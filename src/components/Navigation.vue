@@ -1,6 +1,6 @@
 <template>
   <div id="navigation" :class="{'map': $route.path === '/map'}">
-    <div class="navbar-header">Australia Wildfire
+    <div class="navbar-header">Australia Bushfire
       <svg-icon svgClass="iconhuo1"/>
     </div>
     <div class="navbar-content">
@@ -45,7 +45,6 @@ export default {
   background-color: $background-color2;
   z-index: 100;
   display: flex;
-  color: white;
 }
 .map {
   background-color: $background-color1!important;
@@ -55,7 +54,8 @@ export default {
 }
 .navbar-content {
   display: flex;
-  padding: 0 16px;
+  position: absolute;
+  right: 48px;
   .item {
     padding: 16px;
     cursor: pointer;
@@ -69,5 +69,8 @@ export default {
   position: absolute;
   right: 0;
   cursor: pointer;
+  &:hover {
+    background-color: rgba(158, 187, 224, 0.3);
+  }
 }
 </style>

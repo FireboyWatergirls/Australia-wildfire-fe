@@ -12,22 +12,22 @@ export default new Router({
     {
       path: '/map',
       name: 'Map',
-      component: require('@/views/Map').default
+      component: require('@/views/Map/Map').default
     },
     {
       path: '/analysis',
       name: 'Analysis',
-      component: require('@/views/Analysis').default
+      component: require('@/views/Analysis/Analysis').default
     },
     {
       path: '/model',
       name: 'Model',
-      component: require('@/views/Model').default
+      component: require('@/views/Model/Model').default
     },
     {
       path: '/about',
       name: 'About',
-      component: require('@/views/About').default
+      component: require('@/views/About/About').default
     }
   ]
 })

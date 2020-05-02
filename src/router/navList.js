@@ -1,7 +1,7 @@
-import Map from '../views/Map'
-import Analysis from '../views/Analysis'
-import Model from '../views/Model'
-import About from '../views/About'
+import Map from '@/views/Map/Map'
+import Analysis from '@/views/Analysis/Analysis'
+import Model from '@/views/Model/Model'
+import About from '@/views/About/About'
 
 const NavList = [
   {

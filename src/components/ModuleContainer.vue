@@ -42,9 +42,10 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  z-index: 999;
+  z-index: 1000;
   background-color: $background-color1;
   border: 1px solid #7a7e84;
+  color: #fff;
   .module-title {
     text-shadow: 1px 1px 2px rgba(0,0,0,.8);
     background: rgba(100,191,255,.3);
@@ -92,7 +93,6 @@ export default {
 }
 .modulebox-hidden {
   pointer-events: all;
-  position: absolute;
   border: 1px solid rgb(116, 116, 116);
   background: $background-color1;
   padding: 5px;
@@ -101,14 +101,20 @@ export default {
   font-size: 14px;
   box-sizing: border-box;
   line-height: 18px;
+  z-index: 1000;
+  color: #fff;
   &:hover {
     border: 1px solid #7a7e84;
-    background: rgba(29, 42, 59, 0.1);
+    background: rgba(158, 187, 224, 0.3);
   }
 }
 .layer {
   position: absolute;
-  top: 72px;
+  margin: 62px 10px;
+}
+.impact {
+  position: absolute;
+  bottom: 20px;
   left: 10px;
 }
 </style>
