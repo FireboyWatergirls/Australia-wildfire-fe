@@ -43,7 +43,7 @@ export default {
   flex-direction: column;
   padding: 10px;
   z-index: 1000;
-  background-color: $background-color1;
+  background-color: $bg-color1;
   border: 1px solid #7a7e84;
   color: #fff;
   .module-title {
@@ -94,7 +94,7 @@ export default {
 .modulebox-hidden {
   pointer-events: all;
   border: 1px solid rgb(116, 116, 116);
-  background: $background-color1;
+  background: $bg-color1;
   padding: 5px;
   width: 56px;
   cursor: pointer;

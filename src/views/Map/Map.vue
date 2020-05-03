@@ -27,7 +27,7 @@ export default {
       mapboxgl.accessToken = mapboxToken
       this.map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/lsq210/cjez8jrv223982rqmek99dpyv',
+        style: 'mapbox://styles/mapbox/dark-v10',
         center: [133.65921899005053, -26.031180863929407],
         zoom: 3
       })

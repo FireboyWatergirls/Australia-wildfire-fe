@@ -42,12 +42,14 @@ export default {
   right: 0;
   left: 0;
   top: 0;
-  background-color: $background-color2;
+  background-color: $bg-color1;
   z-index: 100;
   display: flex;
+  color: #fff;
+  // box-shadow: 0 0 4px 0 rgba(128, 148, 175, 0.7);
 }
 .map {
-  background-color: $background-color1!important;
+  background-color: rgba($bg-color1, $header-opacity)!important;
 }
 .navbar-header {
   margin: auto 16px;
@@ -60,7 +62,7 @@ export default {
     padding: 16px;
     cursor: pointer;
     &:hover {
-      background-color: rgba(158, 187, 224, 0.3);
+      background-color: rgba(#ffffffab, 0.1);
     }
   }
 }

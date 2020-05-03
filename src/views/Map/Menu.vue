@@ -1,14 +1,17 @@
 <template>
   <div style="width: 256px;">
-    <a-button type="primary" style="margin-bottom: 16px" @click="toggleCollapsed">
+    <a-button ghost
+      class="map-button"
+      @click="toggleCollapsed">
       <a-icon :type="collapsed ? 'menu-unfold' : 'menu-fold'" />
     </a-button>
     <a-menu
-      :default-selected-keys="['1']"
+      :default-selected-keys="['2']"
       :default-open-keys="['sub1']"
       mode="inline"
-      theme="light"
+      theme="dark"
       :inline-collapsed="collapsed"
+      class="map-menu"
     >
       <a-menu-item key="1">
         <a-icon type="video-camera" />
@@ -59,4 +62,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/var.scss';
+.map-button {
+  margin-bottom: 16px;
+  &:hover {
+    color: $theme-color;
+    border-color: $theme-color;
+  }
+  &:focus {
+    color: $theme-color;
+    border-color: $theme-color;
+  }
+}
+.map-menu {
+  background-color: $bg-color1;
+  border: 1px solid rgba(#eee, .1);
+}
+.ant-menu-item-selected {
+  background-color: $theme-color!important;
+}
+.ant-menu-item {
+  &:hover {
+    background-color: $theme-color!important;
+  }
+}
+.ant-menu-item-active {
+  background-color: $theme-color!important;
+}
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open{
+  color: $theme-color
+}
+.ant-menu-sub {
+  background: #e4ebf1!important;
+}
 </style>
