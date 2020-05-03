@@ -1,18 +1,21 @@
 <template>
-  <div id="navigation" :class="{'map': $route.path === '/map'}">
-    <div class="navbar-header">Australia Bushfire
-      <svg-icon svgClass="iconhuo1"/>
+  <div id="navigation" :class="{ map: $route.path === '/map' }">
+    <div class="navbar-header">
+      Australia Bushfire
+      <svg-icon svgClass="iconhuo1" />
     </div>
     <div class="navbar-content">
-      <div class="item"
+      <div
+        class="item"
         v-for="(item, index) in NavList"
         v-bind:key="`NavList-${index}`"
-        v-on:click="$router.push(item.path)">
+        v-on:click="$router.push(item.path)"
+      >
         <span class="text">{{ item.text }}</span>
       </div>
     </div>
-    <div class='navbar-foot' >
-      <svg-icon svgClass="icongit"/>
+    <div class="navbar-foot">
+      <svg-icon svgClass="icongit" />
     </div>
   </div>
 </template>
@@ -35,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/var.scss';
+@import "@/styles/var.scss";
 #navigation {
   height: 50px;
   position: fixed;
@@ -46,10 +49,10 @@ export default {
   z-index: 100;
   display: flex;
   color: #fff;
-  // box-shadow: 0 0 4px 0 rgba(128, 148, 175, 0.7);
+  box-shadow: 0 0 4px 0 rgba(128, 148, 175, 0.7);
 }
 .map {
-  background-color: rgba($bg-color1, $header-opacity)!important;
+  background-color: rgba($bg-color1, $header-opacity) !important;
 }
 .navbar-header {
   margin: auto 16px;
