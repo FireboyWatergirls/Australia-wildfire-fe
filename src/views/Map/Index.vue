@@ -4,6 +4,7 @@
     <div id="map" v-show="menuKey !== '1'"></div>
     <key-events class="events-constainer" v-if="menuKey === '1'" />
     <!-- <iframe src="/static/keyEvents/index.html" class="events-constainer" v-show="menuKey === '1'"></iframe> -->
+    <layer class="layer"></layer>
   </div>
 </template>
 
@@ -11,6 +12,7 @@
 import mapboxgl from 'mapbox-gl'
 import Menu from './Menu'
 import KeyEvents from './KeyEvents'
+import Layer from './Layer'
 
 export default {
   data() {
@@ -22,6 +24,7 @@ export default {
   components: {
     MapMenu: Menu,
     KeyEvents
+    Layer
   },
   mounted() {
     this.initMap()
@@ -62,5 +65,12 @@ export default {
 }
 .events-constainer {
   z-index: 10;
+}
+.layer {
+  position: absolute;
+  top: 180px;
+  right: 10px;
+  z-index: 100;
+  text-align: right;
 }
 </style>
