@@ -58,7 +58,13 @@ exports.cssLoaders = function (options) {
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
-    less: generateLoaders('less'),
+    less: generateLoaders("less", {
+      modifyVars: {
+        "primary-color": "#fa541c",
+        "link-color": "#fa541c"
+      },
+      javascriptEnabled: true
+    }),
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass'),
     stylus: generateLoaders('stylus'),
