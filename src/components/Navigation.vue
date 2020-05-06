@@ -7,9 +7,9 @@
     <div class="navbar-content">
       <div
         class="item"
-        v-for="(item, index) in NavList"
-        v-bind:key="`NavList-${index}`"
-        v-on:click="$router.push(item.path)"
+        v-for="(item, index) in navList"
+        v-bind:key="`navList-${index}`"
+        v-on:click="$router.push({path: item.path},onComplete => {},onAbort => {})"
       >
         <span class="text">{{ item.text }}</span>
       </div>
@@ -21,14 +21,14 @@
 </template>
 
 <script>
-import NavList from '@/router/navList'
+import navList from '@/router/navList'
 import SvgIcon from './SvgIcon'
 
 export default {
   name: 'navigation',
   data () {
     return {
-      NavList
+      navList
     }
   },
   components: {
@@ -41,7 +41,7 @@ export default {
 @import "@/styles/var.scss";
 #navigation {
   height: 50px;
-  position: fixed;
+  position: absolute;
   right: 0;
   left: 0;
   top: 0;
@@ -49,7 +49,7 @@ export default {
   z-index: 100;
   display: flex;
   color: #fff;
-  box-shadow: 0 0 4px 0 rgba(128, 148, 175, 0.7);
+  box-shadow: 0 0 4px 0 rgba($theme-color, 0.8);
 }
 .map {
   background-color: rgba($bg-color1, $header-opacity) !important;

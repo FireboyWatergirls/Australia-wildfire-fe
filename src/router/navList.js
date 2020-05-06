@@ -2,8 +2,9 @@ import Map from '@/views/Map'
 import Analysis from '@/views/Analysis'
 import Model from '@/views/Model'
 import About from '@/views/About'
+import Ch1 from '@/views/Analysis/Ch1'
 
-const NavList = [
+const navList = [
   {
     path: '/map',
     name: 'map',
@@ -14,7 +15,12 @@ const NavList = [
     path: '/analysis',
     name: 'analysis',
     component: Analysis,
-    text: 'Analysis'
+    text: 'Analysis',
+    children: [{
+      path: 'ch1',
+      name: 'ch1',
+      component: Ch1
+    }]
   },
   {
     path: '/model',
@@ -29,4 +35,4 @@ const NavList = [
     text: 'About'
   }
 ]
-export default NavList
+export default navList
