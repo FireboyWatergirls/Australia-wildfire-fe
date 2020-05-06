@@ -168,7 +168,7 @@ export default {
             'layout': {
               'icon-image': 'fire',
               'icon-allow-overlap': true,
-              'icon-size': 0.1
+              'icon-size': 0.05
             }
           }, 'waterway-label')
         })
