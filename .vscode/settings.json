@@ -9,5 +9,8 @@
       "singleQuote": true,
       "semi": false
     }
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
   }
 }
