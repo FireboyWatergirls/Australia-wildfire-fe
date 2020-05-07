@@ -1,71 +1,100 @@
 <template>
   <div id="analysis">
-    <div class="catalog"
-      v-if="$route.path"
-      v-for="(item,index) in catalog"
-      :key="`catalog-${index}`"
-      :class="item.name"
-      @click="$router.push(`/analysis/${item.name}`)">
-      <p class="title">{{item.text}}</p>
-      <img :src="item.img"/>
+    <div class="catalog" v-if="$route.path === '/analysis'">
+      <div
+        class="catalog-item"
+        v-for="(item, index) in catalog"
+        :key="`catalog-${index}`"
+        :class="item.name"
+        @click="$router.push(`/analysis/${item.name}`)"
+      >
+        <p class="title">{{ item.text }}</p>
+        <img :src="item.img" />
+      </div>
     </div>
-    <router-view class="content"></router-view>
+    <div class="catalog-header" v-if="$route.path !== '/analysis'">
+      <span>{{catalog.filter(item => item.name === $route.name)[0].text}}</span>
+      <a-dropdown>
+        <a class="ant-dropdown-link" @click="e => e.preventDefault()">
+          阅读其他章节
+          <a-icon type="down" />
+        </a>
+        <a-menu slot="overlay" @click="changeChapter">
+          <a-menu-item v-for="item in catalog" :key="item.name">{{item.text}}</a-menu-item>
+        </a-menu>
+      </a-dropdown>
+    </div>
+    <router-view v-if="$route.path !== '/analysis'"></router-view>
   </div>
 </template>
 
 <script>
+import { Dropdown, Menu, Icon } from 'ant-design-vue'
 export default {
-  data () {
+  data() {
     return {
-      catalog: [{
-        name: 'ch1',
-        text: '1.澳大利亚山火是如何发生的？',
-        img: '/static/img/fire.jpg'
-      },
-      {
-        name: 'ch2',
-        text: '2.澳大利亚山火为什么烧这么久？',
-        img: '/static/img/fire1.jpg'
-      },
-      {
-        name: 'ch3',
-        text: '3.澳大利亚山火的影响？',
-        img: '/static/img/fire1.jpg'
-      },
-      {
-        name: 'ch4',
-        text: '4.此次澳大利亚山火给我们的教训？',
-        img: '/static/img/fire.jpg'
-      }]
+      catalog: [
+        {
+          name: 'ch1',
+          text: '1. What are the causes of Australian brushfires?',
+          img: '/static/img/fire.jpg'
+        },
+        {
+          name: 'ch2',
+          text: '2.2019年这次火灾为何烧这么久？',
+          img: '/static/img/fire1.jpg'
+        },
+        {
+          name: 'ch3',
+          text: '3.澳大利亚山火带来的影响？',
+          img: '/static/img/fire1.jpg'
+        },
+        {
+          name: 'ch4',
+          text: '4.一些其他的分析',
+          img: '/static/img/fire.jpg'
+        }
+      ]
     }
   },
+  components: {
+    ADropdown: Dropdown,
+    AMenu: Menu,
+    AMenuItem: Menu.Item,
+    AIcon: Icon
+  },
   methods: {
+    changeChapter({ key }) {
+      this.$router.push(`/analysis/${key}`)
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-#analysis {
+@import '@/styles/var.scss';
+.catalog {
   position: fixed;
   top: 50px;
   left: 0;
   width: 100vw;
   height: calc(100vh - 50px);
 }
-.catalog {
+.catalog-item {
   position: absolute;
   display: flex;
   &:hover {
     p {
       color: white;
       cursor: pointer;
+      font-size: 22px;
     }
     img {
       filter: brightness(0.5);
     }
   }
   p {
-    color: rgba(255,255,255,0.623);
+    color: rgba(255, 255, 255, 0.623);
     z-index: 2;
     width: 100%;
     text-align: center;
@@ -107,7 +136,16 @@ export default {
   right: 0;
   line-height: 37vh;
 }
-.content {
-  z-index: 1000;
+.catalog-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  line-height: 48px;
+  border-bottom: 1px solid rgba($theme-color, 0.5);
 }
 </style>
