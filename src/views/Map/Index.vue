@@ -292,11 +292,11 @@ export default {
         }, 'waterway-label')
 
         // 悬浮显示信息窗
-        popup = new mapboxgl.Popup({
+        var popup81 = new mapboxgl.Popup({
           closeButton: false,
           closeOnClick: false
         })
-        this.map.on('mouseenter', 'firePoint', (e) => {
+        this.map.on('mouseenter', 'firePoint2019-8-1', (e) => {
           // Change the cursor style as a UI indicator.
           this.map.getCanvas().style.cursor = 'pointer'
 
@@ -317,7 +317,7 @@ export default {
 
           // Populate the popup and set its coordinates
           // based on the feature found.
-          popup
+          popup81
             .setLngLat(coordinates)
             .setHTML(description)
             .addTo(this.map)
@@ -325,7 +325,7 @@ export default {
 
         this.map.on('mouseleave', 'firePoint2019-8-1', () => {
           this.map.getCanvas().style.cursor = ''
-          popup.remove()
+          popup81.remove()
         })
 
         this.map.addSource('dem', {
@@ -338,7 +338,12 @@ export default {
           'type': 'hillshade'
           // insert below waterway-river-canal-shadow;
           // where hillshading sits in the Mapbox Outdoors style
-        }, 'waterway-river-canal-shadow')
+        })
+
+        // this.map.setLayoutProperty('fireMap', 'visibility', 'none')
+        // this.map.setLayoutProperty('firePoint', 'visibility', 'none')
+        this.map.setLayoutProperty('fireMap2019-8-1', 'visibility', 'none')
+        this.map.setLayoutProperty('firePoint2019-8-1', 'visibility', 'none')
       })
     },
     mapClickEvent: function(e) {
@@ -426,7 +431,7 @@ export default {
           }
         }, 'waterway-label')
 
-        // 8.2散点图图层
+        // 散点图图层
         this.map.addSource(fireSourse, {
           'type': 'geojson',
           'data': dataPath
@@ -444,7 +449,7 @@ export default {
         }, 'waterway-label')
 
         // 悬浮显示信息窗
-        var popup = new mapboxgl.Popup({
+        var popupTime = new mapboxgl.Popup({
           closeButton: false,
           closeOnClick: false
         })
@@ -469,7 +474,7 @@ export default {
 
           // Populate the popup and set its coordinates
           // based on the feature found.
-          popup
+          popupTime
             .setLngLat(coordinates)
             .setHTML(description)
             .addTo(this.map)
@@ -477,7 +482,7 @@ export default {
 
         this.map.on('mouseleave', layerPoint, () => {
           this.map.getCanvas().style.cursor = ''
-          popup.remove()
+          popupTime.remove()
         })
       } else {
         console.log(layerExist)
