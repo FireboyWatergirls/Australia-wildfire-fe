@@ -1,0 +1,380 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "313",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/1",
+        "acq_time": "56",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "48",
+        "version": "6.3",
+        "bright_t31": "297.3",
+        "frp": "6.6",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.0583,
+          -11.807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "319.3",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/1",
+        "acq_time": "56",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "71",
+        "version": "6.3",
+        "bright_t31": "297.3",
+        "frp": "11.3",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.085,
+          -11.7924
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "311.6",
+        "scan": "3.1",
+        "track": "1.7",
+        "acq_date": "2019/8/1",
+        "acq_time": "57",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "42",
+        "version": "6.3",
+        "bright_t31": "298.7",
+        "frp": "23.1",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.8744,
+          -12.8398
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "310.1",
+        "scan": "1.1",
+        "track": "1.1",
+        "acq_date": "2019/8/1",
+        "acq_time": "57",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "33",
+        "version": "6.3",
+        "bright_t31": "296.1",
+        "frp": "6.5",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.3035,
+          -14.4306
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "310.3",
+        "scan": "4",
+        "track": "1.9",
+        "acq_date": "2019/8/1",
+        "acq_time": "57",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "36",
+        "version": "6.3",
+        "bright_t31": "298.8",
+        "frp": "27.6",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.4897,
+          -12.4953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "311.3",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/1",
+        "acq_time": "1616",
+        "satellite": "Aqua",
+        "instrument": "MODIS",
+        "confidence": "82",
+        "version": "6.3",
+        "bright_t31": "290.1",
+        "frp": "11.7",
+        "daynight": "N",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.0067,
+          -15.7816
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "301.7",
+        "scan": "2",
+        "track": "1.4",
+        "acq_date": "2019/8/1",
+        "acq_time": "1616",
+        "satellite": "Aqua",
+        "instrument": "MODIS",
+        "confidence": "43",
+        "version": "6.3",
+        "bright_t31": "290.2",
+        "frp": "13.7",
+        "daynight": "N",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.7782,
+          -15.0086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "304.8",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/1",
+        "acq_time": "1616",
+        "satellite": "Aqua",
+        "instrument": "MODIS",
+        "confidence": "62",
+        "version": "6.3",
+        "bright_t31": "286.7",
+        "frp": "8.3",
+        "daynight": "N",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.7267,
+          -16.1452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "304.9",
+        "scan": "2.7",
+        "track": "1.6",
+        "acq_date": "2019/8/1",
+        "acq_time": "1616",
+        "satellite": "Aqua",
+        "instrument": "MODIS",
+        "confidence": "62",
+        "version": "6.3",
+        "bright_t31": "293.5",
+        "frp": "24.9",
+        "daynight": "N",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.9115,
+          -15.1785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "319.3",
+        "scan": "2.7",
+        "track": "1.6",
+        "acq_date": "2019/8/1",
+        "acq_time": "1616",
+        "satellite": "Aqua",
+        "instrument": "MODIS",
+        "confidence": "98",
+        "version": "6.3",
+        "bright_t31": "293.7",
+        "frp": "70.6",
+        "daynight": "N",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.9346,
+          -15.1826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "310.9",
+        "scan": "2.7",
+        "track": "1.6",
+        "acq_date": "2019/8/1",
+        "acq_time": "1616",
+        "satellite": "Aqua",
+        "instrument": "MODIS",
+        "confidence": "81",
+        "version": "6.3",
+        "bright_t31": "292.1",
+        "frp": "39",
+        "daynight": "N",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.9314,
+          -15.1737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "307.8",
+        "scan": "2.7",
+        "track": "1.6",
+        "acq_date": "2019/8/1",
+        "acq_time": "1616",
+        "satellite": "Aqua",
+        "instrument": "MODIS",
+        "confidence": "73",
+        "version": "6.3",
+        "bright_t31": "293.2",
+        "frp": "31.9",
+        "daynight": "N",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.9285,
+          -15.1877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "306.4",
+        "scan": "2.3",
+        "track": "1.5",
+        "acq_date": "2019/8/1",
+        "acq_time": "1616",
+        "satellite": "Aqua",
+        "instrument": "MODIS",
+        "confidence": "41",
+        "version": "6.3",
+        "bright_t31": "292.4",
+        "frp": "22.2",
+        "daynight": "N",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.6239,
+          -15.503
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "306.7",
+        "scan": "2.3",
+        "track": "1.5",
+        "acq_date": "2019/8/1",
+        "acq_time": "1616",
+        "satellite": "Aqua",
+        "instrument": "MODIS",
+        "confidence": "34",
+        "version": "6.3",
+        "bright_t31": "292",
+        "frp": "22.8",
+        "daynight": "N",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.6191,
+          -15.4997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "303.3",
+        "scan": "2.6",
+        "track": "1.5",
+        "acq_date": "2019/8/1",
+        "acq_time": "1755",
+        "satellite": "Aqua",
+        "instrument": "MODIS",
+        "confidence": "54",
+        "version": "6.3",
+        "bright_t31": "287.9",
+        "frp": "24.3",
+        "daynight": "N",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.449,
+          -20.7922
+        ]
+      }
+    }
+  ]
+}

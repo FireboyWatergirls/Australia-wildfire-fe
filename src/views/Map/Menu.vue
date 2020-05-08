@@ -4,8 +4,7 @@
       <a-icon :type="collapsed ? 'menu-unfold' : 'menu-fold'" />
     </a-button>
     <a-menu
-      :default-selected-keys="['2']"
-      :default-open-keys="['sub1']"
+      :default-open-keys="['sub1','sub2']"
       mode="inline"
       :theme="theme"
       :inline-collapsed="collapsed"
@@ -17,7 +16,8 @@
         <a-icon type="video-camera" />
         <span>Key Events</span>
       </a-menu-item>
-      <a-menu-item key="2">
+      <a-sub-menu key="sub1">
+        <span slot="title">
         <a-icon type="clock-circle" />
         <span>Space-time Visualization</span>
       </a-menu-item>
@@ -44,6 +44,11 @@ export default {
   },
   methods: {
     toggleCollapsed() {
+    changeFun: function (funName) {
+      this.$store.commit('changeFun', funName)
+      console.log(this.$store.state.funName)
+    },
+    toggleCollapsed () {
       this.collapsed = !this.collapsed
     },
     changeItem(e) {

@@ -1,0 +1,1955 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "331.4",
+        "scan": "1.9",
+        "track": "1.3",
+        "acq_date": "2019/8/2",
+        "acq_time": "4",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "86",
+        "version": "6.3",
+        "bright_t31": "294.4",
+        "frp": "70",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.7548,
+          -23.3644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "312",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "44",
+        "version": "6.3",
+        "bright_t31": "295.7",
+        "frp": "8.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.4035,
+          -27.761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "319.5",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "79",
+        "version": "6.3",
+        "bright_t31": "294",
+        "frp": "19",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.6866,
+          -24.9392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "301.7",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "28",
+        "version": "6.3",
+        "bright_t31": "289.6",
+        "frp": "3.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.9025,
+          -26.8312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "307",
+        "scan": "1.1",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "53",
+        "version": "6.3",
+        "bright_t31": "292.9",
+        "frp": "7.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1812,
+          -27.8513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "333.1",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "87",
+        "version": "6.3",
+        "bright_t31": "293.6",
+        "frp": "40.9",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.6423,
+          -27.1854
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "328.5",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "85",
+        "version": "6.3",
+        "bright_t31": "294.7",
+        "frp": "32.9",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.6402,
+          -27.1953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "349",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "95",
+        "version": "6.3",
+        "bright_t31": "297",
+        "frp": "76.9",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.6483,
+          -27.2172
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "341.5",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "92",
+        "version": "6.3",
+        "bright_t31": "294.4",
+        "frp": "57.3",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.6607,
+          -27.2193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "319",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "77",
+        "version": "6.3",
+        "bright_t31": "295.6",
+        "frp": "18.6",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.6462,
+          -27.2271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "326.3",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "83",
+        "version": "6.3",
+        "bright_t31": "296",
+        "frp": "29",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.6586,
+          -27.2292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "308.7",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "54",
+        "version": "6.3",
+        "bright_t31": "293.9",
+        "frp": "6.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.8236,
+          -27.5546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "311.7",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "5",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "49",
+        "version": "6.3",
+        "bright_t31": "295.3",
+        "frp": "8.2",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.3956,
+          -27.7697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "309",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "60",
+        "version": "6.3",
+        "bright_t31": "297.3",
+        "frp": "5.1",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.066,
+          -29.112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "308.1",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "59",
+        "version": "6.3",
+        "bright_t31": "295.9",
+        "frp": "4.8",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.8406,
+          -28.5513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "310.4",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "65",
+        "version": "6.3",
+        "bright_t31": "296.1",
+        "frp": "6.6",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.8298,
+          -28.5496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "309.1",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "62",
+        "version": "6.3",
+        "bright_t31": "295.1",
+        "frp": "5.8",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.8556,
+          -28.4773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "309.5",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "63",
+        "version": "6.3",
+        "bright_t31": "295.3",
+        "frp": "6.6",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.5449,
+          -29.4444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "310.1",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "69",
+        "version": "6.3",
+        "bright_t31": "288.3",
+        "frp": "10.9",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.3606,
+          -31.3054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "304.9",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "55",
+        "version": "6.3",
+        "bright_t31": "293.7",
+        "frp": "4.1",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.0066,
+          -30.3141
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "304.1",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "55",
+        "version": "6.3",
+        "bright_t31": "288.3",
+        "frp": "6.9",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.3981,
+          -30.9368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "304.7",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "33",
+        "version": "6.3",
+        "bright_t31": "293.8",
+        "frp": "3.6",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.9637,
+          -30.31
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "304.5",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "44",
+        "version": "6.3",
+        "bright_t31": "293.2",
+        "frp": "4.1",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.9539,
+          -30.3669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "304.2",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "51",
+        "version": "6.3",
+        "bright_t31": "288.4",
+        "frp": "5.2",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.1767,
+          -30.3461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "305.6",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "41",
+        "version": "6.3",
+        "bright_t31": "294.2",
+        "frp": "3.9",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.2999,
+          -29.8435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "308.1",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "60",
+        "version": "6.3",
+        "bright_t31": "293.4",
+        "frp": "5.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.2826,
+          -29.8224
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "304.4",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "59",
+        "version": "6.3",
+        "bright_t31": "287.1",
+        "frp": "7.3",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.5318,
+          -29.7975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "331.5",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "87",
+        "version": "6.3",
+        "bright_t31": "295.3",
+        "frp": "28.9",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.5345,
+          -29.4428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "325.9",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "83",
+        "version": "6.3",
+        "bright_t31": "295.7",
+        "frp": "21.6",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.5364,
+          -29.4338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "312.5",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "69",
+        "version": "6.3",
+        "bright_t31": "297.5",
+        "frp": "7.3",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.4549,
+          -29.2555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "317.4",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "6",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "75",
+        "version": "6.3",
+        "bright_t31": "297.5",
+        "frp": "11.5",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.4445,
+          -29.2539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "304.8",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "7",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "60",
+        "version": "6.3",
+        "bright_t31": "290.6",
+        "frp": "6.4",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.248,
+          -31.931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "302.3",
+        "scan": "1.2",
+        "track": "1.1",
+        "acq_date": "2019/8/2",
+        "acq_time": "7",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "50",
+        "version": "6.3",
+        "bright_t31": "289.2",
+        "frp": "4.4",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.2457,
+          -31.9409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "300.4",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "7",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "32",
+        "version": "6.3",
+        "bright_t31": "289.9",
+        "frp": "4.1",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.2395,
+          -32.1089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "301.6",
+        "scan": "2.2",
+        "track": "1.4",
+        "acq_date": "2019/8/2",
+        "acq_time": "7",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "37",
+        "version": "6.3",
+        "bright_t31": "285.2",
+        "frp": "15.6",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.2667,
+          -34.1861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "306",
+        "scan": "2.2",
+        "track": "1.4",
+        "acq_date": "2019/8/2",
+        "acq_time": "7",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "63",
+        "version": "6.3",
+        "bright_t31": "285.1",
+        "frp": "25",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.2718,
+          -34.1884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "304.1",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "7",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "58",
+        "version": "6.3",
+        "bright_t31": "283.4",
+        "frp": "9.3",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.9721,
+          -34.5834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "302.2",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "7",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "0",
+        "version": "6.3",
+        "bright_t31": "290.7",
+        "frp": "3.8",
+        "daynight": "D",
+        "type": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.893,
+          -34.4649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "306.9",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "7",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "56",
+        "version": "6.3",
+        "bright_t31": "291",
+        "frp": "6.9",
+        "daynight": "D",
+        "type": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.8819,
+          -34.4634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "303.9",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "9",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "57",
+        "version": "6.3",
+        "bright_t31": "278.3",
+        "frp": "9.5",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.2001,
+          -41.6233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "329.8",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "9",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "86",
+        "version": "6.3",
+        "bright_t31": "280.8",
+        "frp": "32.5",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.1881,
+          -41.6216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "337.2",
+        "scan": "1.6",
+        "track": "1.2",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "88",
+        "version": "6.3",
+        "bright_t31": "304.5",
+        "frp": "62.4",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.939,
+          -14.2906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "323.3",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "0",
+        "version": "6.3",
+        "bright_t31": "304.3",
+        "frp": "13.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.8931,
+          -11.2207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "324.1",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "77",
+        "version": "6.3",
+        "bright_t31": "303.5",
+        "frp": "14.8",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.8785,
+          -11.2557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "324.6",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "78",
+        "version": "6.3",
+        "bright_t31": "304",
+        "frp": "15.3",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.8878,
+          -11.2571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "326.4",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "75",
+        "version": "6.3",
+        "bright_t31": "303.1",
+        "frp": "18.8",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.6096,
+          -11.5159
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "357.8",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "99",
+        "version": "6.3",
+        "bright_t31": "306",
+        "frp": "81",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.6195,
+          -11.5173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "317.9",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "60",
+        "version": "6.3",
+        "bright_t31": "302.7",
+        "frp": "8.9",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.7585,
+          -11.5368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "327.9",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "70",
+        "version": "6.3",
+        "bright_t31": "304",
+        "frp": "19.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.6182,
+          -11.5266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "327",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "79",
+        "version": "6.3",
+        "bright_t31": "303.5",
+        "frp": "19",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.7572,
+          -11.5462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "320.2",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "49",
+        "version": "6.3",
+        "bright_t31": "304.6",
+        "frp": "10.5",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.6345,
+          -11.5827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "321.5",
+        "scan": "1.1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "54",
+        "version": "6.3",
+        "bright_t31": "303.5",
+        "frp": "11.4",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.6445,
+          -11.5841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "371.4",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "100",
+        "version": "6.3",
+        "bright_t31": "306.3",
+        "frp": "112.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.8015,
+          -11.3928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "353.6",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "97",
+        "version": "6.3",
+        "bright_t31": "306.4",
+        "frp": "61.6",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.8105,
+          -11.3941
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "324.4",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "59",
+        "version": "6.3",
+        "bright_t31": "304.8",
+        "frp": "13.5",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.8196,
+          -11.3954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "322.2",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "41",
+        "version": "6.3",
+        "bright_t31": "305.4",
+        "frp": "11.2",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.8287,
+          -11.3968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "325.1",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "41",
+        "version": "6.3",
+        "bright_t31": "303.6",
+        "frp": "13.9",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.8469,
+          -11.3995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "321.2",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "42",
+        "version": "6.3",
+        "bright_t31": "303.2",
+        "frp": "10.3",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.8092,
+          -11.4031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "319",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "38",
+        "version": "6.3",
+        "bright_t31": "305.5",
+        "frp": "8.4",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.8547,
+          -11.4098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "322.4",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "68",
+        "version": "6.3",
+        "bright_t31": "303.5",
+        "frp": "11.9",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.8638,
+          -11.4111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "327.1",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "74",
+        "version": "6.3",
+        "bright_t31": "304.9",
+        "frp": "18.1",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.8651,
+          -11.4208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "324.6",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "43",
+        "version": "6.3",
+        "bright_t31": "307",
+        "frp": "9.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.5086,
+          -11.4414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "321.6",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "43",
+        "version": "6.3",
+        "bright_t31": "308.1",
+        "frp": "7.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.5177,
+          -11.4427
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "362.6",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "100",
+        "version": "6.3",
+        "bright_t31": "303.4",
+        "frp": "92.2",
+        "daynight": "D",
+        "type": "3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.2408,
+          -11.5029
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "341.8",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "68",
+        "version": "6.3",
+        "bright_t31": "305.5",
+        "frp": "38.8",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.25,
+          -11.5043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "338.2",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "88",
+        "version": "6.3",
+        "bright_t31": "304.2",
+        "frp": "28.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.385,
+          -11.6442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "351.5",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "96",
+        "version": "6.3",
+        "bright_t31": "306.5",
+        "frp": "54.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.3941,
+          -11.6456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "319.4",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "60",
+        "version": "6.3",
+        "bright_t31": "303.3",
+        "frp": "9",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.0684,
+          -11.7453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "359",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "99",
+        "version": "6.3",
+        "bright_t31": "308.4",
+        "frp": "72.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.3928,
+          -11.6545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "359.3",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "99",
+        "version": "6.3",
+        "bright_t31": "308.5",
+        "frp": "73.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.4019,
+          -11.6559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "319.3",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "55",
+        "version": "6.3",
+        "bright_t31": "305.2",
+        "frp": "9.5",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.2632,
+          -11.6444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "324.4",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "68",
+        "version": "6.3",
+        "bright_t31": "306.7",
+        "frp": "11.5",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.364,
+          -11.6594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "348.3",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "94",
+        "version": "6.3",
+        "bright_t31": "308.4",
+        "frp": "48.5",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.4097,
+          -11.6663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "326.4",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "47",
+        "version": "6.3",
+        "bright_t31": "303.8",
+        "frp": "14.3",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.4188,
+          -11.6676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "344",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "92",
+        "version": "6.3",
+        "bright_t31": "305.4",
+        "frp": "40.3",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.4253,
+          -11.687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "331.2",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "60",
+        "version": "6.3",
+        "bright_t31": "305.5",
+        "frp": "19.5",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.4239,
+          -11.696
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "322",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "140",
+        "satellite": "Terra",
+        "instrument": "MODIS",
+        "confidence": "72",
+        "version": "6.3",
+        "bright_t31": "304.8",
+        "frp": "10.7",
+        "daynight": "D",
+        "type": "0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.661,
+          -11.7311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "brightness": "346.1",
+        "scan": "1",
+        "track": "1",
+        "acq_date": "2019/8/2",
+        "acq_time": "",
+        "satellite": "",
+        "instrument": "",
+        "confidence": "",
+        "version": "",
+        "bright_t31": "",
+        "frp": "",
+        "daynight": "",
+        "type": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.6701,
+          -11.7325
+        ]
+      }
+    }
+  ]
+}
