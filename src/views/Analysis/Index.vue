@@ -41,7 +41,7 @@ export default {
         },
         {
           name: 'ch2',
-          text: '2.2019年这次火灾为何烧这么久？',
+          text: '2.Why is there a violent wildfire this time?',
           img: '/static/img/fire1.jpg'
         },
         {
@@ -51,7 +51,7 @@ export default {
         },
         {
           name: 'ch4',
-          text: '4.一些其他的分析',
+          text: '4.Lessons from environmental problems',
           img: '/static/img/fire.jpg'
         }
       ]
