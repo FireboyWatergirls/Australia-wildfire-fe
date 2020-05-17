@@ -26,7 +26,7 @@ import SvgIcon from './SvgIcon'
 
 export default {
   name: 'navigation',
-  data () {
+  data() {
     return {
       navList
     }
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/styles/var.scss";
+@import '@/styles/var.scss';
 #navigation {
   height: 50px;
   position: absolute;
@@ -53,6 +53,7 @@ export default {
 }
 .map {
   background-color: rgba($bg-color1, $header-opacity) !important;
+  position: fixed !important;
 }
 .navbar-header {
   margin: auto 16px;

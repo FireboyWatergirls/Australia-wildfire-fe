@@ -1,8 +1,6 @@
 <template>
   <div style="width: 256px;">
-    <a-button ghost
-      style="margin-bottom: 16px;"
-      @click="toggleCollapsed">
+    <a-button ghost style="margin-bottom: 16px;" @click="toggleCollapsed">
       <a-icon :type="collapsed ? 'menu-unfold' : 'menu-fold'" />
     </a-button>
     <a-menu
@@ -12,6 +10,7 @@
       theme="dark"
       :inline-collapsed="collapsed"
       class="map-menu"
+      @click="changeItem"
     >
       <a-menu-item key="1">
         <a-icon type="video-camera" />
@@ -22,16 +21,13 @@
         <span>Space-time Visualization</span>
       </a-menu-item>
       <a-sub-menu key="sub1">
-        <span slot="title"><a-icon type="pie-chart" /><span> Bushfire Impact </span></span>
-        <a-menu-item key="3">
-          Total Impact
-        </a-menu-item>
-        <a-menu-item key="4">
-          Impact on Protected Species
-        </a-menu-item>
-        <a-menu-item key="5">
-          Impact on the Economy
-        </a-menu-item>
+        <span slot="title">
+          <a-icon type="pie-chart" />
+          <span>Bushfire Impact</span>
+        </span>
+        <a-menu-item key="3">Total Impact</a-menu-item>
+        <a-menu-item key="4">Impact on Protected Species</a-menu-item>
+        <a-menu-item key="5">Impact on the Economy</a-menu-item>
       </a-sub-menu>
     </a-menu>
   </div>
@@ -41,7 +37,7 @@
 import { Menu, Button, Icon } from 'ant-design-vue'
 
 export default {
-  data () {
+  data() {
     return {
       collapsed: false
     }
@@ -54,8 +50,12 @@ export default {
     AIcon: Icon
   },
   methods: {
-    toggleCollapsed () {
+    toggleCollapsed() {
       this.collapsed = !this.collapsed
+    },
+    changeItem(e) {
+      this.$emit('changeItem', e.key)
+      console.log(e)
     }
   }
 }
@@ -65,6 +65,6 @@ export default {
 @import '@/styles/var.scss';
 .map-menu {
   background-color: $bg-color1;
-  border: 1px solid rgba(#eee, .1);
+  border: 1px solid rgba(#eee, 0.1);
 }
 </style>

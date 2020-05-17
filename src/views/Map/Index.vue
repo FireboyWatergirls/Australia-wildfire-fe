@@ -1,30 +1,33 @@
 <template>
-  <div id="map">
-    <div class="menu">
-      <map-menu></map-menu>
-    </div>
+  <div>
+    <map-menu class="menu" @changeItem="changeMenu"></map-menu>
+    <div id="map" v-if="menuKey !== '1'"></div>
+    <key-events class="events-constainer" v-if="menuKey === '1'" />
+    <!-- <iframe src="/static/keyEvents/index.html" class="events-constainer" v-show="menuKey === '1'"></iframe> -->
   </div>
 </template>
 
 <script>
 import mapboxgl from 'mapbox-gl'
 import Menu from './Menu'
-const mapboxToken = 'pk.eyJ1IjoibHNxMjEwIiwiYSI6ImNqZXd6NzVyYzB6b24ydnBzOWFhZ3FpNTQifQ.y4iy69PepyhrkJ98qjzykg'
+import KeyEvents from './KeyEvents'
 
 export default {
-  data () {
+  data() {
     return {
+      menuKey: '2',
+      map: null
     }
   },
   components: {
-    MapMenu: Menu
+    MapMenu: Menu,
+    KeyEvents
   },
-  mounted () {
+  mounted() {
     this.initMap()
   },
   methods: {
-    initMap: function () {
-      mapboxgl.accessToken = mapboxToken
+    initMap: function() {
       this.map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v10',
@@ -35,8 +38,11 @@ export default {
       this.map.addControl(this.nav)
       this.map.on('click', this.mapClickEvent)
     },
-    mapClickEvent: function (e) {
+    mapClickEvent: function(e) {
       console.log('经纬度是', e.lngLat)
+    },
+    changeMenu: function(key) {
+      this.menuKey = key
     }
   }
 }
@@ -49,9 +55,12 @@ export default {
   height: 100vh;
 }
 .menu {
-  position: absolute;
+  position: fixed;
   top: 72px;
   left: 10px;
   z-index: 100;
+}
+.events-constainer {
+  z-index: 10;
 }
 </style>
