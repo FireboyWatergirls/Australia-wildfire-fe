@@ -48,6 +48,7 @@ export default {
       this.$store.commit('changeFun', funName)
       console.log(this.$store.state.funName)
     },
+
     toggleCollapsed () {
       this.collapsed = !this.collapsed
     },
