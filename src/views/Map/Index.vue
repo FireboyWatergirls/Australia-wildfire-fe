@@ -33,9 +33,11 @@ export default {
     initMap: function() {
       this.map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
+        style: style,
+        // style: 'mapbox://styles/mapbox/satellite-v9',
         center: [133.65921899005053, -26.031180863929407],
-        zoom: 3
+        zoom: 3,
+        pitch: pitch
       })
       this.nav = new mapboxgl.NavigationControl()
       this.map.addControl(this.nav)

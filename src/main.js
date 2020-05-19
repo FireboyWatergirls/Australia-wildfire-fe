@@ -5,8 +5,11 @@ import mapboxgl from 'mapbox-gl'
 import App from './App'
 import router from './router'
 import echarts from 'echarts'
+import store from './store'
 import './styles/index.scss'
-
+import Menu from 'ant-design-vue/lib/Menu'
+import 'ant-design-vue/lib/menu/style'
+Vue.use(Menu)
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts
 
@@ -16,6 +19,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibHNxMjEwIiwiYSI6ImNqZXd6NzVyYzB6b24ydnBzOWFhZ
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
