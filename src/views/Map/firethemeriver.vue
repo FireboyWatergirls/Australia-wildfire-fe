@@ -1,11 +1,11 @@
 <template>
-  <div id="fire-themeriver"></div>
+  <div id="fire"></div>
 </template>
 
 <script>
 import $ from 'jquery'
 export default {
-  name: 'fire-themeriver',
+  name: 'fire',
   data() {
     return {}
   },
@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     getData() {
-      this.drawLineChart('fire-themeriver')
+      this.drawLineChart('fire')
     },
     drawLineChart(id) {
       let myChart = this.$echarts.init(document.getElementById(id))
@@ -37,10 +37,16 @@ export default {
             color: '#fff'
           },
           title: {
-            text: 'the change of fire counts in each year'
+            text: 'the change of fire counts in each year',
+            textStyle: {
+              color: '#fff'
+            }
           },
           legend: {
-            data: ['queensland', 'victoria', 'nsw']
+            data: ['queensland', 'victoria', 'nsw'],
+            textStyle: {
+              color: '#fff'
+            }
           },
           singleAxis: {
             max: 'dataMax',
@@ -69,8 +75,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#fire-themeriver {
-  width: 100%;
-  height: 100%;
+#fire {
+  width: 98vw;
+  height: 28vh;
 }
 </style>

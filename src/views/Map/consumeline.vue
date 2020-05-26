@@ -37,7 +37,10 @@ export default {
             }
           },
           title: {
-            text: 'Consumer confidence index changes'
+            text: 'Consumer confidence index changes',
+            textStyle: {
+              color: '#fff'
+            }
           },
           toolbox: {
             top: 25,
@@ -62,7 +65,6 @@ export default {
           },
           xAxis: {
             name: 'time',
-            type: 'value',
             type: 'category',
             boundaryGap: true,
             axisLine: {
@@ -135,7 +137,7 @@ export default {
 
 <style lang="scss" scoped>
 #consume-line {
-  width: 100%;
-  height: 100%;
+  width: 38vw;
+  height: 28vh;
 }
 </style>

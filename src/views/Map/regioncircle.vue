@@ -27,8 +27,9 @@ export default {
           },
           legend: {
             show: true,
+            top: '6%',
             orient: 'vertical',
-            left: 10,
+            left: 6,
             data: [
               'Australian Capital Territory',
               'New South Wales',
@@ -38,10 +39,16 @@ export default {
               'Tasmania',
               'Victoria',
               'Western Australia'
-            ]
+            ],
+            textStyle: {
+              color: '#fff'
+            }
           },
           title: {
-            text: 'damages in the bushfire'
+            text: 'damages in the bushfire',
+            textStyle: {
+              color: '#fff'
+            }
           },
           tooltip: {
             trigger: 'item'
@@ -53,13 +60,13 @@ export default {
               radius: ['5%', '20%'],
               avoidLabelOverlap: false,
               label: {
-                show: true,
+                show: false,
                 position: 'center'
               },
               emphasis: {
                 label: {
                   show: true,
-                  fontSize: '30',
+                  fontSize: '20',
                   fontWeight: 'bold'
                 }
               },
@@ -80,7 +87,7 @@ export default {
               emphasis: {
                 label: {
                   show: true,
-                  fontSize: '30',
+                  fontSize: '20',
                   fontWeight: 'bold'
                 }
               },
@@ -95,13 +102,13 @@ export default {
               radius: ['50%', '65%'],
               avoidLabelOverlap: false,
               label: {
-                show: true,
+                show: false,
                 position: 'center'
               },
               emphasis: {
                 label: {
                   show: true,
-                  fontSize: '30',
+                  fontSize: '20',
                   fontWeight: 'bold'
                 }
               },
@@ -122,7 +129,7 @@ export default {
               emphasis: {
                 label: {
                   show: true,
-                  fontSize: '30',
+                  fontSize: '20',
                   fontWeight: 'bold'
                 }
               },
@@ -141,7 +148,7 @@ export default {
 
 <style lang="scss" scoped>
 #region-circle {
-  width: 100%;
-  height: 100%;
+  width:31vw;
+  height: 55vh;
 }
 </style>

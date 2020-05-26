@@ -39,23 +39,31 @@ export default {
           },
           legend: {
             show: true,
-            y: 'top',
+            top: '4%',
+            right: '2%',
             data: [
               'Vulnerable',
               'Critically Endangered',
               'Endangered',
               'Listed'
-            ]
+            ],
+            textStyle: {
+              color: '#fff'
+            }
           },
           toolbox: {
-            left: 'left',
+            top: 'top',
+            right: '4%',
             feature: {
               saveAsImage: {},
               dataZoom: {}
             }
           },
           title: {
-            text: 'The damage of different species'
+            text: 'The damage of different species',
+            textStyle: {
+              color: '#fff'
+            }
           },
           tooltip: {
             trigger: 'item'
@@ -275,7 +283,7 @@ export default {
 
 <style lang="scss" scoped>
 #scatter-grid {
-  width: 100%;
-  height: 100%;
+  width: 34vw;
+  height: 89vh;
 }
 </style>

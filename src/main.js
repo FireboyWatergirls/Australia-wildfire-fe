@@ -5,7 +5,7 @@ import mapboxgl from 'mapbox-gl'
 import App from './App'
 import router from './router'
 import echarts from 'echarts'
-import './antd'
+import 'echarts-gl'
 import './styles/index.scss'
 import VueRouter from 'vue-router'
 
@@ -16,6 +16,8 @@ router.afterEach((to, from, next) => {
 })
 
 Vue.config.productionTip = false
+Vue.prototype.$echarts = echarts
+
 Vue.prototype.$echarts = echarts
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibHNxMjEwIiwiYSI6ImNqZXd6NzVyYzB6b24ydnBzOWFhZ3FpNTQifQ.y4iy69PepyhrkJ98qjzykg'

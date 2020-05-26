@@ -33,7 +33,10 @@ export default {
           },
           title: {
             left: 'center',
-            text: 'The change of the number of flight in Australia'
+            text: 'The change of the number of flight in Australia',
+            textStyle: {
+              color: '#fff'
+            }
           },
           toolbox: {
             feature: {
@@ -45,7 +48,10 @@ export default {
             }
           },
           legend: {
-            y: 'top',
+            top: '10%',
+            textStyle: {
+              color: '#fff'
+            },
             name: [
               'Dom_Acm_in',
               'Dom_Acm_Out',
@@ -157,7 +163,7 @@ export default {
           ],
           series: [
             {
-              name: 'Dom_Acm_in',
+              name: 'Domesticated In',
               type: 'line',
               symbol: 'none',
               sampling: 'average',
@@ -167,37 +173,37 @@ export default {
               data: data.series[0]
             },
             {
-              name: 'Dom_Acm_Out',
+              name: 'Domesticated Out',
               type: 'line',
 
               data: data.series[1]
             },
             {
-              name: 'Dom_Acm_Total',
+              name: 'Domesticated Total',
               type: 'line',
 
               data: data.series[2]
             },
             {
-              name: 'Int_Acm_In',
+              name: 'International In',
               type: 'line',
 
               data: data.series[3]
             },
             {
-              name: 'Int_Acm_Out',
+              name: 'International Out',
               type: 'line',
 
               data: data.series[4]
             },
             {
-              name: 'Int_Acm_Total',
+              name: 'International Total',
               type: 'line',
 
               data: data.series[5]
             },
             {
-              name: 'if_fire',
+              name: 'Major Fire',
               type: 'bar',
               data: data.series[6]
             }
@@ -211,7 +217,7 @@ export default {
 
 <style lang="scss" scoped>
 #aircraft-line {
-  width: 100%;
-  height: 100%;
+  width: 98vw;
+  height: 27vh;
 }
 </style>

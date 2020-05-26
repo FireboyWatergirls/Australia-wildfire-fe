@@ -4,6 +4,21 @@
     <div id="map" v-show="menuKey !== '1'"></div>
     <key-events class="events-constainer" v-if="menuKey === '1'" />
     <!-- <iframe src="/static/keyEvents/index.html" class="events-constainer" v-show="menuKey === '1'"></iframe> -->
+    <!-- total impact
+      <div id="total-impact">
+      <region-circle class="pie" />
+      <fire class="themeriver" />
+    </div>-->
+    <!-- impact on society
+      <div id="society-impact">
+      <cpi class="line1" />
+      <consume class="line2" />
+      <aircraft class="line3" />
+    </div>-->
+    <!-- impact on natural-->
+    <div id="natural-impact">
+      <bio class="scatter-grid" />
+    </div>
   </div>
 </template>
 
@@ -11,6 +26,12 @@
 import mapboxgl from 'mapbox-gl'
 import Menu from './Menu'
 import KeyEvents from './KeyEvents'
+import RegionCircle from './regioncircle'
+import Fire from './firethemeriver'
+import Cpi from './cpiline'
+import Consume from './consumeline'
+import Aircraft from './aircraftline'
+import Bio from './scattergrid'
 
 export default {
   data() {
@@ -21,7 +42,13 @@ export default {
   },
   components: {
     MapMenu: Menu,
-    KeyEvents
+    KeyEvents,
+    RegionCircle,
+    Fire,
+    Cpi,
+    Consume,
+    Aircraft,
+    Bio
   },
   mounted() {
     this.initMap()
@@ -62,5 +89,55 @@ export default {
 }
 .events-constainer {
   z-index: 10;
+}
+.pie {
+  position: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  top: 14vh;
+  left: 68vw;
+  z-index: 10;
+}
+.themeriver {
+  position: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  top: 16vh;
+  left: 1vw;
+  z-index: 20;
+}
+.line1 {
+  position: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  top: 10vh;
+  left: 61vw;
+  z-index: 20;
+  width: 38vw;
+  height: 28vh;
+}
+.line2 {
+  position: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  top: 12vh;
+  left: 61vw;
+  z-index: 20;
+  width: 38vw;
+  height: 28vh;
+}
+.line3 {
+  position: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  top: 14vh;
+  left: 1vw;
+  z-index: 20;
+  width: 98vw;
+  height: 27vh;
+}
+.scatter-grid {
+  position: fixed;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  top: 9vh;
+  left: 65vw;
+  z-index: 20;
+  width: 38vw;
+  height: 28vh;
 }
 </style>

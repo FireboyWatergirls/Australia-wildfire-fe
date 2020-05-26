@@ -1,11 +1,11 @@
 <template>
-  <div id="cpi-line"></div>
+  <div id="cpi"></div>
 </template>
 
 <script>
 import $ from 'jquery'
 export default {
-  name: 'cpi-line',
+  name: 'cpi',
   data() {
     return {}
   },
@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     getData() {
-      this.drawLineChart('cpi-line')
+      this.drawLineChart('cpi')
     },
     drawLineChart(id) {
       let myChart = this.$echarts.init(document.getElementById(id))
@@ -37,11 +37,13 @@ export default {
             }
           },
           title: {
-            text: 'cpi change in Autralia'
+            text: 'cpi change in Autralia',
+            textStyle: {
+              color: '#fff'
+            }
           },
           xAxis: {
             name: 'time',
-            type: 'value',
             type: 'category',
             boundaryGap: true,
             axisLine: {
@@ -139,7 +141,7 @@ export default {
           },
           series: [
             {
-              name: 'if-fire',
+              name: 'Major fire',
               type: 'bar',
               emphasis: {
                 itemStyle: {
@@ -183,8 +185,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#cpi-line {
-  width: 100%;
-  height: 100%;
+#cpi {
+  width: 38vw;
+  height: 28vh;
 }
 </style>
