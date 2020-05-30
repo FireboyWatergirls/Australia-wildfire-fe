@@ -5,20 +5,22 @@
     <key-events class="events-constainer" v-if="menuKey === '1'" />
     <!-- <iframe src="/static/keyEvents/index.html" class="events-constainer" v-show="menuKey === '1'"></iframe> -->
     <!-- total impact
-      <div id="total-impact">
+    <div id="total-impact">
       <region-circle class="pie" />
       <fire class="themeriver" />
     </div>-->
-    <!-- impact on society
-      <div id="society-impact">
+    <!-- impact on society-->
+    <div id="society-impact">
       <cpi class="line1" />
       <consume class="line2" />
       <aircraft class="line3" />
-    </div>-->
-    <!-- impact on natural-->
-    <div id="natural-impact">
-      <bio class="scatter-grid" />
+      <businesses class="pie-map" />
     </div>
+    <!-- impact on natural-->
+    <!-- <div id="natural-impact">
+      <bio class="scatter-grid" />
+      <koala class="scatter-map" />
+    </div>-->
   </div>
 </template>
 
@@ -32,6 +34,8 @@ import Cpi from './cpiline'
 import Consume from './consumeline'
 import Aircraft from './aircraftline'
 import Bio from './scattergrid'
+import Koala from './koalamap'
+import Businesses from './buspie'
 
 export default {
   data() {
@@ -48,7 +52,9 @@ export default {
     Cpi,
     Consume,
     Aircraft,
-    Bio
+    Bio,
+    Koala,
+    Businesses
   },
   mounted() {
     this.initMap()
@@ -139,5 +145,19 @@ export default {
   z-index: 20;
   width: 38vw;
   height: 28vh;
+}
+.scatter-map {
+  position: fixed;
+  top: 0vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+}
+.pie-map {
+  position: fixed;
+  top: 0vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
 }
 </style>
