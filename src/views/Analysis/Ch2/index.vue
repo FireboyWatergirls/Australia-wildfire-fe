@@ -1,4 +1,4 @@
-<!-- 1900到2019年澳大利亚温度、降雨量变化图表 -->
+<!-- 山火猛烈的原因 -->
 
 <template>
   <div id="ch1">
@@ -8,17 +8,26 @@
       <!-- <h1>Weather & Vegetation</h1> -->
     </div>
     <div class="Introduction">
-      <h2>Introduction</h2>
+      <h2>Background</h2>
       <p>Mountain fires are not new in Australia, because Australia is too dry-the Tropic of Cancer runs through the central part of the continent, and is controlled by the subtropical high belt with little rain all year round. More than 80% of the area has an average annual rainfall of less than 600 mm. In summer and autumn each year, continued high temperatures and strong winds increase dryness, and a flash of lightning can ignite a wildfire.</p>
       <p>In the tens of thousands of years of history in mainland Australia, mountain fires have been regarded as an important part of maintaining ecosystems. Many wild animals and plants depend on mountain fires for reproduction. For example, eucalyptus is born to "burn", its seed pods will open when burning, the seedlings inside spread in the fire. It can thrive in the soil covered by ashes. Therefore, in the vast majority of cases, locals will not think that they are "fighting" with mountain fires, but actively explore ways of coexisting with them.</p>
+    </div>
+    <div class="pic4" id="main4"></div>
+    <div class="Introduction2">
       <p>But the recent situation is very different. In September 2019, Queensland and New South Wales on the east coast ushered in thousands of bushfires early-in previous years, the fire could not reach this scale until November. In November, satellite images showed that the mountain fire had completely enclosed Sydney and gradually spread to the south. From July 1, 2019 to January 8, 2020, 4.9 million hectares of land in New South Wales are or have been burning. It's only half a summer now, but it has far exceeded the state's average burning area in the past 50 years-2.8 million hectares. The rapid expansion of the burning area has made people realize that mountain fires are no longer just staying in forests and grasslands as they were in previous years.</p>
       <p>Australia has wildfires every year. Why is it out of control this year?</p>
+    </div>
+    <div class="human">
+      <h2>Human Factors</h2>
+      <p>In fact, there are wildfires in Australia every year.  Australia has a sparsely populated area and few firefighters. It is very difficult for forest fires to be confronted by manpower. It can only rely on rainfall.</p>
+      <p>At the same time, the burning forest in the mountains has no value in the eyes of politicians. The Australian land is sparsely populated, no one lives there, and there is no development. The economic value is limited. Although regretting wildlife, it really requires the government to invest  To save, from a politician's point of view, the price / performance ratio is particularly low, and it is not something that can show achievements in the eyes of taxpayers.</p>
+      <p>The government has also formed a path dependence in fire protection. Beforehand, the isolation belt will be burned. If the isolation belt is useless, some firefighters will go to the fire to save the fire, but the natural rain will not be saved.  The previous climate was very stable, the rainy season arrived as scheduled, and the mountain fires went out, but once the climate system changed, the original measures would not work.</p>
     </div>
     <div class="Temperature1">
       <h2>Temperature</h2>
       <p>In 2019, Australia experienced the hottest year, and the temperature in Australia has skyrocketed in the past 110 years.</p>
     </div>
-    <div class="pic1" id="main1"></div>
+    <!-- <div class="pic1" id="main1"></div> -->
     <div class="pic3" id="main3"></div>
     <div class="Temperature2">
       <p>From the picture we can see that since 2012, above-average temperatures in Australia have become common. The extreme change in climate comes from a seemingly small rise. Since 1910, Australia ’s temperature has risen by 1.4 degrees Celsius (most of which occurred after the mid-20th century).</p>
@@ -180,9 +189,6 @@ export default {
             type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
           }
         },
-        // legend: {
-        //   data: ['A', 'B', 'C', 'D']
-        // },
         toolbox: {
           show: true,
           orient: 'vertical',
@@ -230,7 +236,7 @@ export default {
                 }
               }
             },
-            name: 'A',
+            name: 'temperature',
             type: 'bar',
             barGap: 0,
             // label: this.labelOption,
@@ -238,15 +244,114 @@ export default {
           }
         ]
       })
+    },
+    drawLine4(id) {
+      this.charts = echarts.init(document.getElementById(id))
+      var xAxisData = ['2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
+      var data1 = [34445, 17869, 13139, 16046, 12868, 8423, 6634, 11557, 13091, 8815, 13476, 14552, 11208, 12834, 14729, 16473, 13169]
+      var data2 = [68919, 49492, 75120, 58495, 63679, 42890, 55228, 93984, 27063, 121889, 122779, 46786, 52461, 37685, 49734, 44720, 62616]
+      var data3 = [19820, 5341, 4830, 5095, 18321, 3991, 6972, 4622, 7382, 4091, 6385, 7853, 4759, 3131, 4803, 5040, 5018]
+      var itemStyle = {
+        normal: {
+          // borderColor: 'white',
+          // borderWidth: 3,
+          // shadowBlur: 10,
+          // shadowOffsetX: 0,
+          // shadowOffsetY: 5,
+          // shadowColor: 'rgba(0, 0, 0, 0.4)',
+          lineStyle: {
+            width: 2
+            // shadowBlur: 10,
+            // shadowOffsetX: 0,
+            // shadowOffsetY: 5,
+            // shadowColor: 'rgba(0, 0, 0, 0.4)'
+          },
+          areaStyle: {
+          }
+        }
+      }
+      this.charts.setOption({
+        title: {
+          text: 'Annual fire count',
+          x: 'center'
+        },
+        legend: {
+          data: ['Victoria', 'Queensland', 'New South Wales'],
+          orient: 'vertical',
+          left: '10%',
+          top: '10%'
+        },
+        tooltip: {
+          trigger: 'axis',
+          // position: function (point) {
+          //   return [point[0], '10%']
+          // },
+          axisPointer: {
+            type: 'line'
+          }
+        },
+        xAxis: {
+          // data: ['类目1', '类目2', '类目3', '类目4', '类目5',]
+          data: xAxisData,
+          boundaryGap: false,
+          splitArea: {
+            show: true
+          }
+        },
+        yAxis: {
+          name: 'counts',
+          position: 'right',
+          splitLine: {
+            // show: false
+          }
+        },
+        series: [{
+          name: 'New South Wales',
+          type: 'line',
+          stack: 'all',
+          symbolSize: 10,
+          data: data1,
+          itemStyle: itemStyle,
+          smooth: true,
+          connectNulls: true,
+          symbol: 'none',
+          color: '#fa1e44'
+        },
+        {
+          name: 'Queensland',
+          type: 'line',
+          stack: 'all',
+          symbolSize: 10,
+          data: data2,
+          itemStyle: itemStyle,
+          connectNulls: true,
+          smooth: true,
+          symbol: 'none',
+          color: '#228fcf'
+        },
+        {
+          name: 'Victoria',
+          type: 'line',
+          stack: 'all',
+          symbolSize: 10,
+          data: data3,
+          itemStyle: itemStyle,
+          connectNulls: true,
+          smooth: true,
+          symbol: 'none',
+          color: '#53a586'
+        }
+        ]
+      })
     }
   },
   // 调用
   mounted() {
-    this.$nextTick(function() {
-      setTimeout(() => {
-        this.drawLine1('main1')
-      })
-    })
+    // this.$nextTick(function() {
+    //   setTimeout(() => {
+    //     this.drawLine1('main1')
+    //   })
+    // })
     this.$nextTick(function() {
       setTimeout(() => {
         this.drawLine2('main2')
@@ -255,6 +360,11 @@ export default {
     this.$nextTick(function() {
       setTimeout(() => {
         this.drawLine3('main3')
+      })
+    })
+    this.$nextTick(function() {
+      setTimeout(() => {
+        this.drawLine4('main4')
       })
     })
   }
@@ -273,6 +383,8 @@ export default {
   width: 100%;
   padding: 0 100px;
 }
+.Introduction2,
+.human,
 .Temperature1,
 .Temperature2,
 .Rainfall1,
@@ -299,9 +411,10 @@ p {
   line-height: 30px;
   font-weight: 300;
 }
-.pic1,
+// .pic1,
 .pic2,
-.pic3 {
+.pic3,
+.pic4 {
   position: relative;
   // margin-top: 30px;
   // margin-right: 30px;
