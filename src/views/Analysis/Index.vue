@@ -46,7 +46,7 @@ export default {
         },
         {
           name: 'ch3',
-          text: '3.澳大利亚山火带来的影响？',
+          text: '3.What are the impacts of the Australia bushfire?',
           img: '/static/img/fire1.jpg'
         },
         {

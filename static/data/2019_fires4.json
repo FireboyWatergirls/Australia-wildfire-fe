@@ -1,0 +1,42 @@
+{"series":[
+[
+{"value":1,"name":"Australian Capital Territory"},
+{"value":25,"name":"New South Wales"},
+{"value":0,"name":"Northern Territory"},
+{"value":0,"name":"Queensland"},
+{"value":3,"name":"South Australia"},
+{"value":0,"name":"Tasmania"},
+{"value":5,"name":"Victoria"},
+{"value":0,"name":"Western Australia"}
+],
+[
+{"value":0,"name":"Australian Capital Territory"},
+{"value":2439,"name":"New South Wales"},
+{"value":5,"name":"Northern Territory"},
+{"value":48,"name":"Queensland"},
+{"value":151,"name":"South Australia"},
+{"value":2,"name":"Tasmania"},
+{"value":396,"name":"Victoria"},
+{"value":1,"name":"Western Australia"}
+],
+[
+{"value":56688,"name":"Australian Capital Territory"},
+{"value":5400000,"name":"New South Wales"},
+{"value":6800000,"name":"Northern Territory"},
+{"value":2500000,"name":"Queensland"},
+{"value":490000,"name":"South Australia"},
+{"value":36000,"name":"Tasmania"},
+{"value":1500000,"name":"Victoria"},
+{"value":2200000,"name":"Western Australia"}
+],
+[
+{"value":140080,"name":"Australian Capital Territory"},
+{"value":13300000,"name":"New South Wales"},
+{"value":16800000,"name":"Northern Territory"},
+{"value":6180000,"name":"Queensland"},
+{"value":1210000,"name":"South Australia"},
+{"value":89000,"name":"Tasmania"},
+{"value":3710000,"name":"Victoria"},
+{"value":5440000,"name":"Western Australia"}
+]
+]}
