@@ -1,7 +1,7 @@
 <template>
   <div>
     <map-menu class="menu" @changeItem="changeMenu"></map-menu>
-    <div id="map" v-if="menuKey !== '1'"></div>
+    <div id="map" v-show="menuKey !== '1'"></div>
     <key-events class="events-constainer" v-if="menuKey === '1'" />
     <!-- <iframe src="/static/keyEvents/index.html" class="events-constainer" v-show="menuKey === '1'"></iframe> -->
   </div>

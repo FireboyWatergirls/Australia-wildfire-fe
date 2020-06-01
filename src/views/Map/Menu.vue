@@ -55,7 +55,6 @@ export default {
     },
     changeItem(e) {
       this.$emit('changeItem', e.key)
-      console.log(e)
     }
   }
 }

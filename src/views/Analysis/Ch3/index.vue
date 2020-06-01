@@ -117,15 +117,15 @@
 </template>
 
 <script>
-import Spe from './Ch3/spe-gen'
-import Businesses from './Ch3/buspie'
-import Cpi from './Ch3/cpiline'
-import BurnArea from './Ch3/burnarea'
-import Regionpie from './Ch3/regioncircle'
-import death from './Ch3/deathpie'
-import consume from './Ch3/consumeline'
-import fundingbar from './Ch3/fundingbar'
-import aircraft from './Ch3/aircraftline'
+import Spe from './spe-gen'
+import Businesses from './buspie'
+import Cpi from './cpiline'
+import BurnArea from './burnarea'
+import Regionpie from './regioncircle'
+import death from './deathpie'
+import consume from './consumeline'
+import fundingbar from './fundingbar'
+import aircraft from './aircraftline'
 export default {
   data() {
     return {}
