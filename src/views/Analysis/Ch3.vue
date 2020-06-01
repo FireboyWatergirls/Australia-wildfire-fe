@@ -19,6 +19,10 @@
       <div class="pic">
         <Regionpie class="pie" />
       </div>
+      <div class="pic">
+        <aircraft class="line" />
+      </div>
+      <p>Observing the change of the number of flight in Australia, we can find that when it comes a fire, the number of flight will decline, and this change is really striking in the domesticated flight while the change of number is not really apparent in the international flight.</p>
     </div>
     <div class="content">
       <h2>2. Ongoing ecological & biodiversity impacts</h2>
@@ -114,7 +118,6 @@
 
 <script>
 import Spe from './Ch3/spe-gen'
-import Koala from './Ch3/koalamap'
 import Businesses from './Ch3/buspie'
 import Cpi from './Ch3/cpiline'
 import BurnArea from './Ch3/burnarea'
@@ -122,6 +125,7 @@ import Regionpie from './Ch3/regioncircle'
 import death from './Ch3/deathpie'
 import consume from './Ch3/consumeline'
 import fundingbar from './Ch3/fundingbar'
+import aircraft from './Ch3/aircraftline'
 export default {
   data() {
     return {}
@@ -129,13 +133,13 @@ export default {
   components: {
     Spe,
     BurnArea,
-    Koala,
     Businesses,
     Cpi,
     Regionpie,
     death,
     consume,
-    fundingbar
+    fundingbar,
+    aircraft
   }
 }
 </script>
