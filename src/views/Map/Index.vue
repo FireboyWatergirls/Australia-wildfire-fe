@@ -3,7 +3,6 @@
     <map-menu class="menu" @changeItem="changeMenu"></map-menu>
     <div id="map" v-show="menuKey !== '1'"></div>
     <key-events class="events-constainer" v-if="menuKey === '1'" />
-    <!-- <iframe src="/static/keyEvents/index.html" class="events-constainer" v-show="menuKey === '1'"></iframe> -->
     <layer class="layer" @changeBaseMap="changeBaseMap"></layer>
   </div>
 </template>
@@ -23,7 +22,7 @@ export default {
   },
   components: {
     MapMenu: Menu,
-    KeyEvents
+    KeyEvents,
     Layer
   },
   mounted() {
@@ -45,7 +44,8 @@ export default {
     mapClickEvent: function(e) {
       console.log('经纬度是', e.lngLat)
     },
-    changeBaseMap: function (styleUrl) {
+    changeBaseMap: function(styleUrl) {
+      this.styleUrl = styleUrl
       this.map.setStyle(styleUrl)
     },
     changeMenu: function(key) {
