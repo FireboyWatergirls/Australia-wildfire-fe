@@ -4,23 +4,25 @@
     <div id="map" v-show="menuKey !== '1'"></div>
     <key-events class="events-constainer" v-if="menuKey === '1'" />
     <!-- <iframe src="/static/keyEvents/index.html" class="events-constainer" v-show="menuKey === '1'"></iframe> -->
-    <!-- total impact
-    <div id="total-impact">
+    <!-- total impact-->
+    <div id="total-impact" v-if="menuKey === '3'" @mousewheel.prevent>
       <region-circle class="pie" />
       <fire class="themeriver" />
-    </div>-->
+      <regionmap class="health-map" />
+      <deathpie class="deathpie" />
+    </div>
     <!-- impact on society-->
-    <div id="society-impact">
+    <div id="society-impact" v-if="menuKey === '5'">
       <cpi class="line1" />
       <consume class="line2" />
       <aircraft class="line3" />
       <businesses class="pie-map" />
     </div>
     <!-- impact on natural-->
-    <!-- <div id="natural-impact">
-      <bio class="scatter-grid" />
+    <div id="natural-impact" v-if="menuKey === '4'">
+      <Bio class="scatter-grid" />
       <koala class="scatter-map" />
-    </div>-->
+    </div>
   </div>
 </template>
 
@@ -28,14 +30,16 @@
 import mapboxgl from 'mapbox-gl'
 import Menu from './Menu'
 import KeyEvents from './KeyEvents'
-import RegionCircle from './regioncircle'
-import Fire from './firethemeriver'
-import Cpi from './cpiline'
-import Consume from './consumeline'
-import Aircraft from './aircraftline'
-import Bio from './scattergrid'
-import Koala from './koalamap'
-import Businesses from './buspie'
+import RegionCircle from './total/regioncircle'
+import Fire from './total/firethemeriver'
+import Cpi from './society/cpiline'
+import Consume from './society/consumeline'
+import Aircraft from './society/aircraftline'
+import Bio from './bio/scattergrid'
+import Koala from './bio/koalamap'
+import Businesses from './society/buspie'
+import regionmap from './total/healthmap'
+import deathpie from './total/deathpie'
 
 export default {
   data() {
@@ -54,7 +58,9 @@ export default {
     Aircraft,
     Bio,
     Koala,
-    Businesses
+    Businesses,
+    regionmap,
+    deathpie
   },
   mounted() {
     this.initMap()
@@ -96,17 +102,24 @@ export default {
 .events-constainer {
   z-index: 10;
 }
-.pie {
-  position: fixed;
+.deathpie {
+  position: absolute;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  top: 14vh;
-  left: 68vw;
+  top: 66vh;
+  right: 1vw;
+  z-index: 50;
+}
+.pie {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  top: 10vh;
+  left: 69vw;
   z-index: 10;
 }
 .themeriver {
-  position: fixed;
+  position: absolute;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  top: 16vh;
+  top: 66vh;
   left: 1vw;
   z-index: 20;
 }
@@ -154,6 +167,13 @@ export default {
   z-index: 5;
 }
 .pie-map {
+  position: fixed;
+  top: 0vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+}
+.health-map {
   position: fixed;
   top: 0vh;
   width: 100vw;

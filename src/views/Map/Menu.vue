@@ -26,8 +26,8 @@
           <span>Bushfire Impact</span>
         </span>
         <a-menu-item key="3">Total Impact</a-menu-item>
-        <a-menu-item key="4">Impact on Protected Species</a-menu-item>
-        <a-menu-item key="5">Impact on the Economy</a-menu-item>
+        <a-menu-item key="4">Impact on Biodiversity</a-menu-item>
+        <a-menu-item key="5">Impact on the Society</a-menu-item>
       </a-sub-menu>
     </a-menu>
   </div>
