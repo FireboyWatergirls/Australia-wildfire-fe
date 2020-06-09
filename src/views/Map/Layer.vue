@@ -4,42 +4,27 @@
       <svg-icon svgClass="iconlayer"></svg-icon>
     </a-button>
     <div class="layer-container" v-if="!collapsed">
+
       <p><a-icon type="home"/> Basemap</p>
-      <!-- <a-radio style="color: white">Satellite Map</a-radio><br>
-      <a-radio style="color: white">Street View</a-radio><br>
-      <a-radio style="color: white">Dark</a-radio><br>
-      <a-radio style="color: white">Light</a-radio><br> -->
-      <a-dropdown>
-        <a-menu slot="overlay">
-          <a-menu-item v-for="(item,index) in mapInfo" :key="index" @click="changeMap(item.style)">{{item.title}}</a-menu-item>
-          <!-- <a-menu-item> Street View</a-menu-item>
-          <a-menu-item> Dark</a-menu-item>
-          <a-menu-item> Light</a-menu-item> -->
-        </a-menu>
-        <a-button style="margin-left: 16px"> Select <a-icon type="down" /> </a-button>
-      </a-dropdown>
-      <p style="margin-top: 16px"><a-icon type="setting" theme="filled" /> HotsPots</p>
-      <a-dropdown>
-        <a-menu slot="overlay">
-          <a-menu-item key="1"> <a-icon type="user" />1st menu item </a-menu-item>
-          <a-menu-item key="2"> <a-icon type="user" />2nd menu item </a-menu-item>
-          <a-menu-item key="3"> <a-icon type="user" />3rd item </a-menu-item>
-        </a-menu>
-        <a-button style="margin-left: 16px"> Select <a-icon type="down" /> </a-button>
-      </a-dropdown>
-      <p style="margin-top: 16px"><a-icon type="layout" theme="filled" /> Overlays</p>
-      <a-checkbox style="color: white" @change="changeMapPitch">3D Map
-      </a-checkbox><br>
-      <a-checkbox style="color: white">Land Classification Map
-      </a-checkbox><br>
-      <a-checkbox style="color: white">Climate Map
-      </a-checkbox>
+<a-select
+        show-search
+        option-filter-prop="children"
+        style="width: 200px"
+        :filter-option="filterOption"
+        default-value="mapbox://styles/mapbox/dark-v9"
+        @change="handleChange"
+      >
+      <a-select-option v-for="(item,index) in mapInfo" :key="`mapInfo-${index}`" :value="item.style">{{item.title}}</a-select-option>
+    </a-select>
+      <p style="margin-top: 16px"><a-icon type="setting" /> HotsPots</p>
+      <a-checkbox v-for="(item, index) in hotsPots" :key="`hotspots-${index}`" style="color: white">{{item.title}}</a-checkbox>
+      <p style="margin-top: 16px"><a-icon type="layout" /> Overlays</p>
+      <a-checkbox v-for="(item, index) in overlays" :key="`overlays-${index}`" style="color: white;margin-left:0">{{item.title}}</a-checkbox>
     </div>
   </div>
 </template>
 
 <script>
-import {Button, Checkbox, Dropdown, Icon, Radio} from 'ant-design-vue'
 import SvgIcon from '@/components/SvgIcon'
 
 export default {
@@ -57,16 +42,30 @@ export default {
         {title: 'navigation-preview-night', style: 'mapbox://styles/mapbox/navigation-preview-night-v2'},
         {title: 'navigation-guidance-day', style: 'mapbox://styles/mapbox/navigation-guidance-day-v2'},
         {title: 'navigation-guidance-night', style: 'mapbox://styles/mapbox/navigation-guidance-night-v2'}
+      ],
+      hotsPots: [
+        {
+          title: 'VIIRS'
+        },
+        {
+          title: 'MODIS'
+        }
+      ],
+      overlays: [
+        {
+          title: '3D Map'
+        },
+        {
+          title: 'Land Classification Map'
+        },
+        {
+          title: 'Climate Map'
+        }
       ]
     }
   },
   components: {
-    SvgIcon,
-    AButton: Button,
-    ACheckbox: Checkbox,
-    ADropdown: Dropdown,
-    AIcon: Icon,
-    ARadio: Radio
+    SvgIcon
   },
 
   methods: {
@@ -77,16 +76,13 @@ export default {
       let pitch = this.$store.state.pitch
       this.$store.commit('changeMapItem', {style, pitch})
     },
-    changeMapPitch (e) {
-      let style = this.$store.state.style
-      let pitch
-      if (e.target.checked) {
-        pitch = 45
-        this.$store.commit('changeMapItem', {style, pitch})
-      } else {
-        pitch = 0
-        this.$store.commit('changeMapItem', {style, pitch})
-      }
+    handleChange (value) {
+      this.$emit('changeBaseMap', value)
+    },
+    filterOption (input, option) {
+      return (
+        option.componentOptions.children[0].text.toLowerCase().indexOf(input.toLowerCase()) >= 0
+      )
     }
   }
 }

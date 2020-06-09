@@ -4,7 +4,7 @@
     <div id="map" v-show="menuKey !== '1'"></div>
     <key-events class="events-constainer" v-if="menuKey === '1'" />
     <!-- <iframe src="/static/keyEvents/index.html" class="events-constainer" v-show="menuKey === '1'"></iframe> -->
-    <layer class="layer"></layer>
+    <layer class="layer" @changeBaseMap="changeBaseMap"></layer>
   </div>
 </template>
 
@@ -33,11 +33,10 @@ export default {
     initMap: function() {
       this.map = new mapboxgl.Map({
         container: 'map',
-        style: style,
-        // style: 'mapbox://styles/mapbox/satellite-v9',
+        style: 'mapbox://styles/mapbox/dark-v10',
         center: [133.65921899005053, -26.031180863929407],
         zoom: 3,
-        pitch: pitch
+        pitch: 0
       })
       this.nav = new mapboxgl.NavigationControl()
       this.map.addControl(this.nav)
@@ -45,6 +44,9 @@ export default {
     },
     mapClickEvent: function(e) {
       console.log('经纬度是', e.lngLat)
+    },
+    changeBaseMap: function (styleUrl) {
+      this.map.setStyle(styleUrl)
     },
     changeMenu: function(key) {
       this.menuKey = key

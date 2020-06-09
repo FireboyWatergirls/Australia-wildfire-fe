@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { Menu, Button, Icon } from 'ant-design-vue'
+import { Menu } from 'ant-design-vue'
 
 export default {
   data() {
@@ -45,9 +45,7 @@ export default {
   components: {
     AMenu: Menu,
     AMenuItem: Menu.Item,
-    ASubMenu: Menu.SubMenu,
-    AButton: Button,
-    AIcon: Icon
+    ASubMenu: Menu.SubMenu
   },
   methods: {
     toggleCollapsed() {

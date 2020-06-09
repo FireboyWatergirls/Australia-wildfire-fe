@@ -6,10 +6,9 @@ import App from './App'
 import router from './router'
 import echarts from 'echarts'
 import store from './store'
+import './antd'
 import './styles/index.scss'
-import Menu from 'ant-design-vue/lib/Menu'
-import 'ant-design-vue/lib/menu/style'
-Vue.use(Menu)
+
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts
 
