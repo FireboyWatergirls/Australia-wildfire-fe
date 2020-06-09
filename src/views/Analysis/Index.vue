@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import { Dropdown, Menu, Icon } from 'ant-design-vue'
 export default {
   data() {
     return {
@@ -56,12 +55,6 @@ export default {
         }
       ]
     }
-  },
-  components: {
-    ADropdown: Dropdown,
-    AMenu: Menu,
-    AMenuItem: Menu.Item,
-    AIcon: Icon
   },
   methods: {
     changeChapter({ key }) {

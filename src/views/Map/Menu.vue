@@ -34,20 +34,11 @@
 </template>
 
 <script>
-import { Menu, Button, Icon } from 'ant-design-vue'
-
 export default {
   data() {
     return {
       collapsed: false
     }
-  },
-  components: {
-    AMenu: Menu,
-    AMenuItem: Menu.Item,
-    ASubMenu: Menu.SubMenu,
-    AButton: Button,
-    AIcon: Icon
   },
   methods: {
     toggleCollapsed() {

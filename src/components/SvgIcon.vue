@@ -17,13 +17,9 @@ export default {
       type: String,
       required: true
     }
-  },
-  computed: {
-
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
 </style>
