@@ -111,7 +111,7 @@ export default {
 #koala {
   width: 1000px;
   height: 700px;
-  margin: 0 auto;
+  // margin: 0 auto;
   padding-bottom: 20px;
 }
 #count {

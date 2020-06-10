@@ -16,6 +16,10 @@
     <div class="Introduction2">
       <p>But the recent situation is very different. In September 2019, Queensland and New South Wales on the east coast ushered in thousands of bushfires early-in previous years, the fire could not reach this scale until November. In November, satellite images showed that the mountain fire had completely enclosed Sydney and gradually spread to the south. From July 1, 2019 to January 8, 2020, 4.9 million hectares of land in New South Wales are or have been burning. It's only half a summer now, but it has far exceeded the state's average burning area in the past 50 years-2.8 million hectares. The rapid expansion of the burning area has made people realize that mountain fires are no longer just staying in forests and grasslands as they were in previous years.</p>
       <p>Australia has wildfires every year. Why is it out of control this year?</p>
+      <p>Let's watch a video about this wildfire in Australia.</p>
+    </div>
+    <div class="movie">
+      <iframe src="//player.bilibili.com/player.html?aid=82537985&bvid=BV18J41157b5&cid=141221520&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" width="800" height="600" allowfullscreen="true"> </iframe>
     </div>
     <div class="human">
       <h2>Human Factors</h2>
@@ -51,6 +55,8 @@
       <p>More intense, more frequent, and longer-lasting forest fire seasons lasting for months seem to be the new normal. We cannot treat this as an accident, it always attracts our attention.</p>
       <p>Karl Braganza said that particularly dry and hot weather in 2019 cannot be considered an accident. Australia's extremely high temperature is five times that of the mid-20th century. People have to pay for this climate change!</p>
     </div>
+    <div class="link1"><router-link to="/analysis/ch1"><p3>←1. What are the causes of Australian brushfires?</p3></router-link></div>
+    <div class="link2"><router-link to="/analysis/ch3"><p3>3. What are the impacts of the Australia bushfire?→</p3></router-link></div>
   </div>
 </template>
 
@@ -422,6 +428,35 @@ p {
   z-index: 3;
   height: 600px;
   width: 1000px;
+  // padding: 30px 30px 30px 30px;
+}
+p3 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 300;
+  color:#FF6633;
+  font-family:"Trebuchet MS"
+}
+.link1{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 0 0 0 100px;
+  float: left;
+}
+.link2{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 0 100px 0 0;
+  float: right;
+}
+.movie{
+    position: relative;
+  // margin-top: 30px;
+  // margin-right: 30px;
+  margin: 0 auto;
+  // z-index: 3;
+  height: 600px;
+  width: 800px;
   // padding: 30px 30px 30px 30px;
 }
 </style>

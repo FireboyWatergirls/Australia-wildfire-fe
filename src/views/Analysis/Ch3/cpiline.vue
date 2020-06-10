@@ -176,6 +176,6 @@ export default {
 #cpi {
   width: 1000px;
   height: 400px;
-  left: 200px;
+  // left: 200px;
 }
 </style>

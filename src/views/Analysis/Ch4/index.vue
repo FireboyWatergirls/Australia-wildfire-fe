@@ -57,10 +57,19 @@
       <p><strong>2°C consistent: </strong>there are a range of emissions pathways that would be compatible with limiting average warming to 2°C by 2100. This would require a significant increase in ambition of the current pledges within the Paris Agreement.</p>
       <p><strong>1.5°C consistent: </strong>there are a range of emissions pathways that would be compatible with limiting average warming to 1.5°C by 2100. However, all would require a very urgent and rapid reduction in global greenhouse gas emissions.</p>
     </div>
+    <div class="video">
+      <h2>Video</h2>
+      <p>In the past 25 years, people have seen many different claims competing with each other. In addition to voices from the scientific and public policy communities, companies and NGOs have also issued claims about the causes and consequences of climate change.  Every initiator is a part of collective citizenship, and is thinking hard about climate change issues and possible solutions.  Climate science, politics and strategy and their related value and ethics issues can and should be discussed in public spaces sincerely and actively.  Science proves that our pace needs to be more solid and rapid, so as to avoid the most likely impact of climate change, and finally get a sustainable future.</p>
+    </div>
+    <div class="movie">
+      <iframe src="//player.bilibili.com/player.html?aid=42364746&bvid=BV16b411k79B&cid=74351744&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" width="800" height="600" allowfullscreen="true"> </iframe>
+    </div>
     <div class="Conclusion">
       <h2>Conclusion</h2>
       <p>Needless to say, global temperatures are getting warmer, air quality is getting worse, glaciers are melting, and sea levels are rising. Mankind needs to develop science, technology and economy under the condition of protecting nature in order to achieve truly sustainable development.  Humanity needs to unite and fight for the protection of our planet.</p>
     </div>
+    <div class="link1"><router-link to="/analysis/ch3"><p3>←3. What are the impacts of the Australia bushfire?</p3></router-link></div>
+    <div class="link2"><router-link to="/analysis"><p3>Analysis→</p3></router-link></div>
   </div>
 </template>
 
@@ -892,7 +901,8 @@ p {
 .Temperature1,
 .Temperature2,
 .future1,
-.future2 {
+.future2,
+.video {
   margin-top: 10px;
   z-index: 3;
   width: 100%;
@@ -904,8 +914,8 @@ p {
 .pic6,
 .pic7,
 .pic8,
-.pic9,
-.pic10 {
+.pic9
+{
   position: relative;
   // margin-top: 30px;
   // margin-right: 30px;
@@ -913,6 +923,26 @@ p {
   z-index: 3;
   height: 600px;
   width: 1000px;
+  // padding: 30px 30px 30px 30px;
+}
+.pic10{
+  position: relative;
+  // margin-top: 30px;
+  // margin-right: 30px;
+  margin: 0 auto;
+  // z-index: 3;
+  height: 500px;
+  width: 750px;
+  // padding: 30px 30px 30px 30px;
+}
+.movie{
+    position: relative;
+  // margin-top: 30px;
+  // margin-right: 30px;
+  margin: 0 auto;
+  // z-index: 3;
+  height: 600px;
+  width: 800px;
   // padding: 30px 30px 30px 30px;
 }
 img{
@@ -923,5 +953,24 @@ img{
   z-index: 3;
   height: 500px;
   width: 750px;
+}
+p3 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 300;
+  color:#FF6633;
+  font-family:"Trebuchet MS"
+}
+.link1{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 0 0 0 100px;
+  float: left;
+}
+.link2{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 0 100px 0 0;
+  float: right;
 }
 </style>

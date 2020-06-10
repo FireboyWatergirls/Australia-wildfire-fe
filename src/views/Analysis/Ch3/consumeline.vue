@@ -124,6 +124,7 @@ export default {
 #consume-line {
   width: 800px;
   height: 400px;
-  left: 280px;
+  // left: 280px;
+  margin: 0 auto;
 }
 </style>

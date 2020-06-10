@@ -320,7 +320,7 @@ export default {
 
 <style lang="scss" scoped>
 #spe {
-  width: 1250px;
+  width: 1000px;
   height: 800px;
 }
 </style>

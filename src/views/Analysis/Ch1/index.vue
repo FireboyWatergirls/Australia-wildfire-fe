@@ -104,6 +104,8 @@
         <p>In relation to fire ignition, there is some indication that climate change could influence the risk of ignitions from dry-lightning (i.e., lightning that occurs without significant rainfall) while noting relatively large uncertainties in currently available model representations of this phenomenon. Additionally, there has recently been a number of devastating fire events in Australia associated with extreme pyroconvection (including thunderstorm development in a fire plume), with recent research indicating a long-term trend towards increased risk factors associated with pyroconvection in southeast Australia. Bushfire weather conditions in future years are projected to increase in severity for many regions of Australasia, including due to more extreme heat events, with the rate and magnitude of change increasing with greenhouse gas concentrations (and emissions).</p>
       </div>
     </div>
+    <div class="link1"><router-link to="/analysis"><p3>←Analysis</p3></router-link></div>
+    <div class="link2"><router-link to="/analysis/ch2"><p3>2. Why is there a violent wildfire this time?→</p3></router-link></div>
   </div>
 </template>
 
@@ -158,5 +160,24 @@ p2 {
   line-height: 30px;
   font-weight: 300;
   color: #3399CC;
+}
+p3 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 300;
+  color:#FF6633;
+  font-family:"Trebuchet MS"
+}
+.link1{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 0 0 0 100px;
+  float: left;
+}
+.link2{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 0 100px 0 0;
+  float: right;
 }
 </style>
