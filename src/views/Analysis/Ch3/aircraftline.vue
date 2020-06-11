@@ -190,7 +190,7 @@ export default {
 
 <style lang="scss" scoped>
 #aircraft-line {
-  width: 1300px;
+  width: 1000px;
   height: 700px;
 }
 </style>

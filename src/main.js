@@ -7,6 +7,13 @@ import router from './router'
 import echarts from 'echarts'
 import './antd'
 import './styles/index.scss'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+router.afterEach((to, from, next) => {
+  window.scrollTo(0, 0)
+})
 
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts

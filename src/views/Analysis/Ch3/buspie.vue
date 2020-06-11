@@ -2,9 +2,9 @@
   <div>
     <div id="businesses"></div>
     <div id="count">
-      <font color="#b22222">
+      <!-- <font color="#b22222">
         <strong>26%</strong>
-      </font>
+      </font> -->
     </div>
     <div id="text">
       <font color="#fff">
@@ -113,7 +113,7 @@ export default {
 #businesses {
   width: 1000px;
   height: 700px;
-  margin: 0 auto;
+  // margin: 0 auto;
   padding-bottom: 20px;
 }
 #count {

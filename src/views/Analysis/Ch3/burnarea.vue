@@ -79,7 +79,7 @@ export default {
 
 <style lang="scss" scoped>
 #burnarea {
-  width: 1200px;
+  width: 1000px;
   height: 500px;
 }
 </style>

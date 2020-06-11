@@ -36,22 +36,22 @@ export default {
         {
           name: 'ch1',
           text: '1. What are the causes of Australian brushfires?',
-          img: '/static/img/fire.jpg'
+          img: '/static/img/fire01.png'
         },
         {
           name: 'ch2',
           text: '2.Why is there a violent wildfire this time?',
-          img: '/static/img/fire1.jpg'
+          img: '/static/img/fire02.png'
         },
         {
           name: 'ch3',
           text: '3.What are the impacts of the Australia bushfire?',
-          img: '/static/img/fire1.jpg'
+          img: '/static/img/fire03.png'
         },
         {
           name: 'ch4',
           text: '4.Lessons from environmental problems',
-          img: '/static/img/fire.jpg'
+          img: '/static/img/fire04.png'
         }
       ]
     }
