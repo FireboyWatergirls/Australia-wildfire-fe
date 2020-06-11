@@ -1,8 +1,9 @@
-@import './var.scss';
-@import './mapbox.scss';
-@import url('https://api.tiles.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css');
+@import "./var.scss";
+@import "./mapbox.scss";
+@import url("https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css");
 
-html, body {
+html,
+body {
   margin: 0;
 }
 
@@ -10,10 +11,10 @@ html, body {
 //   box-sizing: border-box;
 // }
 
-// ::-webkit-scrollbar {
-// 	width: 5px;
-// 	height: 5px;
-// }
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
 
 // .vue-slider-dot {
 //   top: -460% !important;

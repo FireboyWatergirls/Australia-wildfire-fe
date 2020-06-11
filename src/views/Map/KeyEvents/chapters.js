@@ -1,69 +1,82 @@
 var chapters = [
   {
-    id: 'phl',
-    title: 'Philadelphia Bicycle Infrastructure',
-    image: '',
-    description: 'Getting around Philadelphia on two wheels is fast, fun, and cheap. As a typical East Coast large city, the urban core is dense, so there is a lot within reach of a 15 minute ride... even mountain bike trails. Paired with the public transit infrastructure, cycling can be more efficient and much less expensive than driving (and parking) a car.',
+    id: '1',
+    title: '2019-2020 Australian Bushfires',
+    image: '/static/keyEvents/1.jpg',
+    description: 'The fires created unprecedented damage, destroying more than 14 million acres of land and killing more than 20 people and an estimated 1 billion animals. Scroll to see where the fires started and how it spread.',
     location: {
-      center: [-75.13080, 39.97790],
-      zoom: 9.83,
+      center: [148.194, -27.085],
+      zoom: 3.15,
+      pitch: 0.00,
+      bearing: 0.00
+    },
+    onChapterEnter: [],
+    onChapterExit: []
+  },
+  {
+    id: '2',
+    title: 'The fires sparked in September 2019, but the story really began back in 2017. ',
+    image: '',
+    description: `Droughts plagued Australia in 2017 and 2018. 
+    The prolonged drought made this 2019's bushfire season more devastating than ever.
+    On the left, there is a Nine-monthly rainfall deficiency map for Australia(1 January to 30 September 2019)`,
+    location: {
+      center: [148.194, -27.085],
+      zoom: 3.15,
       pitch: 0.00,
       bearing: 0.00
     },
     onChapterEnter: [
       {
-        layer: 'phl-city-limits',
-        opacity: 0.45
+        layer: 'drought',
+        opacity: 0.85
+      },
+      {
+        layer: 'legend',
+        opacity: 1
+      },
+      {
+        layer: 'admin_level_3',
+        opacity: 0
+      },
+      {
+        layer: 'state-label',
+        opacity: 0
       }
     ],
     onChapterExit: [
       {
-        layer: 'phl-city-limits',
+        layer: 'drought',
         opacity: 0
+      },
+      {
+        layer: 'legend',
+        opacity: 0
+      },
+      {
+        layer: 'admin_level_3',
+        opacity: 1
+      },
+      {
+        layer: 'state-label',
+        opacity: 1
       }
     ]
   },
   {
-    id: 'bike-lanes',
-    title: 'Bike Lanes',
-    image: '',
-    description: 'Philadelphia has XX miles of bike lanes, XX miles of which are protected. Drivers are getting more used to sharing the road, but ride defensively.',
-    location: {
-      center: [-75.13901, 39.97085],
-      zoom: 11.62,
-      pitch: 55.50,
-      bearing: -7.20
-    },
-    onChapterEnter: [
-      {
-        layer: 'phl-bike-network',
-        opacity: 1
-      }
-    ],
-    onChapterExit: []
-  },
-  {
-    id: 'indego',
+    id: '3',
     title: 'Indego Bike Share',
     image: '',
     description: 'Indego has been operating in Philadelphia since 20XX. The system initally was focused on Center City, but has expanded service to neighboring areas to support equitable mobility options to the city\'s residents.',
     location: {
-      center: [-75.16468, 39.94503],
-      zoom: 13.15,
-      pitch: 60.00,
-      bearing: -16.80
+      center: [152.029, -29.049],
+      zoom: 14.02,
+      pitch: 0.00,
+      bearing: 0.00
     },
     onChapterEnter: [
-      {
-        layer: 'indego-stations',
-        opacity: 0.8
-      }
     ],
     onChapterExit: [
-      {
-        layer: 'indego-stations',
-        opacity: 0
-      }
     ]
   },
   {

@@ -10,7 +10,7 @@
           :class="id === currentChapter.id ? 'step active' : 'step'"
         >
           <div>
-            <h3 v-if="title">{{title}}</h3>
+            <h2 v-if="title">{{title}}</h2>
             <img v-if="image" :src="image" :alt="title" />
             <p v-if="description">{{description}}</p>
           </div>
@@ -46,7 +46,8 @@ export default {
     const mapStart = chapters[0].location
     this.map = new mapboxgl.Map({
       container: 'events-map',
-      style: 'mapbox://styles/branigan/cjzsvonse027m1co4nkxp13b3',
+      // style: 'mapbox://styles/lsq210/ck9o2qmg61dg81immkmhp3447',
+      style: 'mapbox://styles/lsq210/cjez8jrv223982rqmek99dpyv',
       center: mapStart.center,
       zoom: mapStart.zoom,
       pitch: mapStart.pitch,
@@ -54,6 +55,44 @@ export default {
     })
     const scroller = scrollama()
     this.map.on('load', () => {
+      this.map.addSource('drought', {
+        type: 'image',
+        url: '/static/keyEvents/drought.png',
+        coordinates: [
+          [112.0017200095238, -9.0215050810581],
+          [154.20408122188142, -9.0215050810581],
+          [158.30408122188142, -44.857360778549376],
+          [109.8017200095238, -43.917360778549376]
+        ]
+      })
+      this.map.addSource('legend', {
+        type: 'image',
+        url: '/static/keyEvents/legend.png',
+        coordinates: [
+          [118.85, -36.45],
+          [132.95, -36.45],
+          [132.95, -43.23],
+          [118.85, -43.23]
+        ]
+      })
+      this.map.addLayer(
+        {
+          id: 'drought',
+          source: 'drought',
+          type: 'raster',
+          paint: { 'raster-opacity': 0 }
+        },
+        'admin_level_3'
+      )
+      this.map.addLayer({
+        id: 'legend',
+        source: 'legend',
+        type: 'raster',
+        paint: { 'raster-opacity': 0 }
+      })
+      console.log(this.map.getLayer('drought'))
+      console.log(this.map.getLayer('legend'))
+      console.log(this.map.getLayer('place-label'))
       // setup the instance, pass callback functions
       scroller
         .setup({
@@ -93,6 +132,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '@/styles/var.scss';
 #events-map {
   height: 100vh;
   width: 100vw;
@@ -110,21 +150,30 @@ export default {
   opacity: 0.25;
 }
 .step.active {
-  opacity: 0.9;
+  opacity: 0.99;
 }
 .step div {
   padding: 25px 50px;
   line-height: 25px;
   font-size: 13px;
-  color: #fafafa;
-  background-color: #444;
+  // color: #fafafa;
+  // background-color: $bg-color1;
+  color: #444;
+  background-color: #fafafa;
+  font-size: initial;
 }
-h3 {
-  color: #fafafa;
-  background-color: #444;
+h2 {
+  // color: #fafafa;
+  // background-color: $bg-color1;
+  color: #444;
+  background-color: #fafafa;
+  font-family: 'Charter BT', serif;
+  font-size: x-large;
+  line-height: 1.3;
 }
 .step img {
   width: 100%;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 750px) {
