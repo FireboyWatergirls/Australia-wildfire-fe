@@ -14,8 +14,8 @@
     </div>
     <div class="timeline" v-if="timeLineState">
       <div class="icons-list">
-        <a-icon type="play-circle" theme="twoTone" style="margin-right:15px" @click="Play()"/>
-        <a-icon type="pause-circle" theme="twoTone" @click="Pause()"/>
+        <a-icon v-if="!intervalState" type="play-circle" theme="twoTone" style="margin-right:15px" @click="Play()"/>
+        <a-icon v-if="intervalState" type="pause-circle" theme="twoTone" @click="Pause()"/>
       </div>
       <div class="slider">
       <vue-slider
@@ -46,7 +46,6 @@ import ImpactTotal from './Impact/total'
 import ImpactSociety from './Impact/society'
 import ImpactBio from './Impact/bio'
 import VueSlider from 'vue-slider-component'
-import 'vue-slider-component/theme/fire.css'
 const mapboxToken = 'pk.eyJ1IjoibHNxMjEwIiwiYSI6ImNqZXd6NzVyYzB6b24ydnBzOWFhZ3FpNTQifQ.y4iy69PepyhrkJ98qjzykg'
 
 export default {
@@ -71,10 +70,12 @@ export default {
   mounted() {
     this.initMap()
     this.initDate()
+    console.log('suibiandaying')
   },
   computed: {
     timeLineState () {
       if (this.$store.state.funName === 'timeLine') {
+        console.log('qisiwole')
         return true
       } else {
         console.log('0')
@@ -439,61 +440,39 @@ export default {
       }
     },
     Play: function () {
-    // 关闭已打开火点图
-      var i
       var layerPoint, layerHeat, preLayerHeat, preLayerPoint
-      var layers = this.map.getStyle().layers
-      for (i = 0; i < layers.length; i++) {
-        if (layers[i].id.indexOf('fire') > -1) {
-          this.map.setLayoutProperty(layers[i].id, 'visibility', 'none')
-        }
-      }
-
-      // 判断是否已经开始播放
       if (this.intervalState) {
         clearInterval(this.interval)
       }
-      // 获取开始日期
-      var index = this.date.indexOf(this.value[0])
-      console.log(index)
-      if (index === 0) {
-        // 从头开始播放
-        this.value = [this.date[0], '2020-2-28']
-        layerHeat = 'fireMap' + this.date[0]
-        layerPoint = 'firePoint' + this.date[0]
-        this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
-        this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
-        i = 0
-        setTimeout(() => {
-          console.log(i)
-        }, 3000)
-      } else {
-        // 从设置日期开始播放
-        i = index
-        console.log(index)
+      var startIndex = this.date.indexOf(this.value[0])
+      var endIndex = this.date.indexOf(this.value[1])
+      if (endIndex === this.date.length - 1) {
+        return
       }
       this.intervalState = true
       this.interval = setInterval(() => {
         console.log('loop')
-        this.value = [this.date[i], '2020-2-28']
-        layerHeat = 'fireMap' + this.date[i]
-        layerPoint = 'firePoint' + this.date[i]
-        preLayerHeat = 'fireMap' + this.date[i - 1]
-        preLayerPoint = 'firePoint' + this.date[i - 1]
+        layerHeat = 'fireMap' + this.date[endIndex + 1]
+        layerPoint = 'firePoint' + this.date[endIndex + 1]
+        preLayerHeat = 'fireMap' + this.date[startIndex]
+        preLayerPoint = 'firePoint' + this.date[startIndex]
         this.map.setLayoutProperty(preLayerPoint, 'visibility', 'none')
         this.map.setLayoutProperty(preLayerHeat, 'visibility', 'none')
         this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
         this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
-        i++
-        console.log(i)
-        if (i >= this.date.length) {
+        startIndex++
+        endIndex++
+        this.value = [this.date[startIndex], this.date[endIndex]]
+        console.log(startIndex)
+        if (endIndex >= this.date.length) {
           clearInterval(this.interval)
         }
-      }, 1000)
+      }, 2000)
     },
     Pause: function () {
       // 停止播放
       clearInterval(this.interval)
+      this.intervalState = false
       console.log(this.value)
     }
   }
@@ -521,9 +500,10 @@ export default {
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 .timeline {
-  padding-top: 800px;
+  position: absolute;
+  bottom: 30px;
   width: 100%;
-  margin-left:100px;
+  left:100px;
   .slider{
     width:80%;
     float:left;
