@@ -3,7 +3,15 @@
     <map-menu class="menu" @changeItem="changeMenu"></map-menu>
     <div id="map" v-show="menuKey !== '1'"></div>
     <key-events class="events-constainer" v-if="menuKey === '1'" />
-    <!-- <iframe src="/static/keyEvents/index.html" class="events-constainer" v-show="menuKey === '1'"></iframe> -->
+    <div id="total-impact" v-if="menuKey === '3'" @mousewheel.prevent>
+      <impact-total></impact-total>
+    </div>
+    <div id="society-impact" v-if="menuKey === '5'">
+      <impact-society></impact-society>
+    </div>
+    <div id="natural-impact" v-if="menuKey === '4'">
+      <impact-bio></impact-bio>
+    </div>
   </div>
 </template>
 
@@ -11,6 +19,9 @@
 import mapboxgl from 'mapbox-gl'
 import Menu from './Menu'
 import KeyEvents from './KeyEvents'
+import ImpactTotal from './Impact/total'
+import ImpactSociety from './Impact/society'
+import ImpactBio from './Impact/bio'
 
 export default {
   data() {
@@ -21,7 +32,10 @@ export default {
   },
   components: {
     MapMenu: Menu,
-    KeyEvents
+    KeyEvents,
+    ImpactTotal,
+    ImpactSociety,
+    ImpactBio
   },
   mounted() {
     this.initMap()

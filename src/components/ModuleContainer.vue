@@ -7,10 +7,12 @@
       </div>
       <slot></slot>
     </div>
-    <div class="modulebox-hidden"
+    <div
+      class="modulebox-hidden"
       v-bind:class="moduleName"
       v-if="!isShow"
-      v-on:click="this.changeShowTag">
+      v-on:click="this.changeShowTag"
+    >
       <span>{{moduleName}}</span>
     </div>
   </div>
@@ -18,7 +20,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       isShow: false
     }
@@ -29,7 +31,7 @@ export default {
     }
   },
   methods: {
-    changeShowTag: function () {
+    changeShowTag: function() {
       this.isShow = !this.isShow
     }
   }
@@ -47,8 +49,8 @@ export default {
   border: 1px solid #7a7e84;
   color: #fff;
   .module-title {
-    text-shadow: 1px 1px 2px rgba(0,0,0,.8);
-    background: rgba(100,191,255,.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    background: rgba(149, 147, 146, 0.3);
     text-align: left;
     color: #fff;
     margin: 0 10px 4px 0;
@@ -57,16 +59,17 @@ export default {
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
-    border-left: 5px solid #64bfff;
+    border-left: 5px solid $theme-color;
     vertical-align: middle;
     &:before {
       position: absolute;
       right: -10px;
       bottom: 0;
-      content: "";
-      border-bottom: 5px solid rgba(100,191,255,.3);
-      border-right: 5px solid rgba(100,191,255,.3);
-      border-color: rgba(100,191,255,.3) transparent transparent rgba(100,191,255,.3);
+      content: '';
+      border-bottom: 5px solid rgba(149, 147, 146, 0.3);
+      border-right: 5px solid rgba(149, 147, 146, 0.3);
+      border-color: rgba(149, 147, 146, 0.3) transparent transparent
+        rgba(149, 147, 146, 0.3);
       border-style: solid;
       border-width: 5px;
       width: 0;
@@ -78,8 +81,8 @@ export default {
       right: -10px;
       bottom: 10px;
       top: 0;
-      content: "";
-      background: rgba(100,191,255,.3);
+      content: '';
+      background: rgba(149, 147, 146, 0.3);
       width: 10px;
       pointer-events: none;
     }
@@ -93,28 +96,35 @@ export default {
 }
 .modulebox-hidden {
   pointer-events: all;
-  border: 1px solid rgb(116, 116, 116);
+  border: 1px solid #fff;
   background: $bg-color1;
   padding: 5px;
-  width: 56px;
+  width: 66px;
   cursor: pointer;
   font-size: 14px;
   box-sizing: border-box;
   line-height: 18px;
   z-index: 1000;
   color: #fff;
+  border-radius: 4px;
   &:hover {
-    border: 1px solid #7a7e84;
-    background: rgba(158, 187, 224, 0.3);
+    border: 1px solid $theme-color;
+    color: $theme-color;
   }
 }
-.layer {
-  position: absolute;
-  margin: 62px 10px;
+.cpi {
+  position: relative;
+  margin-top: 10px;
+  float: right;
 }
-.impact {
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
+.consume {
+  position: relative;
+  margin-top: 10px;
+  float: right;
+}
+.aircraft {
+  position: relative;
+  margin-top: 10px;
+  float: right;
 }
 </style>
