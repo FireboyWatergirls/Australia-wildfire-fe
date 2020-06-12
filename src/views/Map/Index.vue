@@ -37,6 +37,7 @@ export default {
       this.nav = new mapboxgl.NavigationControl()
       this.map.addControl(this.nav)
       this.map.on('click', this.mapClickEvent)
+      this.map.on('load', function() {})
     },
     mapClickEvent: function(e) {
       console.log('经纬度是', e.lngLat)

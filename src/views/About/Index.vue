@@ -267,7 +267,7 @@ export default {}
   border: 3px solid #333;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 3vh;
+  margin-top: 10%;
 }
 .avatardown {
   position: relative;
@@ -276,31 +276,31 @@ export default {}
   border: 3px solid #333;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 6vh;
+  margin-top: 20%;
 }
 .icon1 {
   font-size: 50px;
   text-align: center;
   z-index: inherit;
-  margin-top: 10vh;
+  margin-top: 20%;
 }
 .icon2 {
   font-size: 50px;
   text-align: center;
   z-index: inherit;
-  margin-top: 10vh;
+  margin-top: 30%;
 }
 .selfIntro1 {
   width: 90%;
   height: 50%;
   margin-left: 5%;
-  margin-top: 1vh;
+  margin-top: 5%;
 }
 .selfIntro2 {
   width: 90%;
   height: 22%;
   margin-left: 5%;
-  margin-top: 26vh;
+  margin-top: 90%;
 }
 #border-lsq {
   float: left;
