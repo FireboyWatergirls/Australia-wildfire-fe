@@ -16,7 +16,7 @@
       <span>{{catalog.filter(item => item.name === $route.name)[0].text}}</span>
       <a-dropdown>
         <a class="ant-dropdown-link" @click="e => e.preventDefault()">
-          阅读其他章节
+          Read other chapters
           <a-icon type="down" />
         </a>
         <a-menu slot="overlay" @click="changeChapter">
@@ -140,5 +140,6 @@ export default {
   padding: 0 40px;
   line-height: 48px;
   border-bottom: 1px solid rgba($theme-color, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 </style>
