@@ -57,7 +57,7 @@ export default {
       this.map = new mapboxgl.Map({
         container: 'koala',
         style: 'mapbox://styles/mapbox/dark-v10',
-        center: [152.8, -27.67],
+        center: [142, -27.67],
         zoom: 3
       })
       this.map.on('load', () => {
