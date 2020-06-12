@@ -7,9 +7,10 @@
       :default-selected-keys="['2']"
       :default-open-keys="['sub1']"
       mode="inline"
-      theme="dark"
+      :theme="theme"
       :inline-collapsed="collapsed"
       class="map-menu"
+      :class="this.theme === 'dark' ? 'dark' : ''"
       @click="changeItem"
     >
       <a-menu-item key="1">
@@ -37,7 +38,8 @@
 export default {
   data() {
     return {
-      collapsed: false
+      collapsed: false,
+      theme: 'dark'
     }
   },
   methods: {
@@ -46,6 +48,11 @@ export default {
     },
     changeItem(e) {
       this.$emit('changeItem', e.key)
+      if (e.key === '1') {
+        this.theme = 'light'
+      } else {
+        this.theme = 'dark'
+      }
     }
   }
 }
@@ -54,7 +61,9 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/var.scss';
 .map-menu {
-  background-color: $bg-color1;
   border: 1px solid rgba(#eee, 0.1);
+}
+.dark {
+  background-color: $bg-color1;
 }
 </style>
