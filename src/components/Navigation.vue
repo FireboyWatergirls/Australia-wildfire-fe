@@ -14,9 +14,9 @@
         <span class="text">{{ item.text }}</span>
       </div>
     </div>
-    <div class="navbar-foot">
+    <a class="navbar-foot" href="https://github.com/FireboyWatergirls/Australia-wildfire-fe">
       <svg-icon svgClass="icongit" />
-    </div>
+    </a>
   </div>
 </template>
 
@@ -71,12 +71,13 @@ export default {
   }
 }
 .navbar-foot {
+  color: #fff;
   padding: 16px;
   position: absolute;
   right: 0;
   cursor: pointer;
   &:hover {
-    background-color: rgba(158, 187, 224, 0.3);
+    background-color: rgba(#ffffffab, 0.1);
   }
 }
 </style>
