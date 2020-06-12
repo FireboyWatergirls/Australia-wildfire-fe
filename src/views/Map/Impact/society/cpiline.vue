@@ -19,6 +19,12 @@ export default {
     drawLineChart(id) {
       let myChart = this.$echarts.init(document.getElementById(id))
       myChart.setOption({
+        grid: {
+          x: 35,
+          y: 45,
+          x2: 45,
+          y2: 25
+        },
         textStyle: {
           color: '#fff'
         },
@@ -37,7 +43,8 @@ export default {
           text: 'cpi change in Autralia',
           textStyle: {
             color: '#fff'
-          }
+          },
+          x: 'center'
         },
         xAxis: {
           name: 'time',
@@ -183,6 +190,6 @@ export default {
 <style lang="scss" scoped>
 #cpi {
   width: 38vw;
-  height: 28vh;
+  height: 180px;
 }
 </style>

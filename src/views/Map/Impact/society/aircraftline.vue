@@ -206,7 +206,7 @@ export default {
 
 <style lang="scss" scoped>
 #aircraft-line {
-  width: 98vw;
-  height: 27vh;
+  width: 90vw;
+  height: 300px;
 }
 </style>

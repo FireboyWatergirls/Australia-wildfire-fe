@@ -7,18 +7,27 @@
       </font>
     </div>
     <div id="subtitle">
-      <font color="#bbbbbb" size="4px">
-        Decline of koala populations in Australian states over six generations
-      </font>
+      <font
+        color="#bbbbbb"
+        size="4px"
+      >Decline of koala populations in Australian states over six generations</font>
     </div>
     <div id="map-overlay" class="map-overlay"></div>
     <nav id="layer-menu"></nav>
     <div id="state-legend" class="legend">
       <h4>Percentage of the decline</h4>
-      <div><span style="background-color: #fdba9a"></span>hardly any</div>
-      <div><span style="background-color: #f64b3c"></span>low</div>
-      <div><span style="background-color: #c81912"></span>high</div>
-      <div><span style="background-color: #42240c"></span>extremely high</div>
+      <div>
+        <span style="background-color: #fdba9a"></span>hardly any
+      </div>
+      <div>
+        <span style="background-color: #f64b3c"></span>low
+      </div>
+      <div>
+        <span style="background-color: #c81912"></span>high
+      </div>
+      <div>
+        <span style="background-color: #42240c"></span>extremely high
+      </div>
     </div>
     <div id="count">
       <font color="#b22222">
@@ -48,40 +57,51 @@ export default {
       this.map = new mapboxgl.Map({
         container: 'koala',
         style: 'mapbox://styles/mapbox/dark-v10',
-        center: [151.91861161672074, -28.354575691066024],
+        center: [152.8, -27.67],
         zoom: 3
       })
       this.map.on('load', () => {
         this.map
           .addSource('australia', {
-            'type': 'geojson',
-            'data': './static/data/states.geojson'
+            type: 'geojson',
+            data: './static/data/states.geojson'
           })
-          .addLayer({
-            'id': 'koala',
-            'type': 'fill',
-            'source': 'australia',
-            'paint': {
-              'fill-color': [
-                'interpolate',
-                ['linear'],
-                ['get', 'Koala'],
-                0,
-                '#333333',
-                1,
-                '#fdba9a',
-                13,
-                '#f64b3c',
-                15,
-                '#c81912',
-                50,
-                '#42240c'
-              ],
-              'fill-opacity': 0.75
-            }
-          }, 'waterway-label')
-          .on('click', 'koala', (e) => {
-            new mapboxgl.Popup({ offset: [0, 0] }).setLngLat(e.lngLat).setHTML(e.features[0].properties.STATE_NAME + '：-' + e.features[0].properties.Koala + '%').addTo(this.map)
+          .addLayer(
+            {
+              id: 'koala',
+              type: 'fill',
+              source: 'australia',
+              paint: {
+                'fill-color': [
+                  'interpolate',
+                  ['linear'],
+                  ['get', 'Koala'],
+                  0,
+                  '#333333',
+                  1,
+                  '#fdba9a',
+                  13,
+                  '#f64b3c',
+                  15,
+                  '#c81912',
+                  50,
+                  '#42240c'
+                ],
+                'fill-opacity': 0.75
+              }
+            },
+            'waterway-label'
+          )
+          .on('click', 'koala', e => {
+            new mapboxgl.Popup({ offset: [0, 0] })
+              .setLngLat(e.lngLat)
+              .setHTML(
+                e.features[0].properties.STATE_NAME +
+                  '：-' +
+                  e.features[0].properties.Koala +
+                  '%'
+              )
+              .addTo(this.map)
           })
           .on('mouseenter', 'koala', () => {
             this.map.getCanvas().style.cursor = 'pointer'
@@ -118,11 +138,16 @@ export default {
   position: absolute;
   top: 60px;
   left: 255px;
+  background-color: rgb(19, 19, 19);
+  padding: 0 8px;
 }
 #subtitle {
   position: absolute;
   top: 90px;
   left: 230px;
+  margin-top: 6px;
+  background-color: rgb(19, 19, 19);
+  padding: 0 8px;
 }
 .mapboxgl-popup {
   max-width: 400px;

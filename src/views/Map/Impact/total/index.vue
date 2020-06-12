@@ -1,7 +1,7 @@
 <template>
   <div>
     <region-circle class="pie" />
-    <fire class="themeriver" />
+    <!-- <fire class="themeriver" /> -->
     <regionmap class="health-map" />
     <deathpie class="deathpie" />
   </div>

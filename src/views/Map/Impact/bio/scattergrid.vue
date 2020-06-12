@@ -1,7 +1,6 @@
 <template>
   <div id="scatter-grid"></div>
 </template>
-
 <script>
 import data from './data/protect3'
 export default {
@@ -40,12 +39,7 @@ export default {
           show: true,
           top: '4%',
           right: '2%',
-          data: [
-            'Vulnerable',
-            'Critically Endangered',
-            'Endangered',
-            'Listed'
-          ],
+          data: ['Vulnerable', 'Critically Endangered', 'Endangered', 'Listed'],
           textStyle: {
             color: '#fff'
           }

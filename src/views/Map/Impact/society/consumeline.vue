@@ -23,7 +23,10 @@ export default {
           color: '#fff'
         },
         grid: {
-          x: 70
+          x: 55,
+          y: 55,
+          x2: 45,
+          y2: 25
         },
         tooltip: {
           trigger: 'axis',
@@ -40,7 +43,8 @@ export default {
           text: 'Consumer confidence index changes',
           textStyle: {
             color: '#fff'
-          }
+          },
+          x: 'center'
         },
         toolbox: {
           top: 25,
@@ -133,6 +137,6 @@ export default {
 <style lang="scss" scoped>
 #consume-line {
   width: 38vw;
-  height: 28vh;
+  height: 180px;
 }
 </style>
