@@ -75,6 +75,16 @@ export default {
           [118.85, -43.23]
         ]
       })
+      this.map.addSource('smoke', {
+        type: 'image',
+        url: '/static/keyEvents/smoke.png',
+        coordinates: [
+          [111.85, -8.349793451089942],
+          [189.0, -8.349793451089942],
+          [189.0, -62.791480782345104],
+          [111.85, -62.791480782345104]
+        ]
+      })
       this.map.addLayer(
         {
           id: 'drought',
@@ -90,9 +100,26 @@ export default {
         type: 'raster',
         paint: { 'raster-opacity': 0 }
       })
-      console.log(this.map.getLayer('drought'))
-      console.log(this.map.getLayer('legend'))
-      console.log(this.map.getLayer('place-label'))
+      this.map.addLayer({
+        id: 'smoke',
+        source: 'smoke',
+        type: 'raster',
+        paint: { 'raster-opacity': 0 }
+      })
+      // // 调用 wms
+      // this.map.addLayer({
+      //   id: 'wms-test-layer',
+      //   type: 'raster',
+      //   source: {
+      //     type: 'raster',
+      //     tiles: [
+      //       'http://localhost:8080/geoserver/firemap/wms?service=WMS&version=1.1.0&request=GetMap&layers=firemap:VIIRS_2019-12-30T00_00_00Z&bbox={bbox-epsg-3857}&width=768&height=534&srs=EPSG:3857&format=image/png&TRANSPARENT=TRUE'
+      //     ],
+      //     tileSize: 512
+      //   },
+      //   paint: {}
+      // })
+
       // setup the instance, pass callback functions
       scroller
         .setup({

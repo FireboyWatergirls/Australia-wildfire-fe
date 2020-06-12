@@ -65,91 +65,112 @@ var chapters = [
   },
   {
     id: '3',
-    title: 'Indego Bike Share',
-    image: '',
-    description: 'Indego has been operating in Philadelphia since 20XX. The system initally was focused on Center City, but has expanded service to neighboring areas to support equitable mobility options to the city\'s residents.',
+    title: 'Sep 6, 2019: The beginning of a long burning season',
+    image: '/static/keyEvents/3.jpg',
+    description: `Long Gully Road Fire at Drake, near Tenterfield, starts and burns through to end of October, 
+    leaving two people dead and destroying 43 homes. 
+    Two other fires in same region destroy and damage homes, and burn through to November 12.`,
     location: {
       center: [152.029, -29.049],
       zoom: 14.02,
       pitch: 0.00,
       bearing: 0.00
     },
-    onChapterEnter: [
-    ],
-    onChapterExit: [
-    ]
+    onChapterEnter: [],
+    onChapterExit: []
   },
   {
-    id: 'belmont',
-    title: 'Belmont Plateau Trails',
-    image: '',
-    description: 'A short ride along the Schuylkill River Trail from the Art Museum, Belmont is a twisty, log-ridden rollercoaster of a trail network. It is easy to get turned around, the underbrush is at times impenetrable, and short steep sections come out of nowhere. In other words, it\'s really fun',
+    id: '4',
+    title: 'Oct 26, 2019: Biggest ever fire begins',
+    image: '/static/keyEvents/4.jpg',
+    description: `Single lightning strike in the Wollemi National Park northwest of Sydney sparks a fire that quickly spreads. 
+    This becomes the Gospers Mountain Fire, which by December had burned more than 500,000 hectares – the biggest fire 
+    from a single ignition point in Australian history.`,
     location: {
-      center: [-75.20325, 39.99574],
-      zoom: 14.99,
-      pitch: 44.00,
-      bearing: -40.00
+      center: [151.556, -32.969],
+      zoom: 7.03,
+      pitch: 55.50,
+      bearing: 7.78
+    },
+    onChapterEnter: [],
+    onChapterExit: []
+  },
+  {
+    id: '5',
+    title: 'Oct 30, 2019: Fears for koalas',
+    image: '/static/keyEvents/5.jpg',
+    description: `Experts fear up to 350 koalas were burned alive in fires that tore through 
+    thousands of hectares of bush near Port Macquarie on mid-north NSW coast.`,
+    location: {
+      center: [153.063, -31.464],
+      zoom: 6.90,
+      pitch: 0.00,
+      bearing: -0.05
     },
     onChapterEnter: [
       {
-        layer: 'belmont',
+        layer: 'koalas',
+        opacity: 1
+      },
+      {
+        layer: 'port-macquarie',
         opacity: 1
       }
     ],
     onChapterExit: [
       {
-        layer: 'belmont',
+        layer: 'koalas',
+        opacity: 0
+      },
+      {
+        layer: 'port-macquarie',
         opacity: 0
       }
     ]
   },
   {
-    id: 'wiss',
-    title: 'Wissahickon Park Trails',
-    image: '',
-    description: 'This steep, rocky gorge can be surprisingly technical. Follow the orange and yellow trails to repeatedly climb and descend through the schist hillsides (careful of the cliffs), or stick to the gravel Forbidden Drive for a relaxing ride along the creek. You\'ll forget you\'re in a city.',
+    id: '6',
+    title: 'November 11, 2019: A state of emergency is declared in New South Wales and Queensland.',
+    image: '/static/keyEvents/6.jpg',
+    description: 'Catastrophic fire danger declared in Greater Sydney for first time since the introduction of this level. NSW declares state of emergency. Almost 600 schools closed. ',
     location: {
-      center: [-75.21223, 40.05028],
-      zoom: 13.08,
-      pitch: 47.50,
-      bearing: 32.80
+      center: [146.754, -26.920],
+      zoom: 3.40,
+      pitch: 0,
+      bearing: 0
     },
     onChapterEnter: [
       {
-        layer: 'wissahickon',
+        layer: 'state-emergency',
         opacity: 1
       }
     ],
     onChapterExit: [
       {
-        layer: 'wissahickon',
+        layer: 'state-emergency',
         opacity: 0
       }
     ]
   },
   {
-    id: 'pennypack',
-    title: 'Pennypack Park Trails',
-    image: '',
-    description: 'Pennypack is a great introduction trail system. Not too steep and not too technical, the beautiful wooded park also provides a great escape from urban life. The south side trails are originally bridle trails, so be nice to equestrians and dismount when you approach them.',
+    id: '7',
+    title: 'November to December 2019: Fires continue to spread.',
+    image: '/static/keyEvents/7.jpg',
+    description: 'In this true color corrected reflectance imagery from VIIRS/Suomi NPP, you can see the brown smoke from the fires on the southeastern coast of Australia ',
     location: {
-      center: [-75.05685, 40.06839],
-      zoom: 13.73,
-      pitch: 43.50,
-      bearing: 96.80
+      center: [177.809, -41.917],
+      zoom: 2.11,
+      pitch: 0,
+      bearing: 0
     },
-    onChapterEnter: [
-      {
-        layer: 'pennypack',
-        opacity: 1
-      }
-    ],
-    onChapterExit: [
-      {
-        layer: 'pennypack',
-        opacity: 0
-      }
-    ]
+    onChapterEnter: [{
+      layer: 'smoke',
+      opacity: 0.85
+    }],
+    onChapterExit: [{
+      layer: 'smoke',
+      opacity: 0
+    }]
   }
 ]
 
