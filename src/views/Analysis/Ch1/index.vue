@@ -49,63 +49,109 @@
         <p>While bush fires can happen at any time of the year in Australia, the time of peak bushfire activity varies across the country with the changes in the seasonal weather patterns.</p>
         <p>For northern Australia the peak bushfire period is during the dry season, which is generally throughout winter and spring. In southern Australia the bushfire season peaks in summer and autumn. While these are traditional peaks of the bushfire season, local conditions can drive dangerous bushfire activity at any time.</p>
         <h1>
-          <img src="/static/img/figure1.jpg" width="940" height="530">
+          <img src="/static/img/figure1.jpg" width="940" height="530" />
           <p>Figure 1: Fire seasons in Australia</p>
         </h1>
         <p>Weather systems work differently across Australia's temperate and tropical regions. Severe bushfire conditions are influenced by a combination of these systems, but in most cases by hot, dry winds blowing from central Australia. The dry summer months are the danger time for southern Australia, while northern Australia is at risk during winter.</p>
-        <br><p2><strong>Southeast Australia—summer and autumn</strong></p2>
+        <br />
+        <div class="p2">
+          <strong>Southeast Australia—summer and autumn</strong>
+        </div>
         <p>As grass and forests dry during summer and autumn, southeast Australia becomes vulnerable to the threat of bushfire. During late spring and early summer grass and forest fuels hold some moisture but fires can occur on hot days with strong winds. Fuels dry out in mid and late summer but winds are typically not as strong. Early autumn sees a transition to cooler conditions and generally lighter winds.</p>
-        <br><p2><strong>New South Wales and southern Queensland—spring to mid-summer</strong></p2>
+        <br />
+        <div class="p2">
+          <strong>New South Wales and southern Queensland—spring to mid-summer</strong>
+        </div>
         <p>The greatest danger occurs after the dry winter and spring. The worst conditions occur when deep low-pressure systems near Tasmania bring strong, hot and dry, westerly winds to the coastal districts. The end of the fire season is determined by the onset of moister conditions, sometimes the result of a tropical cyclone developing near the Queensland coast.</p>
-        <br><p2><strong>Northwest Western Australia and the Northern Territory—winter and spring</strong></p2>
+        <br />
+        <div class="p2">
+          <strong>Northwest Western Australia and the Northern Territory—winter and spring</strong>
+        </div>
         <p>In the warm, dry and sunny winter and spring, when grasses are dead and fuels have dried, northern Australia becomes most susceptible to bushfires. Intense high-pressure systems over South Australia producing strong southeast to northeast winds increase the risk of bushfires.</p>
-        <br><p2><strong>Southern Western Australia—spring and summer</strong></p2>
+        <br />
+        <div class="p2">
+          <strong>Southern Western Australia—spring and summer</strong>
+        </div>
         <p>The greatest danger is between late spring and early autumn when fuels have dried after the winter rains. Heat troughs intensifying near the Pilbara, with surges of hot air from the interior produce dangerous fire weather conditions.</p>
       </div>
 
       <div class="s2">
-        <br><h3>How does weather influence fire behaviour?</h3>
+        <br />
+        <h3>How does weather influence fire behaviour?</h3>
         <p>Weather conditions influence the size, intensity, speed, and predictability of bushfires and how dangerous they can be to the community.</p>
         <p>Vegetation growth can be encouraged by periods of wet weather, increasing the amount of fuel available (grass, leaf litter, twigs, bark). When the weather is hot, the humidity is low and there's been little recent rain, this vegetation dries out and becomes more flammable. A fire is more likely to start, and continue to burn, in hot, dry and windy weather.</p>
-        <br><p2><strong>Humidity</strong></p2>
+        <br />
+        <div class="p2">
+          <strong>Humidity</strong>
+        </div>
         <p>Relative humidity is commonly used to measure atmospheric moisture. It is defined as the ratio of the amount of water vapour measured to what the air could hold at saturation point. Very low relative humidity, say less than 20%, causes fuels to dry out and become more flammable.</p>
-        <br><p2><strong>Wind</strong></p2>
+        <br />
+        <div class="p2">
+          <strong>Wind</strong>
+        </div>
         <p>Strong gusty winds help fan the flames and cause a fire to spread faster across the landscape. Strong winds can carry hot embers long distances - these can start spot fires many kilometres ahead of the main fire front.</p>
         <p>A change in wind direction can bring a period of dangerous bushfire activity, this is often seen as a trough or cold front - also known as a cool change.</p>
         <p>In southern Australia, cold fronts are probably the most powerful influence on our fire weather. Cold fronts occur at the junction of warm and cold air masses where the strong temperature contrast provides the energy source that generates the frequently associated strong winds.</p>
         <p>As a cold front passes, the wind direction will often swing about 90 degrees. Usually, the winds ahead of a cold front are hot northwesterlies, while cooler southwesterlies follow the front, with significant effects on the behaviour and structure of existing fires.</p>
-        <h1><video width="600" controls><source src="static/img/video.mp4" type="video/mp4"></video></h1>
-        <br><p2><strong>Rainfall</strong></p2>
+        <h1>
+          <video width="600" controls>
+            <source src="static/img/video.mp4" type="video/mp4" />
+          </video>
+        </h1>
+        <br />
+        <div class="p2">
+          <strong>Rainfall</strong>
+        </div>
         <p>Dry grass, parched native shrubs and dead leaves and twigs are a fire's basic fuel. During droughts and in very hot, windy weather, even heavy fuels like large logs and the green leaves and smaller branches of large trees can become dry and flammable.</p>
         <p>Heavy rainfall might quench a fire, but it can make it difficult for firefighters to access burnt areas. Where fires have been intense, or occur over steep terrain, heavy rain might cause severe erosion and affect water quality when rivers carry ash and sediment along.</p>
-        <br><p2><strong>Lightning</strong></p2>
+        <br />
+        <div class="p2">
+          <strong>Lightning</strong>
+        </div>
         <p>In some parts of Australia lightning is the main source of bushfire ignition. The winds during thunderstorms can make it hard to predict the behaviour and movement of a bushfire.</p>
         <p>Large fires can also create their own thunderstorms known as pyrocumulonimbus. They can cause erratic more intense and dangerous bushfire behaviour. Find out more about pyrocumulonimbus at the Bureau Blog.</p>
-        <br><p2><strong>Temperature inversions</strong></p2>
+        <br />
+        <div class="p2">
+          <strong>Temperature inversions</strong>
+        </div>
         <p>A layer of warm air sitting over a layer of cold air is called a temperature inversion. Inversions are common during the night and early morning when cool night air collects close to the ground (Figure 4). This arrangement of air is stable because cold air near the ground is heavy and tends to stay near the ground. The warm air above the inversion is lighter and tends to stay above the inversion.</p>
         <p>There are often strong winds in the warm air above inversions, but while the inversion lasts these winds cannot come down to ground level.</p>
         <p>As the sun heats the ground during the day, the inversion weakens and strong winds may begin to blow near the ground (Figure 5). This is one reason why many bushfires burn more fiercely in the afternoon, as happened with the fires in Hobart in 1967.</p>
         <h1>
-          <img src="static/img/figure4.png" width="540" height="314">
-          <img src="static/img/figure5.png" width="540" height="314">
+          <img src="static/img/figure4.png" width="540" height="314" />
+          <img src="static/img/figure5.png" width="540" height="314" />
           <p>Figure 4 (left), Figure 5 (right)</p>
         </h1>
-        <br><p2><strong>Smoke</strong></p2>
+        <br />
+        <div class="p2">
+          <strong>Smoke</strong>
+        </div>
         <p>Inversions also have an influence on the smoke produced by a fire. In stable conditions, when an inversion is strong, smoke is trapped close to the ground causing issues with air quality and visibility. Once the inversion breaks, typically in the late morning, the smoke becomes more mixed with clear air and disperses through the atmosphere. New smoke produced by the fire forms a neat plume that moves downstream away from the fire.</p>
         <p>The mixing height, which is available to view on MetEye under the Wind Forecasts section, is an indicator of whether smoke will be trapped on a particular day. When there is low mixing height (less than 1000 metres), smoke will stay near the ground. When the mixing height is higher (greater than 2000 metres), smoke will disperse higher into the atmosphere and air quality will improve at the ground.</p>
-        <h1><img src="static/img/figure6.jpg" width="940" height="704">
-        <p>Figure 6: Smoke from a prescribed burn at Big Hill Track in the Otways on 4 April 2017 after an inversion has broken. Photo courtesy of Nathan Christian from Forest Fire Management Victoria, Mildura.</p></h1>
+        <h1>
+          <img src="static/img/figure6.jpg" width="940" height="704" />
+          <p>Figure 6: Smoke from a prescribed burn at Big Hill Track in the Otways on 4 April 2017 after an inversion has broken. Photo courtesy of Nathan Christian from Forest Fire Management Victoria, Mildura.</p>
+        </h1>
       </div>
 
       <div class="s3">
-        <br><h3>Climate change and bushfire risk in Australia</h3>
+        <br />
+        <h3>Climate change and bushfire risk in Australia</h3>
         <p>Climate change is influencing the frequency and severity of dangerous bushfire conditions in Australia and other regions of the world, including through influencing temperature, environmental moisture, weather patterns and fuel conditions. There have been significant changes observed in recent decades towards more dangerous bushfire weather conditions for various regions of Australia.</p>
         <p>In particular, observed changes in southern and eastern Australia include more extreme conditions during summer, as well as an earlier start to the bushfire season with dangerous weather conditions occurring significantly earlier in spring than they used to. These trends towards more dangerous bushfire conditions are at least partly attributable to human-caused climate change, including through increased temperatures. Northern Australia, which sees significant fire activity during the dry season, has experienced increases in monsoonal rainfall that have increased fuel growth in recent decades, as a key factor influencing fire danger in that region.</p>
         <p>In relation to fire ignition, there is some indication that climate change could influence the risk of ignitions from dry-lightning (i.e., lightning that occurs without significant rainfall) while noting relatively large uncertainties in currently available model representations of this phenomenon. Additionally, there has recently been a number of devastating fire events in Australia associated with extreme pyroconvection (including thunderstorm development in a fire plume), with recent research indicating a long-term trend towards increased risk factors associated with pyroconvection in southeast Australia. Bushfire weather conditions in future years are projected to increase in severity for many regions of Australasia, including due to more extreme heat events, with the rate and magnitude of change increasing with greenhouse gas concentrations (and emissions).</p>
       </div>
     </div>
-    <div class="link1"><router-link to="/analysis"><p3>←Analysis</p3></router-link></div>
-    <div class="link2"><router-link to="/analysis/ch2"><p3>2. Why is there a violent wildfire this time?→</p3></router-link></div>
+    <div class="link1">
+      <router-link to="/analysis">
+        <div class="p3">←Analysis</div>
+      </router-link>
+    </div>
+    <div class="link2">
+      <router-link to="/analysis/ch2">
+        <div class="p3">2. Why is there a violent wildfire this time?→</div>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -159,22 +205,22 @@ p2 {
   font-size: 20px;
   line-height: 30px;
   font-weight: 300;
-  color: #3399CC;
+  color: #3399cc;
 }
 p3 {
   font-size: 30px;
   line-height: 30px;
   font-weight: 300;
-  color:#FF6633;
-  font-family:"Trebuchet MS"
+  color: #ff6633;
+  font-family: 'Trebuchet MS';
 }
-.link1{
+.link1 {
   margin-top: 20px;
   margin-bottom: 30px;
   padding: 0 0 0 100px;
   float: left;
 }
-.link2{
+.link2 {
   margin-top: 20px;
   margin-bottom: 30px;
   padding: 0 100px 0 0;

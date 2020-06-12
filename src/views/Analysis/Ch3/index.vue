@@ -59,11 +59,14 @@
     <div class="content">
       <h2>5. Mental health costs</h2>
       <p>Fires do not only cause physical harm; many people experience mental trauma from the experience of emergency evacuation and losing homes, pets, belongings, livestock or other sources of livelihoods. Some communities found themselves unable to evacuate quickly when lost electricity meant fuel stations weren’t operational or blocked roads kept people trapped in high risk areas. Some were forced to seek safety on beaches and on boats, sheltering children overnight while witnessing unprecedented firestorms. Such experiences can have lasting mental health impacts across affected communities.</p>
-      <p>Stress responses associated with surviving a natural disaster may range from low to moderate levels of distress, through to severe PTS. Post-traumatic stress disorder (PTSD), a prolonged and severe psychological response to trauma, is characterised by significant physical, social, occupational, emotional or cognitive impairment. Approximately 8% of the general population experience symptoms of PTS during their lives. Women are twice as likely as men to be diagnosed. The incidence of PTSD in persons directly affected by the   experience of natural disaster, such as bushfire, is significantly higher than that of the general population. As such, it is suggested that 23–42% of individuals impacted by bushfire experience PTSD-related symptoms in the months following this bushfire event.</p>
+      <p>Stress responses associated with surviving a natural disaster may range from low to moderate levels of distress, through to severe PTS. Post-traumatic stress disorder (PTSD), a prolonged and severe psychological response to trauma, is characterised by significant physical, social, occupational, emotional or cognitive impairment. Approximately 8% of the general population experience symptoms of PTS during their lives. Women are twice as likely as men to be diagnosed. The incidence of PTSD in persons directly affected by the experience of natural disaster, such as bushfire, is significantly higher than that of the general population. As such, it is suggested that 23–42% of individuals impacted by bushfire experience PTSD-related symptoms in the months following this bushfire event.</p>
       <div class="imgstyle">
         <img src="/static/img/list4.jpg" width="840px" />
       </div>
-      <h3>A man sits on a bench as caravans and tents of evacuees are parked at a showground that was turned into an unofficial evacuation centre, in the town of Cobargo, Australia, January 12, 2020.<br> Photo by: REUTERS/Alkis Konstantinidis</h3>
+      <h3>
+        A man sits on a bench as caravans and tents of evacuees are parked at a showground that was turned into an unofficial evacuation centre, in the town of Cobargo, Australia, January 12, 2020.
+        <br />Photo by: REUTERS/Alkis Konstantinidis
+      </h3>
     </div>
     <div class="content">
       <h2>6. Economic costs</h2>
@@ -73,9 +76,9 @@
       </p>
       <p>The figure below shows the change of Consumer Price Index (cpi) from quarter to quarter. The places with a red background represent the large fire in that quarter. By observing the occurrence of fire and changes in cpi, it can be found that in most cases, cpi will have a downward trend in the first quarter after the fire.</p>
     </div>
-      <div class="pic">
-        <cpi class="line" />
-      </div>
+    <div class="pic">
+      <cpi class="line" />
+    </div>
     <div class="content">
       <p>It can be found that the consumption intention of Australian residents generally presents a declining trend. Although residents' willingness to consume also declined from 2018 to early 2019, the decline of residents' willingness to consume increased significantly from June 19 (the time when the fire started).</p>
       <div class="pic">
@@ -87,29 +90,35 @@
       <p>A deeper analysis of the industries most heavily impacted shows that over a third of businesses in the Accommodation and Food services sector, which includes travel and tourism, say they have been affected ‘A great deal’ – higher than any other industry, while a third of businesses in the Transport, Postal and Warehousing sector say they have been affected to some extent.</p>
       <p>Businesses in Queensland and NSW have been the hardest hit with 12% of Queensland businesses and 11% of NSW businesses affected ‘A great deal’ by the bushfires – far higher than any other States.In general businesses in NSW are the most likely to have been impacted with over a third (35%) affected in some way compared to around a quarter of businesses in Queensland (25%) and Victoria (24%). In contrast, only 16% of businesses in WA and 11% in Tasmania have been affected at all. For the 7% that say the business has been affected ‘A great deal’ by the bushfires common impacts cited include ‘Cancelled bookings and events’, ‘Lack of access to the business or properties because of the fires’, ‘Staff not available for work because of diversion to fighting fires’, ‘Air quality’ and ‘Smoke haze’, ‘Lack of tourists’ and some have been ‘Burned out entirely’. The 10% who say their business has been ‘Somewhat’ affected by the bushfires mention ‘Loss of income’, ‘Employees sick from smoke’, ‘Employees called away for reserve duty/fighting fires’, ‘Employees unable to get to work’, ‘Customers depressed and sad’ and ‘Cancellation of jobs’. The remaining 9% who say their business has been affected ‘A little’ by the bushfires mainly refer to the ‘Smoke contamination’, and ‘Air quality’, ‘Staff taking time off to volunteer’, and a drop off in customers as there are ‘Less tourists’, ‘Less orders’, and ‘Less money available for people to spend.’</p>
     </div>
-      <div class="pic">
-        <businesses class="map" />
-      </div>
+    <div class="pic">
+      <businesses class="map" />
+    </div>
     <div class="content">
-      <h3>Source: Roy Morgan Special Snap SMS Poll of Australian businesses in January 2020, n=1,308. <br>Base: Australian businesses.</h3>
+      <h3>
+        Source: Roy Morgan Special Snap SMS Poll of Australian businesses in January 2020, n=1,308.
+        <br />Base: Australian businesses.
+      </h3>
       <div class="imgstyle">
         <img src="/static/img/table.png" width="871px" />
       </div>
       <p>
         <strong>Recovery Funding</strong>
       </p>
-        <p>In January 2020, the Australian federal government announced a two billion Australian dollar relief package to aid the bushfire recovery after the 2019/2020 fire season. Of this fund, 100 million Australian dollars had been allocated to primary producers in the country. Most of the funds, around 1.6 billion Australian dollars, had not yet been allocated as of that month.</p>
+      <p>In January 2020, the Australian federal government announced a two billion Australian dollar relief package to aid the bushfire recovery after the 2019/2020 fire season. Of this fund, 100 million Australian dollars had been allocated to primary producers in the country. Most of the funds, around 1.6 billion Australian dollars, had not yet been allocated as of that month.</p>
     </div>
-        <div class="pic">
-          <fundingbar class="bar" />
-        </div>
+    <div class="pic">
+      <fundingbar class="bar" />
+    </div>
     <div class="content">
       <h2>7. Climate feedback loops</h2>
       <p>The bushfires have not only been made more likely and intense by climate change, they also add to it. Until the 2019–2020 Australian bushfire season, the forests in Australia were thought to reabsorb all the carbon released in bushfires across the country. This would mean the forests achieved net zero emissions. However, global warming is making bushfires burn more intensely and frequently and the 2019–2020 bushfires have already emitted 400 megatonnes of carbon dioxide into the atmosphere, according to the Copernicus monitoring programme. This is as much as Australia's average annual carbon dioxide emissions in just the past three months. These will increase Australia’s annual greenhouse gas emissions, contributing to global warming, and heighten the likelihood of recurring megafires that will release yet more emissions. This is a deeply concerning climate feedback loop.</p>
       <div class="imgstyle">
         <img src="/static/img/list7.jpg" width="600px" />
       </div>
-      <h3>Thick plumes of smoke rise from bushfires at the coast of East Gippsland, Victoria, Australia January 4, 2020 in this aerial picture taken from AMSA Challenger jet.<br> Photo by Australian Maritime Safety Authority/Handout via REUTERS</h3>
+      <h3>
+        Thick plumes of smoke rise from bushfires at the coast of East Gippsland, Victoria, Australia January 4, 2020 in this aerial picture taken from AMSA Challenger jet.
+        <br />Photo by Australian Maritime Safety Authority/Handout via REUTERS
+      </h3>
     </div>
     <div class="content">
       <h2>8. Environmental costs: pollution</h2>
@@ -131,8 +140,16 @@
       <h3>Source: Bom, ABS Kynetec</h3>
       <p>The result of the low rainfall has been a much-reduced winter crop. For example, the 2019 wheat crop of 13 million tonnes was 47% below the long-term average. Irrigation storages have been greatly impacted, which has resulted in one of the smallest rice crops in history. Cotton is estimated to decline by 82% to 61,000 hectares – the lowest since 1978-1979. Grain sorghum has also declined by a huge amount – down 71% to 143,000 hectares. Irrigated dairy has been priced out of the water market by higher value permanent horticulture crops in northern Victoria. Many dairy farms in northern Victoria have been forced to cease production and sell their entire herds to abattoirs. On a more positive note, grain, beef and sheep farmers in Victoria are enjoying one of their best years in living memory. A combination of high grain, hay, beef, sheep meat and wool prices and above average yields generated a perfect storm of profit. Areas of South Australia, Western Australia and Tasmania also enjoyed a ‘reasonable’ 2019 season. Rainfall in January and February has been exceptional and has had the double impact of both putting all the fires out and setting up a strong soil moisture profile in the long-suffering agricultural districts of Northern NSW and Southern Queensland. This is ideal for the coming winter cropping season.</p>
     </div>
-    <div class="link1"><router-link to="/analysis/ch2"><p3>←2. Why is there a violent wildfire this time?</p3></router-link></div>
-    <div class="link2"><router-link to="/analysis/ch4"><p3>4. Lessons from Environmental problems→</p3></router-link></div>
+    <div class="link1">
+      <router-link to="/analysis/ch2">
+        <div class="p3">←2. Why is there a violent wildfire this time?</div>
+      </router-link>
+    </div>
+    <div class="link2">
+      <router-link to="/analysis/ch4">
+        <div class="p3">4. Lessons from Environmental problems→</div>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -207,7 +224,7 @@ h3 {
   font-style: italic;
   color: '#7c7575';
 }
-.pic{
+.pic {
   position: relative;
   // margin-top: 30px;
   // margin-right: 30px;
@@ -237,7 +254,7 @@ img {
   width: 1000px;
   z-index: 100;
 }
-.imgstyle{
+.imgstyle {
   width: 1000px;
   margin: 0 auto;
 }
@@ -245,16 +262,16 @@ p3 {
   font-size: 30px;
   line-height: 30px;
   font-weight: 300;
-  color:#FF6633;
-  font-family:"Trebuchet MS"
+  color: #ff6633;
+  font-family: 'Trebuchet MS';
 }
-.link1{
+.link1 {
   margin-top: 20px;
   margin-bottom: 30px;
   padding: 0 0 0 100px;
   float: left;
 }
-.link2{
+.link2 {
   margin-top: 20px;
   margin-bottom: 30px;
   padding: 0 100px 0 0;
