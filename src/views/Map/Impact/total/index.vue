@@ -8,13 +8,13 @@
 </template>
 <script>
 import RegionCircle from './regioncircle'
-import Fire from './firethemeriver'
+// import Fire from './firethemeriver'
 import regionmap from './healthmap'
 import deathpie from './deathpie'
 export default {
   components: {
     RegionCircle,
-    Fire,
+    // Fire,
     regionmap,
     deathpie
   }

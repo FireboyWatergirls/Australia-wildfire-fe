@@ -44,7 +44,8 @@ export default {
           boundaryGap: true,
           axisLabel: {
             interval: 0,
-            rotate: 0
+            rotate: 0,
+            fontSize: 10
           },
           data: [
             'Conservation',

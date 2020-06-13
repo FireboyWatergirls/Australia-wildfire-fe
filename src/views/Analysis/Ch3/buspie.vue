@@ -2,9 +2,9 @@
   <div>
     <div id="businesses"></div>
     <div id="count">
-      <!-- <font color="#b22222">
+      <font color="#b22222">
         <strong>26%</strong>
-      </font> -->
+      </font>
     </div>
     <div id="text">
       <font color="#fff">
