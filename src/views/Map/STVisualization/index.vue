@@ -133,6 +133,8 @@ export default {
         'waterway-label'
       )
 
+      map.setLayoutProperty(layerHeat, 'visibility', 'none')
+
       // 散点图图层
       map.addSource(fireSourse, {
         type: 'geojson',
@@ -266,14 +268,6 @@ export default {
       this.date = dateList
       console.log(this.dat)
     },
-    getData: async function(tempDate) {
-      var data = await fireApi.getPoints(tempDate)
-      return data
-    },
-    getData20: async function(tempDate) {
-      var data = await fireApi.getPoints20(tempDate)
-      return data
-    },
     initMap: function() {
       mapboxgl.accessToken = mapboxToken
       this.map = new mapboxgl.Map({
@@ -325,7 +319,8 @@ export default {
           layerPoint = 'firePoint' + tempDate
           sourseName = 'wildfires' + tempDate
           fireSourse = 'firepoints' + tempDate
-          data = await this.$options.methods.getData(tempDate)
+          data = await fireApi.getPoints(tempDate)
+          console.log(data)
           this.$options.methods.buildFireMap(
             sourseName,
             data,
@@ -341,7 +336,7 @@ export default {
           layerPoint = 'firePoint' + tempDate
           sourseName = 'wildfires' + tempDate
           fireSourse = 'firepoints' + tempDate
-          data = await this.$options.methods.getData(tempDate)
+          data = await fireApi.getPoints(tempDate)
           this.$options.methods.buildFireMap(
             sourseName,
             data,
@@ -360,7 +355,7 @@ export default {
                   layerPoint = 'firePoint' + tempDate
                   sourseName = 'wildfires' + tempDate
                   fireSourse = 'firepoints' + tempDate
-                  data = await this.$options.methods.getData(tempDate)
+                  data = await fireApi.getPoints(tempDate)
                   this.$options.methods.buildFireMap(
                     sourseName,
                     data,
@@ -376,7 +371,7 @@ export default {
                   layerPoint = 'firePoint' + tempDate
                   sourseName = 'wildfires' + tempDate
                   fireSourse = 'firepoints' + tempDate
-                  data = await this.$options.methods.getData(tempDate)
+                  data = await fireApi.getPoints(tempDate)
                   this.$options.methods.buildFireMap(
                     sourseName,
                     data,
@@ -393,7 +388,7 @@ export default {
                   layerPoint = 'firePoint' + tempDate
                   sourseName = 'wildfires' + tempDate
                   fireSourse = 'firepoints' + tempDate
-                  data = await this.$options.methods.getData(tempDate)
+                  data = await fireApi.getPoints(tempDate)
                   this.$options.methods.buildFireMap(
                     sourseName,
                     data,
@@ -409,7 +404,7 @@ export default {
                   layerPoint = 'firePoint' + tempDate
                   sourseName = 'wildfires' + tempDate
                   fireSourse = 'firepoints' + tempDate
-                  data = await this.$options.methods.getData(tempDate)
+                  data = await fireApi.getPoints(tempDate)
                   this.$options.methods.buildFireMap(
                     sourseName,
                     data,
@@ -429,7 +424,7 @@ export default {
                   layerPoint = 'firePoint' + tempDate
                   sourseName = 'wildfires' + tempDate
                   fireSourse = 'firepoints' + tempDate
-                  data = await this.$options.methods.getData20(tempDate)
+                  data = await fireApi.getPoints20(tempDate)
                   this.$options.methods.buildFireMap(
                     sourseName,
                     data,
@@ -445,7 +440,7 @@ export default {
                   layerPoint = 'firePoint' + tempDate
                   sourseName = 'wildfires' + tempDate
                   fireSourse = 'firepoints' + tempDate
-                  data = await this.$options.methods.getData20(tempDate)
+                  data = await fireApi.getPoints20(tempDate)
                   this.$options.methods.buildFireMap(
                     sourseName,
                     data,
@@ -463,7 +458,7 @@ export default {
                   layerPoint = 'firePoint' + tempDate
                   sourseName = 'wildfires' + tempDate
                   fireSourse = 'firepoints' + tempDate
-                  data = await this.$options.methods.getData20(tempDate)
+                  data = await fireApi.getPoints20(tempDate)
                   this.$options.methods.buildFireMap(
                     sourseName,
                     data,
@@ -479,7 +474,7 @@ export default {
                   layerPoint = 'firePoint' + tempDate
                   sourseName = 'wildfires' + tempDate
                   fireSourse = 'firepoints' + tempDate
-                  data = await this.$options.methods.getData20(tempDate)
+                  data = await fireApi.getPoints20(tempDate)
                   this.$options.methods.buildFireMap(
                     sourseName,
                     data,
@@ -535,8 +530,14 @@ export default {
           if (value0[1] === value1[1]) {
             // 选中范围在同一月
             for (j = value0[2]; j <= value1[2]; j++) {
-              layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
-              layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+              if (j < 10) {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                layerPoint =
+                  'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+              } else {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+              }
               this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
               this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
               console.log(layerHeat)
@@ -546,16 +547,30 @@ export default {
             // 打开起始月
             if (value0[1] % 2 === 0) {
               for (j = value0[2]; j < 32; j++) {
-                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
-                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                if (j < 10) {
+                  layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                  layerPoint =
+                    'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+                } else {
+                  layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                  layerPoint =
+                    'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                }
                 this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
                 this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
                 console.log(layerHeat)
               }
             } else {
               for (j = value0[2]; j < 31; j++) {
-                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
-                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                if (j < 10) {
+                  layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                  layerPoint =
+                    'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+                } else {
+                  layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                  layerPoint =
+                    'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                }
                 this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
                 this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
                 console.log(layerHeat)
@@ -568,8 +583,17 @@ export default {
               console.log(i % 2)
               if (i % 2 === 0) {
                 for (j = 1; j < 32; j++) {
-                  layerHeat = 'fireMap' + value0[0] + '-' + i + '-' + j
-                  layerPoint = 'firePoint' + value0[0] + '-' + i + '-' + j
+                  if (j < 10) {
+                    layerHeat =
+                      'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                    layerPoint =
+                      'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+                  } else {
+                    layerHeat =
+                      'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                    layerPoint =
+                      'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                  }
                   this.map.setLayoutProperty(
                     layerPoint,
                     'visibility',
@@ -580,8 +604,17 @@ export default {
                 }
               } else {
                 for (j = 1; j < 31; j++) {
-                  layerHeat = 'fireMap' + value0[0] + '-' + i + '-' + j
-                  layerPoint = 'firePoint' + value0[0] + '-' + i + '-' + j
+                  if (j < 10) {
+                    layerHeat =
+                      'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                    layerPoint =
+                      'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+                  } else {
+                    layerHeat =
+                      'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                    layerPoint =
+                      'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                  }
                   this.map.setLayoutProperty(
                     layerPoint,
                     'visibility',
@@ -595,8 +628,14 @@ export default {
 
             // 打开终止月
             for (j = 1; j <= value1[2]; j++) {
-              layerHeat = 'fireMap' + value0[0] + '-' + value1[1] + '-' + j
-              layerPoint = 'firePoint' + value0[0] + '-' + value1[1] + '-' + j
+              if (j < 10) {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                layerPoint =
+                  'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+              } else {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+              }
               this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
               this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
               console.log(layerHeat)
@@ -607,8 +646,14 @@ export default {
           if (value0[1] === value1[1]) {
             // 选中范围在同一月
             for (j = value0[2]; j <= value1[2]; j++) {
-              layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
-              layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+              if (j < 10) {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                layerPoint =
+                  'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+              } else {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+              }
               this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
               this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
               console.log(layerHeat)
@@ -618,16 +663,30 @@ export default {
             // 打开起始月
             if (value0[1] === 1) {
               for (j = value0[2]; j < 32; j++) {
-                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
-                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                if (j < 10) {
+                  layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                  layerPoint =
+                    'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+                } else {
+                  layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                  layerPoint =
+                    'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                }
                 this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
                 this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
                 console.log(layerHeat)
               }
             } else {
               for (j = value0[2]; j < 29; j++) {
-                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
-                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                if (j < 10) {
+                  layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                  layerPoint =
+                    'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+                } else {
+                  layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                  layerPoint =
+                    'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                }
                 this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
                 this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
                 console.log(layerHeat)
@@ -636,8 +695,14 @@ export default {
 
             // 打开终止月
             for (j = 1; j <= value1[2]; j++) {
-              layerHeat = 'fireMap' + value0[0] + '-' + value1[1] + '-' + j
-              layerPoint = 'firePoint' + value0[0] + '-' + value1[1] + '-' + j
+              if (j < 10) {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                layerPoint =
+                  'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+              } else {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+              }
               this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
               this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
               console.log(layerHeat)
@@ -648,16 +713,26 @@ export default {
         // 打开起始月
         if (value0[1] % 2 === 0) {
           for (j = value0[2]; j < 32; j++) {
-            layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
-            layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+            if (j < 10) {
+              layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+              layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+            } else {
+              layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+              layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+            }
             this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
             this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
             console.log(layerHeat)
           }
         } else {
           for (j = value0[2]; j < 31; j++) {
-            layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
-            layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+            if (j < 10) {
+              layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+              layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+            } else {
+              layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+              layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+            }
             this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
             this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
             console.log(layerHeat)
@@ -669,16 +744,28 @@ export default {
           console.log(i)
           if (i % 2 === 0) {
             for (j = 1; j < 32; j++) {
-              layerHeat = 'fireMap' + value0[0] + '-' + i + '-' + j
-              layerPoint = 'firePoint' + value0[0] + '-' + i + '-' + j
+              if (j < 10) {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                layerPoint =
+                  'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+              } else {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+              }
               this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
               this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
               console.log(layerHeat)
             }
           } else {
             for (j = 1; j < 31; j++) {
-              layerHeat = 'fireMap' + value0[0] + '-' + i + '-' + j
-              layerPoint = 'firePoint' + value0[0] + '-' + i + '-' + j
+              if (j < 10) {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+                layerPoint =
+                  'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+              } else {
+                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+              }
               this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
               this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
               console.log(layerHeat)
@@ -688,8 +775,13 @@ export default {
 
         // 打开终止月
         for (j = 1; j <= value1[2]; j++) {
-          layerHeat = 'fireMap' + value1[0] + '-' + value1[1] + '-' + j
-          layerPoint = 'firePoint' + value1[0] + '-' + value1[1] + '-' + j
+          if (j < 10) {
+            layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+            layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+          } else {
+            layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+            layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+          }
           this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
           this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
           console.log(layerHeat)
@@ -698,8 +790,13 @@ export default {
         // 判断是否需要打开2020年1月
         if (value1[1] === '2') {
           for (j = 1; j < 32; j++) {
-            layerHeat = 'fireMap' + value1[0] + '-1-' + j
-            layerPoint = 'firePoint' + value1[0] + '-1-' + j
+            if (j < 10) {
+              layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
+              layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+            } else {
+              layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
+              layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+            }
             this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
             this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
             console.log(layerHeat)
@@ -735,7 +832,7 @@ export default {
         if (endIndex >= this.date.length) {
           clearInterval(this.interval)
         }
-      }, 600)
+      }, 30)
     },
     Pause: function() {
       // 停止播放
