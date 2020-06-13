@@ -16,8 +16,7 @@
         <a-icon type="video-camera" />
         <span>Key Events</span>
       </a-menu-item>
-      <a-sub-menu key="sub1">
-        <span slot="title">
+      <a-menu-item key="2">
         <a-icon type="clock-circle" />
         <span>Space-time Visualization</span>
       </a-menu-item>
@@ -43,12 +42,6 @@ export default {
     }
   },
   methods: {
-    toggleCollapsed() {
-    changeFun: function (funName) {
-      this.$store.commit('changeFun', funName)
-      console.log(this.$store.state.funName)
-    },
-
     toggleCollapsed () {
       this.collapsed = !this.collapsed
     },

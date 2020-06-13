@@ -1,39 +1,45 @@
 <template>
-<div id="map">
-<div class="timeline" v-if="timeLineState">
+  <div id="map">
+    <div class="timeline">
       <div class="slider">
-      <vue-slider
-      id="slider"
-      v-model="value"
-      :data="date"
-      :absorb="true"
-      :tooltip="'active'"
-      :use-keyboard="true"
-      :marks="marks"
-      :enable-cross="false"
-      style="widte:80vw"
-      v-on:drag-end="filter(value)">
-        <template v-slot:dot>
-          <img :src="'/static/icon/fire.png'" class="custom-dot" style="width:25px"/>
-        </template>
-      </vue-slider>
-  </div>
+        <vue-slider
+          id="slider"
+          v-model="value"
+          :data="date"
+          :absorb="true"
+          :tooltip="'active'"
+          :use-keyboard="true"
+          :marks="marks"
+          :enable-cross="false"
+          style="widte:80vw"
+          v-on:drag-end="filter(value)"
+        >
+          <template v-slot:dot>
+            <img :src="'/static/icon/fire.png'" class="custom-dot" style="width:25px" />
+          </template>
+        </vue-slider>
+      </div>
       <div class="icons-list">
-        <a-icon v-if="!intervalState" type="play-circle" theme="twoTone" style="margin-right:15px" @click="Play()"/>
-        <a-icon v-if="intervalState" type="pause-circle" theme="twoTone" @click="Pause()"/>
+        <a-icon
+          v-if="!intervalState"
+          type="play-circle"
+          theme="twoTone"
+          style="margin-right:15px"
+          @click="Play()"
+        />
+        <a-icon v-if="intervalState" type="pause-circle" theme="twoTone" @click="Pause()" />
       </div>
     </div>
-</div>
-
+  </div>
 </template>
 
 <script>
 import mapboxgl from 'mapbox-gl'
-import {Icon} from 'ant-design-vue'
 import VueSlider from 'vue-slider-component'
-const mapboxToken = 'pk.eyJ1IjoibHNxMjEwIiwiYSI6ImNqZXd6NzVyYzB6b24ydnBzOWFhZ3FpNTQifQ.y4iy69PepyhrkJ98qjzykg'
+const mapboxToken =
+  'pk.eyJ1IjoibHNxMjEwIiwiYSI6ImNqZXd6NzVyYzB6b24ydnBzOWFhZ3FpNTQifQ.y4iy69PepyhrkJ98qjzykg'
 export default {
-  data () {
+  data() {
     return {
       map: null,
       value: ['2019-9-1', '2020-2-28'],
@@ -47,111 +53,133 @@ export default {
     }
   },
   components: {
-    VueSlider,
-    AIcon: Icon
+    VueSlider
   },
-  mounted () {
+  mounted() {
     this.initMap()
     this.initDate()
   },
-  computed: {
-    timeLineState () {
-      if (this.$store.state.funName === 'timeLine') {
-        return true
-      } else {
-        return false
-      }
-    }
-  },
   methods: {
-    buildFireMap: function (sourseName, dataPath, layerHeat, layerPoint, fireSourse, map) {
+    buildFireMap: function(
+      sourseName,
+      dataPath,
+      layerHeat,
+      layerPoint,
+      fireSourse,
+      map
+    ) {
       map.addSource(sourseName, {
-        'type': 'geojson',
-        'data': dataPath
+        type: 'geojson',
+        data: dataPath
       })
 
       // 热力图图层
-      map.addLayer({
-        'id': layerHeat,
-        'type': 'heatmap',
-        'source': sourseName,
-        'maxzoom': 9,
-        'paint': {
-          'heatmap-weight': [
-            'interpolate',
-            ['linear'],
-            ['get', 'mag'],
-            0, 0,
-            6, 1
-          ],
-          'heatmap-intensity': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            0, 1,
-            9, 3
-          ],
-          'heatmap-color': [
-            'interpolate',
-            ['linear'],
-            ['heatmap-density'],
-            0, 'rgba(33,102,172,0)',
-            0.2, 'rgb(103,169,207)',
-            0.4, 'rgb(209,229,240)',
-            0.6, 'rgb(253,219,199)',
-            0.8, 'rgb(239,138,98)',
-            1, 'rgb(178,24,43)'
-          ],
-          'heatmap-radius': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            0, 2,
-            9, 20
-          ],
-          'heatmap-opacity': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            7, 1,
-            9, 0
-          ]
-        }
-      }, 'waterway-label')
+      map.addLayer(
+        {
+          id: layerHeat,
+          type: 'heatmap',
+          source: sourseName,
+          maxzoom: 9,
+          paint: {
+            'heatmap-weight': [
+              'interpolate',
+              ['linear'],
+              ['get', 'mag'],
+              0,
+              0,
+              6,
+              1
+            ],
+            'heatmap-intensity': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              0,
+              1,
+              9,
+              3
+            ],
+            'heatmap-color': [
+              'interpolate',
+              ['linear'],
+              ['heatmap-density'],
+              0,
+              'rgba(33,102,172,0)',
+              0.2,
+              'rgb(103,169,207)',
+              0.4,
+              'rgb(209,229,240)',
+              0.6,
+              'rgb(253,219,199)',
+              0.8,
+              'rgb(239,138,98)',
+              1,
+              'rgb(178,24,43)'
+            ],
+            'heatmap-radius': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              0,
+              2,
+              9,
+              20
+            ],
+            'heatmap-opacity': ['interpolate', ['linear'], ['zoom'], 7, 1, 9, 0]
+          }
+        },
+        'waterway-label'
+      )
 
       // 散点图图层
       map.addSource(fireSourse, {
-        'type': 'geojson',
-        'data': dataPath
+        type: 'geojson',
+        data: dataPath
       })
 
-      map.addLayer({
-        'id': layerPoint,
-        'type': 'symbol',
-        'source': fireSourse,
-        'layout': {
-          'icon-image': 'fire',
-          'icon-allow-overlap': true,
-          'icon-size': 0.05
-        }
-      }, 'waterway-label')
+      map.addLayer(
+        {
+          id: layerPoint,
+          type: 'symbol',
+          source: fireSourse,
+          layout: {
+            'icon-image': 'fire',
+            'icon-allow-overlap': true,
+            'icon-size': 0.05
+          }
+        },
+        'waterway-label'
+      )
 
       // 悬浮显示信息窗
       var popupTime = new mapboxgl.Popup({
         closeButton: false,
         closeOnClick: false
       })
-      map.on('mouseenter', layerPoint, (e) => {
-      // Change the cursor style as a UI indicator.
+      map.on('mouseenter', layerPoint, e => {
+        // Change the cursor style as a UI indicator.
         map.getCanvas().style.cursor = 'pointer'
 
         var dayOrnight
-        if (e.features[0].properties.daynight.match('D')) { dayOrnight = 'Day' } else { dayOrnight = 'Night' }
+        if (e.features[0].properties.daynight.match('D')) {
+          dayOrnight = 'Day'
+        } else {
+          dayOrnight = 'Night'
+        }
 
         var coordinates = e.features[0].geometry.coordinates.slice()
-        var description = 'Brightness: ' + e.features[0].properties.brightness + '</br>' +
-          'Date: ' + e.features[0].properties.acq_date + '</br>' + 'time: ' + dayOrnight +
-          '</br>' + 'Instrument: ' + e.features[0].properties.instrument
+        var description =
+          'Brightness: ' +
+          e.features[0].properties.brightness +
+          '</br>' +
+          'Date: ' +
+          e.features[0].properties.acq_date +
+          '</br>' +
+          'time: ' +
+          dayOrnight +
+          '</br>' +
+          'Instrument: ' +
+          e.features[0].properties.instrument
 
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears
@@ -173,7 +201,7 @@ export default {
         popupTime.remove()
       })
     },
-    initDate: function () {
+    initDate: function() {
       var dateList = []
       var i, j, tempDate, month
       for (i = 9; i < 15; i++) {
@@ -208,7 +236,7 @@ export default {
       this.date = dateList
       console.log(this.date[1])
     },
-    initMap: function () {
+    initMap: function() {
       mapboxgl.accessToken = mapboxToken
       this.map = new mapboxgl.Map({
         container: 'map',
@@ -220,7 +248,7 @@ export default {
       this.map.addControl(this.nav)
       this.map.on('click', this.mapClickEvent)
       this.map.on('load', () => {
-      // 加载小火苗
+        // 加载小火苗
         this.map.loadImage('/static/icon/fire.png', (error, image) => {
           if (error) throw error
 
@@ -229,19 +257,27 @@ export default {
 
         // 加载DEM图层
         this.map.addSource('dem', {
-          'type': 'raster-dem',
-          'url': 'mapbox://mapbox.terrain-rgb'
+          type: 'raster-dem',
+          url: 'mapbox://mapbox.terrain-rgb'
         })
         this.map.addLayer({
-          'id': 'hillshading',
-          'source': 'dem',
-          'type': 'hillshade'
-        // insert below waterway-river-canal-shadow;
-        // where hillshading sits in the Mapbox Outdoors style
+          id: 'hillshading',
+          source: 'dem',
+          type: 'hillshade'
+          // insert below waterway-river-canal-shadow;
+          // where hillshading sits in the Mapbox Outdoors style
         })
 
         // 加载火点图和热力图
-        var i, j, tempDate, month, sourseName, dataPath, layerHeat, layerPoint, fireSourse
+        var i,
+          j,
+          tempDate,
+          month,
+          sourseName,
+          dataPath,
+          layerHeat,
+          layerPoint,
+          fireSourse
         var map = this.map
         for (i = 9; i < 15; i++) {
           if (i < 13) {
@@ -253,7 +289,14 @@ export default {
                 sourseName = 'wildfires' + tempDate
                 fireSourse = 'firepoints' + tempDate
                 dataPath = '/static/' + tempDate + '.geojson'
-                this.$options.methods.buildFireMap(sourseName, dataPath, layerHeat, layerPoint, fireSourse, map)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  dataPath,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
               }
             } else {
               for (j = 1; j < 31; j++) {
@@ -263,7 +306,14 @@ export default {
                 sourseName = 'wildfires' + tempDate
                 fireSourse = 'firepoints' + tempDate
                 dataPath = '/static/' + tempDate + '.geojson'
-                this.$options.methods.buildFireMap(sourseName, dataPath, layerHeat, layerPoint, fireSourse, map)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  dataPath,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
               }
             }
           } else {
@@ -276,7 +326,14 @@ export default {
                 sourseName = 'wildfires' + tempDate
                 fireSourse = 'firepoints' + tempDate
                 dataPath = '/static/' + tempDate + '.geojson'
-                this.$options.methods.buildFireMap(sourseName, dataPath, layerHeat, layerPoint, fireSourse, map)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  dataPath,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
               }
             } else {
               for (j = 1; j < 29; j++) {
@@ -287,7 +344,14 @@ export default {
                 sourseName = 'wildfires' + tempDate
                 fireSourse = 'firepoints' + tempDate
                 dataPath = '/static/' + tempDate + '.geojson'
-                this.$options.methods.buildFireMap(sourseName, dataPath, layerHeat, layerPoint, fireSourse, map)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  dataPath,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
               }
             }
           }
@@ -295,11 +359,11 @@ export default {
       })
     },
 
-    mapClickEvent: function (e) {
+    mapClickEvent: function(e) {
       console.log('经纬度是', e.lngLat)
     },
 
-    filter: function (value) {
+    filter: function(value) {
       console.log(this.intervalState)
       if (this.intervalState) {
         clearInterval(this.interval)
@@ -328,10 +392,10 @@ export default {
 
       // 打开指定范围火点图
       if (value0[0] === value1[0]) {
-      // 2019-2019
+        // 2019-2019
         if (value0[0] === '2019') {
           if (value0[1] === value1[1]) {
-          // 选中范围在同一月
+            // 选中范围在同一月
             for (j = value0[2]; j <= value1[2]; j++) {
               layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
               layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
@@ -340,8 +404,8 @@ export default {
               console.log(layerHeat)
             }
           } else {
-          // 选中范围在不同月
-          // 打开起始月
+            // 选中范围在不同月
+            // 打开起始月
             if (value0[1] % 2 === 0) {
               for (j = value0[2]; j < 32; j++) {
                 layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
@@ -368,7 +432,11 @@ export default {
                 for (j = 1; j < 32; j++) {
                   layerHeat = 'fireMap' + value0[0] + '-' + i + '-' + j
                   layerPoint = 'firePoint' + value0[0] + '-' + i + '-' + j
-                  this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
+                  this.map.setLayoutProperty(
+                    layerPoint,
+                    'visibility',
+                    'visible'
+                  )
                   this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
                   console.log(layerHeat)
                 }
@@ -376,7 +444,11 @@ export default {
                 for (j = 1; j < 31; j++) {
                   layerHeat = 'fireMap' + value0[0] + '-' + i + '-' + j
                   layerPoint = 'firePoint' + value0[0] + '-' + i + '-' + j
-                  this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
+                  this.map.setLayoutProperty(
+                    layerPoint,
+                    'visibility',
+                    'visible'
+                  )
                   this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
                   console.log(layerHeat)
                 }
@@ -393,9 +465,9 @@ export default {
             }
           }
         } else if (value0[0] === '2020') {
-        // 2020-2020
+          // 2020-2020
           if (value0[1] === value1[1]) {
-          // 选中范围在同一月
+            // 选中范围在同一月
             for (j = value0[2]; j <= value1[2]; j++) {
               layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
               layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
@@ -404,8 +476,8 @@ export default {
               console.log(layerHeat)
             }
           } else {
-          // 选中范围在不同月
-          // 打开起始月
+            // 选中范围在不同月
+            // 打开起始月
             if (value0[1] === 1) {
               for (j = value0[2]; j < 32; j++) {
                 layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
@@ -497,7 +569,7 @@ export default {
         }
       }
     },
-    Play: function () {
+    Play: function() {
       var layerPoint, layerHeat, preLayerHeat, preLayerPoint
       if (this.intervalState) {
         clearInterval(this.interval)
@@ -527,7 +599,7 @@ export default {
         }
       }, 2000)
     },
-    Pause: function () {
+    Pause: function() {
       // 停止播放
       clearInterval(this.interval)
       this.intervalState = false
@@ -535,7 +607,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -544,7 +615,7 @@ export default {
   width: 100vw;
   height: 100vh;
 }
-.mapboxgl-popup{
+.mapboxgl-popup {
   max-width: 400px;
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
@@ -552,19 +623,18 @@ export default {
   position: absolute;
   bottom: 30px;
   width: 100%;
-  left:100px;
-  .slider{
-    width:80%;
-    float:left;
-    margin-left:100px;
+  left: 100px;
+  .slider {
+    width: 80%;
+    float: left;
+    margin-left: 100px;
   }
-  .icons-list{
+  .icons-list {
     width: 5%;
-    float:left;
+    float: left;
     font-size: 24px;
     position: absolute;
     z-index: 100;
   }
 }
-
 </style>
