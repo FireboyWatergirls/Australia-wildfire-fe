@@ -36,16 +36,18 @@
 <script>
 import mapboxgl from 'mapbox-gl'
 import VueSlider from 'vue-slider-component'
+import fireApi from '@/../src/api/fireService'
+
 const mapboxToken =
   'pk.eyJ1IjoibHNxMjEwIiwiYSI6ImNqZXd6NzVyYzB6b24ydnBzOWFhZ3FpNTQifQ.y4iy69PepyhrkJ98qjzykg'
 export default {
   data() {
     return {
       map: null,
-      value: ['2019-9-1', '2020-2-28'],
+      value: ['2019-09-01', '2020-02-29'],
       marks: {
-        '2019-9-1': '2019-9-1',
-        '2020-2-28': '2020-2-28'
+        '2019-09-01': '2019-09-01',
+        '2020-02-29': '2020-02-29'
       },
       date: [],
       interval: null,
@@ -62,7 +64,7 @@ export default {
   methods: {
     buildFireMap: function(
       sourseName,
-      dataPath,
+      data,
       layerHeat,
       layerPoint,
       fireSourse,
@@ -70,7 +72,7 @@ export default {
     ) {
       map.addSource(sourseName, {
         type: 'geojson',
-        data: dataPath
+        data: data
       })
 
       // 热力图图层
@@ -134,7 +136,7 @@ export default {
       // 散点图图层
       map.addSource(fireSourse, {
         type: 'geojson',
-        data: dataPath
+        data: data
       })
 
       map.addLayer(
@@ -160,24 +162,24 @@ export default {
         // Change the cursor style as a UI indicator.
         map.getCanvas().style.cursor = 'pointer'
 
-        var dayOrnight
+        /* var dayOrnight
         if (e.features[0].properties.daynight.match('D')) {
           dayOrnight = 'Day'
         } else {
           dayOrnight = 'Night'
-        }
+        } */
 
         var coordinates = e.features[0].geometry.coordinates.slice()
         var description =
           'Brightness: ' +
           e.features[0].properties.brightness +
           '</br>' +
-          'Date: ' +
+          /* 'Date: ' +
           e.features[0].properties.acq_date +
           '</br>' +
           'time: ' +
           dayOrnight +
-          '</br>' +
+          '</br>' + */
           'Instrument: ' +
           e.features[0].properties.instrument
 
@@ -204,37 +206,73 @@ export default {
     initDate: function() {
       var dateList = []
       var i, j, tempDate, month
-      for (i = 9; i < 15; i++) {
+      // 2019.9
+      for (j = 1; j < 10; j++) {
+        tempDate = '2019-09-0' + j
+        dateList.push(tempDate)
+      }
+      for (j = 10; j < 31; j++) {
+        tempDate = '2019-09-' + j
+        dateList.push(tempDate)
+      }
+      // 2019.10-2020.2
+      for (i = 10; i < 15; i++) {
         if (i < 13) {
           if (i % 2 === 0) {
-            for (j = 1; j < 32; j++) {
+            for (j = 1; j < 10; j++) {
+              tempDate = '2019-' + i + '-0' + j
+              dateList.push(tempDate)
+            }
+            for (j = 10; j < 32; j++) {
               tempDate = '2019-' + i + '-' + j
               dateList.push(tempDate)
             }
           } else {
-            for (j = 1; j < 31; j++) {
+            for (j = 1; j < 10; j++) {
+              tempDate = '2019-' + i + '-0' + j
+              dateList.push(tempDate)
+            }
+            for (j = 10; j < 31; j++) {
               tempDate = '2019-' + i + '-' + j
               dateList.push(tempDate)
             }
           }
         } else {
           if (i === 13) {
-            for (j = 1; j < 32; j++) {
+            for (j = 1; j < 10; j++) {
               month = i - 12
-              tempDate = '2020-' + month + '-' + j
+              tempDate = '2020-0' + month + '-0' + j
+              dateList.push(tempDate)
+            }
+            for (j = 10; j < 32; j++) {
+              month = i - 12
+              tempDate = '2020-0' + month + '-' + j
               dateList.push(tempDate)
             }
           } else {
-            for (j = 1; j < 29; j++) {
+            for (j = 1; j < 10; j++) {
               month = i - 12
-              tempDate = '2020-' + month + '-' + j
+              tempDate = '2020-0' + month + '-0' + j
+              dateList.push(tempDate)
+            }
+            for (j = 10; j < 30; j++) {
+              month = i - 12
+              tempDate = '2020-0' + month + '-' + j
               dateList.push(tempDate)
             }
           }
         }
       }
       this.date = dateList
-      console.log(this.date[1])
+      console.log(this.dat)
+    },
+    getData: async function(tempDate) {
+      var data = await fireApi.getPoints(tempDate)
+      return data
+    },
+    getData20: async function(tempDate) {
+      var data = await fireApi.getPoints20(tempDate)
+      return data
     },
     initMap: function() {
       mapboxgl.accessToken = mapboxToken
@@ -247,7 +285,7 @@ export default {
       this.nav = new mapboxgl.NavigationControl()
       this.map.addControl(this.nav)
       this.map.on('click', this.mapClickEvent)
-      this.map.on('load', () => {
+      this.map.on('load', async () => {
         // 加载小火苗
         this.map.loadImage('/static/icon/fire.png', (error, image) => {
           if (error) throw error
@@ -272,90 +310,190 @@ export default {
         var i,
           j,
           tempDate,
-          month,
           sourseName,
-          dataPath,
+          data,
           layerHeat,
           layerPoint,
-          fireSourse
+          fireSourse,
+          month
         var map = this.map
-        for (i = 9; i < 15; i++) {
-          if (i < 13) {
-            if (i % 2 === 0) {
-              for (j = 1; j < 32; j++) {
-                tempDate = '2019-' + i + '-' + j
-                layerHeat = 'fireMap' + tempDate
-                layerPoint = 'firePoint' + tempDate
-                sourseName = 'wildfires' + tempDate
-                fireSourse = 'firepoints' + tempDate
-                dataPath = '/static/' + tempDate + '.geojson'
-                this.$options.methods.buildFireMap(
-                  sourseName,
-                  dataPath,
-                  layerHeat,
-                  layerPoint,
-                  fireSourse,
-                  map
-                )
+
+        // 2019.9
+        for (j = 1; j < 10; j++) {
+          tempDate = '2019-09-0' + j
+          layerHeat = 'fireMap' + tempDate
+          layerPoint = 'firePoint' + tempDate
+          sourseName = 'wildfires' + tempDate
+          fireSourse = 'firepoints' + tempDate
+          data = await this.$options.methods.getData(tempDate)
+          this.$options.methods.buildFireMap(
+            sourseName,
+            data,
+            layerHeat,
+            layerPoint,
+            fireSourse,
+            map
+          )
+        }
+        for (j = 10; j < 31; j++) {
+          tempDate = '2019-09-' + j
+          layerHeat = 'fireMap' + tempDate
+          layerPoint = 'firePoint' + tempDate
+          sourseName = 'wildfires' + tempDate
+          fireSourse = 'firepoints' + tempDate
+          data = await this.$options.methods.getData(tempDate)
+          this.$options.methods.buildFireMap(
+            sourseName,
+            data,
+            layerHeat,
+            layerPoint,
+            fireSourse,
+            map
+          )
+          // 2019.10-2020.2
+          for (i = 10; i < 15; i++) {
+            if (i < 13) {
+              if (i % 2 === 0) {
+                for (j = 1; j < 10; j++) {
+                  tempDate = '2019-' + i + '-0' + j
+                  layerHeat = 'fireMap' + tempDate
+                  layerPoint = 'firePoint' + tempDate
+                  sourseName = 'wildfires' + tempDate
+                  fireSourse = 'firepoints' + tempDate
+                  data = await this.$options.methods.getData(tempDate)
+                  this.$options.methods.buildFireMap(
+                    sourseName,
+                    data,
+                    layerHeat,
+                    layerPoint,
+                    fireSourse,
+                    map
+                  )
+                }
+                for (j = 10; j < 32; j++) {
+                  tempDate = '2019-' + i + '-' + j
+                  layerHeat = 'fireMap' + tempDate
+                  layerPoint = 'firePoint' + tempDate
+                  sourseName = 'wildfires' + tempDate
+                  fireSourse = 'firepoints' + tempDate
+                  data = await this.$options.methods.getData(tempDate)
+                  this.$options.methods.buildFireMap(
+                    sourseName,
+                    data,
+                    layerHeat,
+                    layerPoint,
+                    fireSourse,
+                    map
+                  )
+                }
+              } else {
+                for (j = 1; j < 10; j++) {
+                  tempDate = '2019-' + i + '-0' + j
+                  layerHeat = 'fireMap' + tempDate
+                  layerPoint = 'firePoint' + tempDate
+                  sourseName = 'wildfires' + tempDate
+                  fireSourse = 'firepoints' + tempDate
+                  data = await this.$options.methods.getData(tempDate)
+                  this.$options.methods.buildFireMap(
+                    sourseName,
+                    data,
+                    layerHeat,
+                    layerPoint,
+                    fireSourse,
+                    map
+                  )
+                }
+                for (j = 10; j < 31; j++) {
+                  tempDate = '2019-' + i + '-' + j
+                  layerHeat = 'fireMap' + tempDate
+                  layerPoint = 'firePoint' + tempDate
+                  sourseName = 'wildfires' + tempDate
+                  fireSourse = 'firepoints' + tempDate
+                  data = await this.$options.methods.getData(tempDate)
+                  this.$options.methods.buildFireMap(
+                    sourseName,
+                    data,
+                    layerHeat,
+                    layerPoint,
+                    fireSourse,
+                    map
+                  )
+                }
               }
             } else {
-              for (j = 1; j < 31; j++) {
-                tempDate = '2019-' + i + '-' + j
-                layerHeat = 'fireMap' + tempDate
-                layerPoint = 'firePoint' + tempDate
-                sourseName = 'wildfires' + tempDate
-                fireSourse = 'firepoints' + tempDate
-                dataPath = '/static/' + tempDate + '.geojson'
-                this.$options.methods.buildFireMap(
-                  sourseName,
-                  dataPath,
-                  layerHeat,
-                  layerPoint,
-                  fireSourse,
-                  map
-                )
-              }
-            }
-          } else {
-            if (i === 13) {
-              for (j = 1; j < 32; j++) {
+              if (i === 13) {
                 month = i - 12
-                tempDate = '2020-' + month + '-' + j
-                layerHeat = 'fireMap' + tempDate
-                layerPoint = 'firePoint' + tempDate
-                sourseName = 'wildfires' + tempDate
-                fireSourse = 'firepoints' + tempDate
-                dataPath = '/static/' + tempDate + '.geojson'
-                this.$options.methods.buildFireMap(
-                  sourseName,
-                  dataPath,
-                  layerHeat,
-                  layerPoint,
-                  fireSourse,
-                  map
-                )
-              }
-            } else {
-              for (j = 1; j < 29; j++) {
+                for (j = 1; j < 10; j++) {
+                  tempDate = '2020-' + month + '-0' + j
+                  layerHeat = 'fireMap' + tempDate
+                  layerPoint = 'firePoint' + tempDate
+                  sourseName = 'wildfires' + tempDate
+                  fireSourse = 'firepoints' + tempDate
+                  data = await this.$options.methods.getData20(tempDate)
+                  this.$options.methods.buildFireMap(
+                    sourseName,
+                    data,
+                    layerHeat,
+                    layerPoint,
+                    fireSourse,
+                    map
+                  )
+                }
+                for (j = 10; j < 32; j++) {
+                  tempDate = '2020-' + month + '-' + j
+                  layerHeat = 'fireMap' + tempDate
+                  layerPoint = 'firePoint' + tempDate
+                  sourseName = 'wildfires' + tempDate
+                  fireSourse = 'firepoints' + tempDate
+                  data = await this.$options.methods.getData20(tempDate)
+                  this.$options.methods.buildFireMap(
+                    sourseName,
+                    data,
+                    layerHeat,
+                    layerPoint,
+                    fireSourse,
+                    map
+                  )
+                }
+              } else {
                 month = i - 12
-                tempDate = '2020-' + month + '-' + j
-                layerHeat = 'fireMap' + tempDate
-                layerPoint = 'firePoint' + tempDate
-                sourseName = 'wildfires' + tempDate
-                fireSourse = 'firepoints' + tempDate
-                dataPath = '/static/' + tempDate + '.geojson'
-                this.$options.methods.buildFireMap(
-                  sourseName,
-                  dataPath,
-                  layerHeat,
-                  layerPoint,
-                  fireSourse,
-                  map
-                )
+                for (j = 1; j < 10; j++) {
+                  tempDate = '2020-' + month + '-0' + j
+                  layerHeat = 'fireMap' + tempDate
+                  layerPoint = 'firePoint' + tempDate
+                  sourseName = 'wildfires' + tempDate
+                  fireSourse = 'firepoints' + tempDate
+                  data = await this.$options.methods.getData20(tempDate)
+                  this.$options.methods.buildFireMap(
+                    sourseName,
+                    data,
+                    layerHeat,
+                    layerPoint,
+                    fireSourse,
+                    map
+                  )
+                }
+                for (j = 10; j < 30; j++) {
+                  tempDate = '2020-' + month + '-' + j
+                  layerHeat = 'fireMap' + tempDate
+                  layerPoint = 'firePoint' + tempDate
+                  sourseName = 'wildfires' + tempDate
+                  fireSourse = 'firepoints' + tempDate
+                  data = await this.$options.methods.getData20(tempDate)
+                  this.$options.methods.buildFireMap(
+                    sourseName,
+                    data,
+                    layerHeat,
+                    layerPoint,
+                    fireSourse,
+                    map
+                  )
+                }
               }
             }
           }
         }
+        alert('loaded')
       })
     },
 
