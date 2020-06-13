@@ -13,10 +13,11 @@
   },
   "dependencies": {
     "ant-design-vue": "^1.5.4",
+    "axios": "^0.19.2",
     "echarts": "^4.8.0",
     "echarts-gl": "^1.1.1",
-    "mapbox-gl": "^1.10.0",
     "mapbox-echarts": "^1.0.3",
+    "mapbox-gl": "^1.10.0",
     "node-sass": "^4.14.0",
     "scrollama": "^2.2.1",
     "vue": "^2.5.2",

@@ -19,8 +19,6 @@ router.afterEach((to, from, next) => {
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts
 
-Vue.prototype.$echarts = echarts
-
 mapboxgl.accessToken = 'pk.eyJ1IjoibHNxMjEwIiwiYSI6ImNqZXd6NzVyYzB6b24ydnBzOWFhZ3FpNTQifQ.y4iy69PepyhrkJ98qjzykg'
 
 /* eslint-disable no-new */

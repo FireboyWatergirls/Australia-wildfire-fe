@@ -39,6 +39,7 @@
 
 <script>
 import mapboxgl from 'mapbox-gl'
+import axios from 'axios'
 export default {
   name: 'businesses',
   data() {
@@ -59,70 +60,82 @@ export default {
       let popup = new mapboxgl.Popup({
         closeButton: false
       })
-      this.map.on('load', () => {
-        this.map
-          .addSource('australia', {
-            type: 'geojson',
-            data: './static/data/states.geojson'
+      axios.get('./static/data/states.geojson') // 这里换成url
+      // then获取成功： response成功后的返回值
+        .then(response => {
+          // console.log(response)
+          this.oftenGoods = response.data
+          // console.log(this.oftenGoods)
+          this.map.on('load', () => {
+            this.map
+              .addSource('australia', {
+                type: 'geojson',
+                data: this.oftenGoods
+              })
+              .addLayer(
+                {
+                  id: 'Total Affected',
+                  type: 'fill',
+                  source: 'australia',
+                  paint: {
+                    'fill-color': [
+                      'interpolate',
+                      ['linear'],
+                      ['get', 'Total_Affected'],
+                      0,
+                      '#f1e3cb',
+                      10,
+                      '#f9b384',
+                      20,
+                      '#ca5116',
+                      30,
+                      '#581c0c'
+                    ],
+                    'fill-opacity': 0.75
+                  }
+                },
+                'waterway-label'
+              )
+              .on('click', 'Total Affected', e => {
+                this.map.getCanvas().style.cursor = 'pointer'
+                let feature = e.features[0]
+                overlay.innerHTML = ''
+                let title = document.createElement('strong')
+                title.textContent = feature.properties.STATE_NAME
+                let deal = document.createElement('div')
+                deal.textContent =
+                  'A Great Deal:' + feature.properties.A_Great_deal + '%'
+                let Somewhat = document.createElement('div')
+                Somewhat.textContent =
+                  'Somewhat:' + feature.properties.Somewhat + '%'
+                let Little = document.createElement('div')
+                Little.textContent =
+                  'A Great Deal:' + feature.properties.A_Little + '%'
+                overlay.appendChild(title)
+                overlay.appendChild(deal)
+                overlay.appendChild(Somewhat)
+                overlay.appendChild(Little)
+                overlay.style.display = 'block'
+                popup
+                  .setLngLat(e.lngLat)
+                  .setText(feature.properties.STATE_NAME)
+                  .addTo(this.map)
+              })
+              .on('mouseenter', 'Total Affected', () => {
+                this.map.getCanvas().style.cursor = 'pointer'
+              })
+              .on('mouseleave', 'Total Affected', () => {
+                this.map.getCanvas().style.cursor = ''
+                popup.remove()
+                overlay.style.display = 'none'
+              })
           })
-          .addLayer(
-            {
-              id: 'Total Affected',
-              type: 'fill',
-              source: 'australia',
-              paint: {
-                'fill-color': [
-                  'interpolate',
-                  ['linear'],
-                  ['get', 'Total_Affected'],
-                  0,
-                  '#f1e3cb',
-                  10,
-                  '#f9b384',
-                  20,
-                  '#ca5116',
-                  30,
-                  '#581c0c'
-                ],
-                'fill-opacity': 0.75
-              }
-            },
-            'waterway-label'
-          )
-          .on('click', 'Total Affected', e => {
-            this.map.getCanvas().style.cursor = 'pointer'
-            let feature = e.features[0]
-            overlay.innerHTML = ''
-            let title = document.createElement('strong')
-            title.textContent = feature.properties.STATE_NAME
-            let deal = document.createElement('div')
-            deal.textContent =
-              'A Great Deal:' + feature.properties.A_Great_deal + '%'
-            let Somewhat = document.createElement('div')
-            Somewhat.textContent =
-              'Somewhat:' + feature.properties.Somewhat + '%'
-            let Little = document.createElement('div')
-            Little.textContent =
-              'A Great Deal:' + feature.properties.A_Little + '%'
-            overlay.appendChild(title)
-            overlay.appendChild(deal)
-            overlay.appendChild(Somewhat)
-            overlay.appendChild(Little)
-            overlay.style.display = 'block'
-            popup
-              .setLngLat(e.lngLat)
-              .setText(feature.properties.STATE_NAME)
-              .addTo(this.map)
-          })
-          .on('mouseenter', 'Total Affected', () => {
-            this.map.getCanvas().style.cursor = 'pointer'
-          })
-          .on('mouseleave', 'Total Affected', () => {
-            this.map.getCanvas().style.cursor = ''
-            popup.remove()
-            overlay.style.display = 'none'
-          })
-      })
+        })
+        // 获取失败
+        .catch(error => {
+          console.log(error)
+          alert('网络错误，不能访问')
+        })
     }
   }
 }
