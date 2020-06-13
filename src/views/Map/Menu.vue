@@ -5,6 +5,7 @@
     </a-button>
     <a-menu
       :default-open-keys="['sub1','sub2']"
+      :defaultSelectedKeys="['2']"
       mode="inline"
       :theme="theme"
       :inline-collapsed="collapsed"
@@ -42,7 +43,7 @@ export default {
     }
   },
   methods: {
-    toggleCollapsed () {
+    toggleCollapsed() {
       this.collapsed = !this.collapsed
     },
     changeItem(e) {

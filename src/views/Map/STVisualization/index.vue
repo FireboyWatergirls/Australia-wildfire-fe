@@ -597,7 +597,7 @@ export default {
         if (endIndex >= this.date.length) {
           clearInterval(this.interval)
         }
-      }, 2000)
+      }, 600)
     },
     Pause: function() {
       // 停止播放
