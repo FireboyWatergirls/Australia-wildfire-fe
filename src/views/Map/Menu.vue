@@ -4,8 +4,8 @@
       <a-icon :type="collapsed ? 'menu-unfold' : 'menu-fold'" />
     </a-button>
     <a-menu
-      :default-selected-keys="['2']"
-      :default-open-keys="['sub1']"
+      :default-open-keys="['sub1','sub2']"
+      :defaultSelectedKeys="['2']"
       mode="inline"
       :theme="theme"
       :inline-collapsed="collapsed"

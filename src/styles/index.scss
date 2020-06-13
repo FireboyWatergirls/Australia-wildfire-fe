@@ -1,30 +1,9 @@
-@import "./var.scss";
-@import "./mapbox.scss";
-@import url("https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css");
+@import './var.scss';
+@import './fire.css';
+@import './mapbox.scss';
+@import url('https://api.tiles.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css');
 
 html,
 body {
   margin: 0;
-}
-
-// * {
-//   box-sizing: border-box;
-// }
-
-::-webkit-scrollbar {
-  /*滚动条整体样式*/
-  width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
-  height: 1px;
-}
-::-webkit-scrollbar-thumb {
-  /*滚动条里面小方块*/
-  border-radius: 0px;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  background: #535353;
-}
-::-webkit-scrollbar-track {
-  /*滚动条里面轨道*/
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  background: #ededed;
 }
