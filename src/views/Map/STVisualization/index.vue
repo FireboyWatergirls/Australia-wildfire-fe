@@ -133,6 +133,7 @@ export default {
         'waterway-label'
       )
 
+      console.log(layerHeat)
       map.setLayoutProperty(layerHeat, 'visibility', 'none')
 
       // 散点图图层
@@ -320,7 +321,6 @@ export default {
           sourseName = 'wildfires' + tempDate
           fireSourse = 'firepoints' + tempDate
           data = await fireApi.getPoints(tempDate)
-          console.log(data)
           this.$options.methods.buildFireMap(
             sourseName,
             data,
@@ -330,13 +330,16 @@ export default {
             map
           )
         }
+        console.log(j)
         for (j = 10; j < 31; j++) {
+          console.log('enter')
           tempDate = '2019-09-' + j
           layerHeat = 'fireMap' + tempDate
           layerPoint = 'firePoint' + tempDate
           sourseName = 'wildfires' + tempDate
           fireSourse = 'firepoints' + tempDate
           data = await fireApi.getPoints(tempDate)
+          console.log(tempDate)
           this.$options.methods.buildFireMap(
             sourseName,
             data,
@@ -345,145 +348,146 @@ export default {
             fireSourse,
             map
           )
-          // 2019.10-2020.2
-          for (i = 10; i < 15; i++) {
-            if (i < 13) {
-              if (i % 2 === 0) {
-                for (j = 1; j < 10; j++) {
-                  tempDate = '2019-' + i + '-0' + j
-                  layerHeat = 'fireMap' + tempDate
-                  layerPoint = 'firePoint' + tempDate
-                  sourseName = 'wildfires' + tempDate
-                  fireSourse = 'firepoints' + tempDate
-                  data = await fireApi.getPoints(tempDate)
-                  this.$options.methods.buildFireMap(
-                    sourseName,
-                    data,
-                    layerHeat,
-                    layerPoint,
-                    fireSourse,
-                    map
-                  )
-                }
-                for (j = 10; j < 32; j++) {
-                  tempDate = '2019-' + i + '-' + j
-                  layerHeat = 'fireMap' + tempDate
-                  layerPoint = 'firePoint' + tempDate
-                  sourseName = 'wildfires' + tempDate
-                  fireSourse = 'firepoints' + tempDate
-                  data = await fireApi.getPoints(tempDate)
-                  this.$options.methods.buildFireMap(
-                    sourseName,
-                    data,
-                    layerHeat,
-                    layerPoint,
-                    fireSourse,
-                    map
-                  )
-                }
-              } else {
-                for (j = 1; j < 10; j++) {
-                  tempDate = '2019-' + i + '-0' + j
-                  layerHeat = 'fireMap' + tempDate
-                  layerPoint = 'firePoint' + tempDate
-                  sourseName = 'wildfires' + tempDate
-                  fireSourse = 'firepoints' + tempDate
-                  data = await fireApi.getPoints(tempDate)
-                  this.$options.methods.buildFireMap(
-                    sourseName,
-                    data,
-                    layerHeat,
-                    layerPoint,
-                    fireSourse,
-                    map
-                  )
-                }
-                for (j = 10; j < 31; j++) {
-                  tempDate = '2019-' + i + '-' + j
-                  layerHeat = 'fireMap' + tempDate
-                  layerPoint = 'firePoint' + tempDate
-                  sourseName = 'wildfires' + tempDate
-                  fireSourse = 'firepoints' + tempDate
-                  data = await fireApi.getPoints(tempDate)
-                  this.$options.methods.buildFireMap(
-                    sourseName,
-                    data,
-                    layerHeat,
-                    layerPoint,
-                    fireSourse,
-                    map
-                  )
-                }
+        }
+        console.log('out')
+        // 2019.10-2020.2
+        for (i = 10; i < 15; i++) {
+          if (i < 13) {
+            if (i % 2 === 0) {
+              for (j = 1; j < 10; j++) {
+                tempDate = '2019-' + i + '-0' + j
+                layerHeat = 'fireMap' + tempDate
+                layerPoint = 'firePoint' + tempDate
+                sourseName = 'wildfires' + tempDate
+                fireSourse = 'firepoints' + tempDate
+                data = await fireApi.getPoints(tempDate)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  data,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
+              }
+              for (j = 10; j < 32; j++) {
+                tempDate = '2019-' + i + '-' + j
+                layerHeat = 'fireMap' + tempDate
+                layerPoint = 'firePoint' + tempDate
+                sourseName = 'wildfires' + tempDate
+                fireSourse = 'firepoints' + tempDate
+                data = await fireApi.getPoints(tempDate)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  data,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
               }
             } else {
-              if (i === 13) {
-                month = i - 12
-                for (j = 1; j < 10; j++) {
-                  tempDate = '2020-' + month + '-0' + j
-                  layerHeat = 'fireMap' + tempDate
-                  layerPoint = 'firePoint' + tempDate
-                  sourseName = 'wildfires' + tempDate
-                  fireSourse = 'firepoints' + tempDate
-                  data = await fireApi.getPoints20(tempDate)
-                  this.$options.methods.buildFireMap(
-                    sourseName,
-                    data,
-                    layerHeat,
-                    layerPoint,
-                    fireSourse,
-                    map
-                  )
-                }
-                for (j = 10; j < 32; j++) {
-                  tempDate = '2020-' + month + '-' + j
-                  layerHeat = 'fireMap' + tempDate
-                  layerPoint = 'firePoint' + tempDate
-                  sourseName = 'wildfires' + tempDate
-                  fireSourse = 'firepoints' + tempDate
-                  data = await fireApi.getPoints20(tempDate)
-                  this.$options.methods.buildFireMap(
-                    sourseName,
-                    data,
-                    layerHeat,
-                    layerPoint,
-                    fireSourse,
-                    map
-                  )
-                }
-              } else {
-                month = i - 12
-                for (j = 1; j < 10; j++) {
-                  tempDate = '2020-' + month + '-0' + j
-                  layerHeat = 'fireMap' + tempDate
-                  layerPoint = 'firePoint' + tempDate
-                  sourseName = 'wildfires' + tempDate
-                  fireSourse = 'firepoints' + tempDate
-                  data = await fireApi.getPoints20(tempDate)
-                  this.$options.methods.buildFireMap(
-                    sourseName,
-                    data,
-                    layerHeat,
-                    layerPoint,
-                    fireSourse,
-                    map
-                  )
-                }
-                for (j = 10; j < 30; j++) {
-                  tempDate = '2020-' + month + '-' + j
-                  layerHeat = 'fireMap' + tempDate
-                  layerPoint = 'firePoint' + tempDate
-                  sourseName = 'wildfires' + tempDate
-                  fireSourse = 'firepoints' + tempDate
-                  data = await fireApi.getPoints20(tempDate)
-                  this.$options.methods.buildFireMap(
-                    sourseName,
-                    data,
-                    layerHeat,
-                    layerPoint,
-                    fireSourse,
-                    map
-                  )
-                }
+              for (j = 1; j < 10; j++) {
+                tempDate = '2019-' + i + '-0' + j
+                layerHeat = 'fireMap' + tempDate
+                layerPoint = 'firePoint' + tempDate
+                sourseName = 'wildfires' + tempDate
+                fireSourse = 'firepoints' + tempDate
+                data = await fireApi.getPoints(tempDate)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  data,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
+              }
+              for (j = 10; j < 31; j++) {
+                tempDate = '2019-' + i + '-' + j
+                layerHeat = 'fireMap' + tempDate
+                layerPoint = 'firePoint' + tempDate
+                sourseName = 'wildfires' + tempDate
+                fireSourse = 'firepoints' + tempDate
+                data = await fireApi.getPoints(tempDate)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  data,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
+              }
+            }
+          } else {
+            if (i === 13) {
+              month = i - 12
+              for (j = 1; j < 10; j++) {
+                tempDate = '2020-0' + month + '-0' + j
+                layerHeat = 'fireMap' + tempDate
+                layerPoint = 'firePoint' + tempDate
+                sourseName = 'wildfires' + tempDate
+                fireSourse = 'firepoints' + tempDate
+                data = await fireApi.getPoints20(tempDate)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  data,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
+              }
+              for (j = 10; j < 32; j++) {
+                tempDate = '2020-0' + month + '-' + j
+                layerHeat = 'fireMap' + tempDate
+                layerPoint = 'firePoint' + tempDate
+                sourseName = 'wildfires' + tempDate
+                fireSourse = 'firepoints' + tempDate
+                data = await fireApi.getPoints20(tempDate)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  data,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
+              }
+            } else {
+              month = i - 12
+              for (j = 1; j < 10; j++) {
+                tempDate = '2020-0' + month + '-0' + j
+                layerHeat = 'fireMap' + tempDate
+                layerPoint = 'firePoint' + tempDate
+                sourseName = 'wildfires' + tempDate
+                fireSourse = 'firepoints' + tempDate
+                data = await fireApi.getPoints20(tempDate)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  data,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
+              }
+              for (j = 10; j < 30; j++) {
+                tempDate = '2020-0' + month + '-' + j
+                layerHeat = 'fireMap' + tempDate
+                layerPoint = 'firePoint' + tempDate
+                sourseName = 'wildfires' + tempDate
+                fireSourse = 'firepoints' + tempDate
+                data = await fireApi.getPoints20(tempDate)
+                this.$options.methods.buildFireMap(
+                  sourseName,
+                  data,
+                  layerHeat,
+                  layerPoint,
+                  fireSourse,
+                  map
+                )
               }
             }
           }
@@ -529,7 +533,9 @@ export default {
         if (value0[0] === '2019') {
           if (value0[1] === value1[1]) {
             // 选中范围在同一月
-            for (j = value0[2]; j <= value1[2]; j++) {
+            var start = parseInt(value0[2])
+            var end = parseInt(value1[2])
+            for (j = start; j <= end; j++) {
               if (j < 10) {
                 layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
                 layerPoint =
@@ -546,7 +552,8 @@ export default {
             // 选中范围在不同月
             // 打开起始月
             if (value0[1] % 2 === 0) {
-              for (j = value0[2]; j < 32; j++) {
+              start = parseInt(value0[2])
+              for (j = start; j < 32; j++) {
                 if (j < 10) {
                   layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
                   layerPoint =
@@ -561,7 +568,8 @@ export default {
                 console.log(layerHeat)
               }
             } else {
-              for (j = value0[2]; j < 31; j++) {
+              start = parseInt(value0[2])
+              for (j = start; j < 31; j++) {
                 if (j < 10) {
                   layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
                   layerPoint =
@@ -627,7 +635,8 @@ export default {
             }
 
             // 打开终止月
-            for (j = 1; j <= value1[2]; j++) {
+            end = parseInt(value1[2])
+            for (j = 1; j <= end; j++) {
               if (j < 10) {
                 layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
                 layerPoint =
@@ -645,7 +654,9 @@ export default {
           // 2020-2020
           if (value0[1] === value1[1]) {
             // 选中范围在同一月
-            for (j = value0[2]; j <= value1[2]; j++) {
+            start = parseInt(value0[2])
+            end = parseInt(value1[2])
+            for (j = start; j <= end; j++) {
               if (j < 10) {
                 layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
                 layerPoint =
@@ -662,7 +673,9 @@ export default {
             // 选中范围在不同月
             // 打开起始月
             if (value0[1] === 1) {
-              for (j = value0[2]; j < 32; j++) {
+              start = parseInt(value0[2])
+
+              for (j = start; j < 32; j++) {
                 if (j < 10) {
                   layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
                   layerPoint =
@@ -677,7 +690,8 @@ export default {
                 console.log(layerHeat)
               }
             } else {
-              for (j = value0[2]; j < 29; j++) {
+              start = parseInt(value0[2])
+              for (j = start; j < 29; j++) {
                 if (j < 10) {
                   layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
                   layerPoint =
@@ -694,7 +708,8 @@ export default {
             }
 
             // 打开终止月
-            for (j = 1; j <= value1[2]; j++) {
+            end = parseInt(value1[2])
+            for (j = 1; j <= end; j++) {
               if (j < 10) {
                 layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
                 layerPoint =
@@ -712,7 +727,8 @@ export default {
       } else {
         // 打开起始月
         if (value0[1] % 2 === 0) {
-          for (j = value0[2]; j < 32; j++) {
+          start = parseInt(value0[2])
+          for (j = start; j < 32; j++) {
             if (j < 10) {
               layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
               layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
@@ -725,7 +741,8 @@ export default {
             console.log(layerHeat)
           }
         } else {
-          for (j = value0[2]; j < 31; j++) {
+          start = parseInt(value0[2])
+          for (j = start; j < 31; j++) {
             if (j < 10) {
               layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
               layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
@@ -745,12 +762,11 @@ export default {
           if (i % 2 === 0) {
             for (j = 1; j < 32; j++) {
               if (j < 10) {
-                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
-                layerPoint =
-                  'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+                layerHeat = 'fireMap' + value0[0] + '-' + i + '-0' + j
+                layerPoint = 'firePoint' + value0[0] + '-' + i + '-0' + j
               } else {
-                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
-                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                layerHeat = 'fireMap' + value0[0] + '-' + i + '-' + j
+                layerPoint = 'firePoint' + value0[0] + '-' + i + '-' + j
               }
               this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
               this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
@@ -759,12 +775,11 @@ export default {
           } else {
             for (j = 1; j < 31; j++) {
               if (j < 10) {
-                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
-                layerPoint =
-                  'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+                layerHeat = 'fireMap' + value0[0] + '-' + i + '-0' + j
+                layerPoint = 'firePoint' + value0[0] + '-' + i + '-0' + j
               } else {
-                layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
-                layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+                layerHeat = 'fireMap' + value0[0] + '-' + i + '-' + j
+                layerPoint = 'firePoint' + value0[0] + '-' + i + '-' + j
               }
               this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
               this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
@@ -774,7 +789,8 @@ export default {
         }
 
         // 打开终止月
-        for (j = 1; j <= value1[2]; j++) {
+        end = parseInt(value1[2])
+        for (j = 1; j <= end; j++) {
           if (j < 10) {
             layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
             layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
@@ -791,11 +807,11 @@ export default {
         if (value1[1] === '2') {
           for (j = 1; j < 32; j++) {
             if (j < 10) {
-              layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-0' + j
-              layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-0' + j
+              layerHeat = 'fireMap2020-01-0' + j
+              layerPoint = 'firePoint2020-01-0' + j
             } else {
-              layerHeat = 'fireMap' + value0[0] + '-' + value0[1] + '-' + j
-              layerPoint = 'firePoint' + value0[0] + '-' + value0[1] + '-' + j
+              layerHeat = 'fireMap2020-01-' + j
+              layerPoint = 'firePoint2020-01-' + j
             }
             this.map.setLayoutProperty(layerPoint, 'visibility', 'visible')
             this.map.setLayoutProperty(layerHeat, 'visibility', 'visible')
