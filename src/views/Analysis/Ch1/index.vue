@@ -2,7 +2,7 @@
   <div id="ch1">
     <div class="title">
       <h1>What are the causes of</h1>
-      <h1>Australian brushfires?</h1>
+      <h1>Australian bushfires?</h1>
       <h1>Weather & Vegetation</h1>
     </div>
     <div class="part">
@@ -105,7 +105,7 @@
       </div>
     </div>
     <div class="link1"><router-link to="/analysis"><p3>←Analysis</p3></router-link></div>
-    <div class="link2"><router-link to="/analysis/ch2"><p3>2. Why is there a violent wildfire this time?→</p3></router-link></div>
+    <div class="link2"><router-link to="/analysis/ch2"><p3>2. Why is there violent bushfires this time?→</p3></router-link></div>
   </div>
 </template>
 

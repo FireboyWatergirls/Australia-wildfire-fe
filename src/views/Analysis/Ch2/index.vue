@@ -4,26 +4,26 @@
   <div id="ch1">
     <div class="title">
       <h1>Why is there</h1>
-      <h1>a violent wildfire this time</h1>
+      <h1>violent bushfires this time</h1>
       <!-- <h1>Weather & Vegetation</h1> -->
     </div>
     <div class="Introduction">
       <h2>Background</h2>
-      <p>Mountain fires are not new in Australia, because Australia is too dry-the Tropic of Cancer runs through the central part of the continent, and is controlled by the subtropical high belt with little rain all year round. More than 80% of the area has an average annual rainfall of less than 600 mm. In summer and autumn each year, continued high temperatures and strong winds increase dryness, and a flash of lightning can ignite a wildfire.</p>
+      <p>Mountain fires are not new in Australia, because Australia is too dry-the Tropic of Cancer runs through the central part of the continent, and is controlled by the subtropical high belt with little rain all year round. More than 80% of the area has an average annual rainfall of less than 600 mm. In summer and autumn each year, continued high temperatures and strong winds increase dryness, and a flash of lightning can ignite a bushfires.</p>
       <p>In the tens of thousands of years of history in mainland Australia, mountain fires have been regarded as an important part of maintaining ecosystems. Many wild animals and plants depend on mountain fires for reproduction. For example, eucalyptus is born to "burn", its seed pods will open when burning, the seedlings inside spread in the fire. It can thrive in the soil covered by ashes. Therefore, in the vast majority of cases, locals will not think that they are "fighting" with mountain fires, but actively explore ways of coexisting with them.</p>
     </div>
     <div class="pic4" id="main4"></div>
     <div class="Introduction2">
       <p>But the recent situation is very different. In September 2019, Queensland and New South Wales on the east coast ushered in thousands of bushfires early-in previous years, the fire could not reach this scale until November. In November, satellite images showed that the mountain fire had completely enclosed Sydney and gradually spread to the south. From July 1, 2019 to January 8, 2020, 4.9 million hectares of land in New South Wales are or have been burning. It's only half a summer now, but it has far exceeded the state's average burning area in the past 50 years-2.8 million hectares. The rapid expansion of the burning area has made people realize that mountain fires are no longer just staying in forests and grasslands as they were in previous years.</p>
-      <p>Australia has wildfires every year. Why is it out of control this year?</p>
-      <p>Let's watch a video about this wildfire in Australia.</p>
+      <p>Australia has bushfires every year. Why is it out of control this year?</p>
+      <p>Let's watch a video about this bushfires in Australia.</p>
     </div>
     <div class="movie">
       <iframe src="//player.bilibili.com/player.html?aid=82537985&bvid=BV18J41157b5&cid=141221520&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" width="800" height="600" allowfullscreen="true"> </iframe>
     </div>
     <div class="human">
       <h2>Human Factors</h2>
-      <p>In fact, there are wildfires in Australia every year.  Australia has a sparsely populated area and few firefighters. It is very difficult for forest fires to be confronted by manpower. It can only rely on rainfall.</p>
+      <p>In fact, there are bushfires in Australia every year.  Australia has a sparsely populated area and few firefighters. It is very difficult for forest fires to be confronted by manpower. It can only rely on rainfall.</p>
       <p>At the same time, the burning forest in the mountains has no value in the eyes of politicians. The Australian land is sparsely populated, no one lives there, and there is no development. The economic value is limited. Although regretting wildlife, it really requires the government to invest  To save, from a politician's point of view, the price / performance ratio is particularly low, and it is not something that can show achievements in the eyes of taxpayers.</p>
       <p>The government has also formed a path dependence in fire protection. Beforehand, the isolation belt will be burned. If the isolation belt is useless, some firefighters will go to the fire to save the fire, but the natural rain will not be saved.  The previous climate was very stable, the rainy season arrived as scheduled, and the mountain fires went out, but once the climate system changed, the original measures would not work.</p>
     </div>
@@ -55,7 +55,7 @@
       <p>More intense, more frequent, and longer-lasting forest fire seasons lasting for months seem to be the new normal. We cannot treat this as an accident, it always attracts our attention.</p>
       <p>Karl Braganza said that particularly dry and hot weather in 2019 cannot be considered an accident. Australia's extremely high temperature is five times that of the mid-20th century. People have to pay for this climate change!</p>
     </div>
-    <div class="link1"><router-link to="/analysis/ch1"><p3>←1. What are the causes of Australian brushfires?</p3></router-link></div>
+    <div class="link1"><router-link to="/analysis/ch1"><p3>←1. What are the causes of Australian bushfires?</p3></router-link></div>
     <div class="link2"><router-link to="/analysis/ch3"><p3>3. What are the impacts of the Australia bushfire?→</p3></router-link></div>
   </div>
 </template>

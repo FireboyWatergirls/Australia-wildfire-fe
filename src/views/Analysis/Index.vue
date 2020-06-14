@@ -16,7 +16,7 @@
       <span>{{catalog.filter(item => item.name === $route.name)[0].text}}</span>
       <a-dropdown>
         <a class="ant-dropdown-link" @click="e => e.preventDefault()">
-          阅读其他章节
+          Other chapters
           <a-icon type="down" />
         </a>
         <a-menu slot="overlay" @click="changeChapter">
@@ -35,12 +35,12 @@ export default {
       catalog: [
         {
           name: 'ch1',
-          text: '1. What are the causes of Australian brushfires?',
+          text: '1. What are the causes of Australian bushfires?',
           img: '/static/img/fire01.png'
         },
         {
           name: 'ch2',
-          text: '2.Why is there a violent wildfire this time?',
+          text: '2.Why is there violent bushfires this time?',
           img: '/static/img/fire02.png'
         },
         {
