@@ -28,10 +28,7 @@
           <img src="/static/img/git.png" />
         </div>
         <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
+          <img src="/static/img/feishu.png" />
         </div>
       </a-carousel>
       <h1
@@ -40,12 +37,19 @@
       >Resource</h1>
       <div id="links">
         <div style="margin-left:12px; font-size:0.875rem;line-height:1.8;color:#43869f;">
-          <p>
-            Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.
-            Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.
-            Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.
-            Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.
-          </p>
+          <a
+            href="https://www.kaggle.com/carlosparadis/fires-from-space-australia-and-new-zeland/data"
+          >https://www.kaggle.com/carlosparadis/fires-from-space-australia-and-new-zeland/data</a>
+          <br />
+          <a href="http://www.bom.gov.au/australia/">http://www.bom.gov.au/australia/</a>
+          <br />
+          <a
+            href="http://www.bom.gov.au/water/geofabric/download.shtml"
+          >http://www.bom.gov.au/water/geofabric/download.shtml</a>
+          <br />
+          <a
+            href="http://www.environment.gov.au/land/native-vegetation/national-vegetation-information-system/data-products#key51"
+          >http://www.environment.gov.au/land/native-vegetation/national-vegetation-information-system/data-products#key51</a>
         </div>
       </div>
     </div>
@@ -59,9 +63,12 @@
             <div id="info-lsq">
               <img class="avatarup" src="/static/avatar/lsq.jpeg" />
               <div class="selfIntro1">
-                <h1 style="text-align:center">Lsq</h1>
-                <h2>leader</h2>
-                <p>Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.</p>
+                <h1 style="text-align:center">Shiqi Luo</h1>
+                <h3 style="margin-left:10%;margin-top:15%">
+                  play badminton/
+                  <br />draw pictures/
+                  <br />surf on Internet
+                </h3>
               </div>
               <div class="icon1">
                 <a href="https://github.com/lsq210">
@@ -81,9 +88,12 @@
                 </a>
               </div>
               <div class="selfIntro2">
-                <p>Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.</p>
-                <h2>group member</h2>
-                <h1 style="text-align:center">Gyx</h1>
+                <h3 style="margin-left:10%;margin-bottom:18%">
+                  Delicious food/
+                  <br />cooking/
+                  <br />comic and animation
+                </h3>
+                <h1 style="text-align:center">Yongxuan Guo</h1>
               </div>
               <img class="avatardown" src="/static/avatar/gyx.jpg" />
             </div>
@@ -94,9 +104,12 @@
             <div id="info-dmy">
               <img class="avatarup" src="/static/avatar/dmy.jpg" />
               <div class="selfIntro1">
-                <h1 style="text-align:center">Dmy</h1>
-                <h2>group member</h2>
-                <p>Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.</p>
+                <h1 style="text-align:center">Mingyue Dong</h1>
+                <h3 style="margin-left:10%;margin-top:15%">
+                  travel/
+                  <br />do research/
+                  <br />debate
+                </h3>
               </div>
               <div class="icon1">
                 <a href="https://github.com/MandyDongrs">
@@ -115,9 +128,12 @@
                 </a>
               </div>
               <div class="selfIntro2">
-                <p>Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.</p>
-                <h2>group member</h2>
-                <h1 style="text-align:center">Csl</h1>
+                <h3 style="margin-left:10%;margin-bottom:18%">
+                  painting/
+                  <br />learn Japenese/
+                  <br />BRPG
+                </h3>
+                <h1 style="text-align:center">Silu Chen</h1>
               </div>
               <img class="avatardown" src="/static/avatar/csl.jpg" />
             </div>
@@ -128,9 +144,12 @@
             <div id="info-wzy">
               <img class="avatarup" src="/static/avatar/wzy.jpg" />
               <div class="selfIntro1">
-                <h1 style="text-align:center">Wzy</h1>
-                <h2>group member</h2>
-                <p>Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.</p>
+                <h1 style="text-align:center">Zhiye Wang</h1>
+                <h3 style="margin-left:10%;margin-top:15%">
+                  fashion/
+                  <br />TV show
+                  <br />make-up master
+                </h3>
               </div>
               <div class="icon1">
                 <a href="https://github.com/WangZhiyee">
@@ -149,9 +168,12 @@
                 </a>
               </div>
               <div class="selfIntro2">
-                <p>Carbon emissions reductions giving, legitimize amplify non-partisan Aga Khan. Policy dialogue assessment expert free-speech cornerstone disruptor freedom. Cesar Chavez empower.</p>
-                <h2>group member</h2>
-                <h1 style="text-align:center">Zyb</h1>
+                <h3 style="margin-left:10%;margin-bottom:18%">
+                  art designer/
+                  <br />computer game/
+                  <br />deserts
+                </h3>
+                <h1 style="text-align:center">Yibo Zhou</h1>
               </div>
               <img class="avatardown" src="/static/avatar/zyb2.jpeg" />
             </div>
@@ -276,7 +298,7 @@ export default {}
   border: 3px solid #333;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 20%;
+  margin-top: 0%;
 }
 .icon1 {
   font-size: 50px;
@@ -300,7 +322,7 @@ export default {}
   width: 90%;
   height: 22%;
   margin-left: 5%;
-  margin-top: 90%;
+  margin-top: 120%;
 }
 #border-lsq {
   float: left;
